@@ -77,10 +77,20 @@
               <p>For blocks, wrap in <code>&lt;pre&gt;&lt;code&gt;</code>:</p>
 
 <?prettify linenums=1?>
-<pre><code>Code sample
-Line 2 of code sample</code></pre>
+<pre><code>$.ajax({
+  url: "/api/getWeather",
+  data: {
+    zipcode: 97201
+  },
+  success: function( data ) {
+    $( "#weather-temp" ).html( "<strong>" + data + "</strong> degrees" );
+  }
+});</code></pre>
 
-              <p>To trigger syntax highlighting using <a href='https://code.google.com/p/google-code-prettify/'>prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code> as documented in the <a href='https://code.google.com/p/google-code-prettify/wiki/GettingStarted'>prettify wifi</a>.  Syntax highlighting depends on the Google CDN, to avoid including all language files into the standard CSS bundle, so it will only be loaded where required.</p>
+              <p>To trigger syntax highlighting using <a href='https://code.google.com/p/google-code-prettify/'>prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code>, or add the <code>prettify</code> class, as documented in the <a href='https://code.google.com/p/google-code-prettify/wiki/GettingStarted'>prettify wifi</a>.  Since prettify auto-loads all its lang files, we use it from the Cloudflare CDN.  Put this at the end of your <code>&lt;body&gt;</code> to enable support:</p>
+
+<pre><code>&lt;script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'>&lt;/script>
+&lt;script>prettyPrint()&lt;/script></code></pre>
 
               <h2 id='images'>Images</h2>
 
@@ -121,5 +131,7 @@ Line 2 of code sample</code></pre>
 
       </div> <!-- /page -->
 
+      <script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'></script>
+      <script>prettyPrint()</script>
     </body>
 </html>
