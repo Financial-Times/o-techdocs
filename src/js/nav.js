@@ -44,7 +44,6 @@ $(function() {
 					return false;
 				}
 			});
-			console.log(candidate);
 			if (candidate && !candidate.hasClass('o-techdocs-nav__item--active')) {
 				list.find('li').removeClass('o-techdocs-nav__item--active');
 				candidate.addClass('o-techdocs-nav__item--active');
