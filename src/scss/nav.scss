@@ -1,13 +1,12 @@
 .o-techdocs-sidebar {
-  margin-top: 0;
-  list-style: none;
+  @extend %o-grid-no-left-gutter;
 }
 
 .o-techdocs-nav {
   margin-top: 0;
   margin-bottom: 10px;
   list-style: none;
-  @extend %o-grid-no-left-gutter;
+  padding: 0;
   li {
     background-color: $o-colors-tint1;
   }
