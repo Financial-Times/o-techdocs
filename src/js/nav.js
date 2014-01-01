@@ -6,10 +6,11 @@
 var $ = require('jquery');
 
 $(function() {
-	var list = '', lis = [], scrollmargin, scrolltimer, resizetimer, dockpoint, dockmargin;
+	var list = '', lis = [], scrollmargin, scrolltimer, resizetimer, dockpoint, dockmargin, headings = [], currentheading;
 
 	// Find heading 2s and build a link list.  Only proceed if there would be more than one item in the list
 	$('.o-techdocs-content h2[id]').each(function() {
+		headings.push({id:this.id, pos:$(this).offset().top});
 		lis.push('<li id="o-techdocs-pagenav-'+this.id+'"><a href="#'+this.id+'">'+this.innerText+'</a></li>');
 	});
 	if (lis.length < 2) return;
@@ -26,7 +27,16 @@ $(function() {
 	dockmargin = 50;
 
 	function calcScrollMargin() {
-		scrollmargin = $(window).height() / 5;
+		scrollmargin = $(window).height() / 8;
+	}
+
+	function showHideMenu() {
+		var onecol = $('.o-techdocs-content:eq(0)').offset().top > $('.o-techdocs-nav:eq(0)').offset().top;
+		if (onecol && list.is(':visible')) {
+			list.hide();
+		} else if (!onecol && !list.is(':visible')) {
+			list.show();
+		}
 	}
 
 	// On scroll, determine which section is in view, and highlight it
@@ -34,19 +44,24 @@ $(function() {
 		if (scrolltimer) return;
 		scrolltimer = setTimeout(function() {
 			scrolltimer = null;
-			var scrolltop = $(document).scrollTop(); scrollos = scrolltop + scrollmargin;
+			var scrolltop = $(document).scrollTop();
+			var scrollos = scrolltop + scrollmargin;
 			var candidate;
-			$('.o-techdocs-content').find('h2, h3, h4').each(function() {
-				var thisos = $(this).offset().top;
-				if (thisos <= scrollos && $('#o-techdocs-pagenav-'+this.id).length) {
-					candidate = $('#o-techdocs-pagenav-'+this.id);
-				} else if (thisos > scrollos && candidate) {
+			headings.forEach(function(heading) {
+
+				// Heading is before current scroll position, so might be the current heading
+				if (heading.pos <= scrollos) {
+					candidate = heading;
+
+				// Heading is after current scroll position, can't be the current or any future one
+				} else if (heading.pos > scrollos) {
 					return false;
 				}
 			});
-			if (candidate && !candidate.hasClass('o-techdocs-nav__item--active')) {
+			if (candidate && candidate.id != currentheading) {
 				list.find('li').removeClass('o-techdocs-nav__item--active');
-				candidate.addClass('o-techdocs-nav__item--active');
+				$('#o-techdocs-pagenav-'+candidate.id).addClass('o-techdocs-nav__item--active');
+				currentheading = candidate.id;
 			} else if (!candidate) {
 				list.find('li').removeClass('o-techdocs-nav__item--active');
 			}
@@ -63,12 +78,21 @@ $(function() {
 		}, 100);
 	});
 
-	// On resize, reconsider boundary tolerance for section highlighting and dock/undock menu
+	// On resize, reconsider boundary tolerance for section highlighting
 	$(window).on('resize', function() {
 		if (resizetimer) return;
 		resizetimer = setTimeout(function() {
 			resizetimer = null;
 			calcScrollMargin();
+			showHideMenu();
 		}, 1000);
+	});
+
+	// On window load, recache all the heading positions as they may have moved since DOMReady, due to images being loaded in
+	$(window).on('load', function() {
+		headings = [];
+		$('.o-techdocs-content h2[id]').each(function() {
+			headings.push({id:this.id, pos:$(this).offset().top});
+		});
 	});
 });
