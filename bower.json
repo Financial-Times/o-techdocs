@@ -5,11 +5,14 @@
         "o-colors": "git://github.com/Financial-Times/o-colors#0.2",
         "jquery": "2.0"
     },
-    "files": [
+    "main": [
     	"main.js",
     	"main.scss"
     ],
     "ignore": [
-    	"test"
+    	"test",
+        "Gruntfile.js",
+        "package.json",
+        "README.md"
     ]
 }
