@@ -119,6 +119,20 @@
   > *:first-child {
     margin-top: 0;
   }
+
+  /* Theme GitHub gists to match FT style */
+  .gist .gist-file {
+    border: 1px solid #e9decf;
+    border-radius: 4px;
+    .gist-data {
+      background-color: #f6e9d8;
+      .line-numbers {
+      color: #a7a59b;
+      background-color: #f6e9d8;
+      border-right: none;
+      padding: 1em;
+    }
+  }
 }
 
 .o-techdocs-table {
