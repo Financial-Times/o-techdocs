@@ -1,8 +1,8 @@
 
 .o-techdocs {
   padding-bottom: 40px;
-  background-color: $o-colors-pink;
-  color: $o-colors-charcoal;
+  background-color: oColorsGetColorFor("page-background");
+  color: oColorsGetColorFor("article-body-text");
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.428571429;
@@ -30,7 +30,7 @@
     font-size: 18px;
   }
   a {
-    color: $o-colors-blue;
+    color: oColorsGetColorFor("link-text");
     text-decoration: none;
   }
   a:hover {
@@ -44,8 +44,8 @@
   code {
     padding: 2px 4px;
     border-radius: 4px;
-    background-color: $o-colors-tint1;
-    color: #9b164f;  /* $ftColor-Claret */
+    background-color: oColorsGetColorFor("inline-code-sample-background");
+    color: oColorsGetColorFor("inline-code-sample-text");
     white-space: pre-wrap;
     font-size: 90%;
   }
@@ -55,10 +55,10 @@
     overflow-x: auto;
     margin: 0 0 10px;
     padding: 9.5px;
-    border: 1px solid #e9decf; /* $ftColor-Tint2 */
+    border: 1px solid oColorsGetColorFor("block-code-sample-border");
     border-radius: 4px;
-    background-color: $o-colors-tint1;
-    color: #333333;
+    background-color: oColorsGetColorFor("block-code-sample-background");
+    color: oColorsGetColorFor("block-code-sample-text");
     word-wrap: inherit;
     word-break: break-all;
     font-size: 13px;
@@ -105,9 +105,9 @@
     margin-bottom: 20px;
     padding: 19px;
     min-height: 20px;
-    border: 1px solid #e9decf;
+    border: 1px solid oColorsGetColorFor("docs-aside-border");
     border-radius: 4px;
-    background-color: #f6e9d8; /* ftColor-Tint1 */
+    background-color: oColorsGetColorFor("docs-aside-background");
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
     h4 {
@@ -122,13 +122,13 @@
 
   /* Theme GitHub gists to match FT style */
   .gist .gist-file {
-    border: 1px solid #e9decf;
+    border: 1px solid oColorsGetColorFor("block-code-sample-border");
     border-radius: 4px;
     .gist-data {
-      background-color: #f6e9d8;
+      background-color: oColorsGetColorFor("block-code-sample-background");
       .line-numbers {
-        color: #a7a59b;
-        background-color: #f6e9d8;
+        color: oColorsGetColorFor("block-code-sample-text");
+        background-color: oColorsGetColorFor("block-code-sample-background");
         border-right: none;
         padding: 1em;
       }
@@ -145,11 +145,11 @@
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
-  border-top: 3px solid $o-colors-tint1;
-  border-right: 5px solid $o-colors-tint1;
-  border-bottom: 3px solid $o-colors-tint1;
-  border-left: 5px solid $o-colors-tint1;
-  background: $o-colors-tint1;
+  border-top: 3px solid oColorsGetColorFor("table-background");
+  border-right: 5px solid oColorsGetColorFor("table-background");
+  border-bottom: 3px solid oColorsGetColorFor("table-background");
+  border-left: 5px solid oColorsGetColorFor("table-background");
+  background: oColorsGetColorFor("table-background");
   >thead>tr>th,
   >tbody>tr>th,
   >tfoot>tr>th,
@@ -164,17 +164,13 @@
   >thead>tr>th,
   >tbody>tr>th,
   >tr>th {
-    border-bottom: 2px solid $o-colors-warm-grey1;
+    border-bottom: 2px solid oColorsGetColorFor("table-header-row-border");
     vertical-align: bottom;
   }
   >tbody>tr>td,
   >tr>td {
-    border-bottom: 1px solid $o-colors-tint3;
+    border-bottom: 1px solid oColorsGetColorFor("table-row-border");
     vertical-align: top;
-  }
-  >tbody>tr:nth-child(odd)>td,
-  >tbody>tr:nth-child(odd)>th {
-    background-color: $o-colors-tint1;
   }
 }
 

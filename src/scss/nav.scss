@@ -8,7 +8,7 @@
   list-style: none;
   padding: 0;
   li {
-    background-color: $o-colors-tint1;
+    background-color: oColorsGetColorFor("docs-nav-background")
   }
   a {
     position: relative;
@@ -17,12 +17,12 @@
     padding: 6px 10px 6px 30px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: $o-colors-blue;
+    color: oColorsGetColorFor("link-text");
     text-decoration: none;
   }
   a:hover {
-    background-color: #EBE2D3;
-    color: $o-colors-black;
+    background-color: oColorsGetColorFor("docs-nav-active-background");
+    color: oColorsGetColorFor("link-hover-text");
   }
 }
 
@@ -41,7 +41,7 @@
 .o-techdocs-nav__item--active {
   > a {
     padding-left: 15px;
-    background-color: $o-colors-tint2;
+    background-color: oColorsGetColorFor("docs-nav-active-background");
     color: black;
     font-weight: bold;
     pointer-events: none;
@@ -54,7 +54,7 @@
 }
 
 .o-techdocs-nav--page li a {
-  color: $o-colors-claret;
+  color: oColorsGetColorFor("docs-inpagenav-link-text");
 }
 .o-techdocs-nav--affix {
   position: fixed;
