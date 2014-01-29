@@ -1,11 +1,5 @@
 #!/usr/bin/env ruby
 
-# Install build tools
-`npm install`
-
-# Install dependencies
-`bower install`
-
 # Create build output directory
 Dir.mkdir('buildcache')
 

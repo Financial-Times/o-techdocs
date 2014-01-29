@@ -3,3 +3,6 @@ script:
 language: ruby
 before_install:
  - gem install sass
+ - npm install -g bower
+ - npm install
+ - bower install
