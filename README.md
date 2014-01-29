@@ -1,4 +1,4 @@
-## Tech docs framework
+## Tech docs framework  [![Build Status](https://travis-ci.org/Financial-Times/o-techdocs.png?branch=master)](https://travis-ci.org/Financial-Times/o-techdocs)
 
 This module component provides documentation styles for techical documentation, API references and internal tools.
 
