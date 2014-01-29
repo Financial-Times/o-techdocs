@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     sass: {
       docs: {
         options: {
-          style: 'expanded',
+          style: 'compressed',
           loadPath: './bower_components'
         },
         files: {
