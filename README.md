@@ -21,4 +21,4 @@ To test this module in isolation:
 
     http://localhost:8000/demos/demo.html 
 
-View the source of the test.html file for extensive notes and examples on use of the various styles.
+View the source of the demo.html file for extensive notes and examples on use of the various styles.
