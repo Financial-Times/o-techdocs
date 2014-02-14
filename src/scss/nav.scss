@@ -2,15 +2,17 @@
   @extend %o-grid-row;
 }
 .o-techdocs-sidebar {
+  @extend %o-grid-col;
   @extend %o-grid-no-left-gutter;
-  @extend %o-grid-3;
-  @extend %o-grid-m12;
-  @extend %o-grid-s12;
+  @extend %o-grid-colspan-3;
+  @extend %o-grid-colspan-M12;
+  @extend %o-grid-colspan-S12;
 }
 .o-techdocs-main {
-  @extend %o-grid-9;
-  @extend %o-grid-m12;
-  @extend %o-grid-s12;
+  @extend %o-grid-col;
+  @extend %o-grid-colspan-9;
+  @extend %o-grid-colspan-M12;
+  @extend %o-grid-colspan-S12;
 }
 
 .o-techdocs-nav {
