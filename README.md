@@ -17,8 +17,8 @@ To test this module in isolation:
 
     python -m SimpleHTTPServer 8000
 
-1. Load `/test/test.html` on the web server host, eg:
+1. Load `/demos/demo.html` on the web server host, eg:
 
-    http://localhost:8000/test/test.html
+    http://localhost:8000/demos/demo.html
 
-View the source of the test.html file for extensive notes and examples on use of the various styles.
+View the source of the demo.html file for extensive notes and examples on use of the various styles.

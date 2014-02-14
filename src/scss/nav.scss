@@ -1,5 +1,16 @@
+.o-techdocs-layout {
+  @extend %o-grid-row;
+}
 .o-techdocs-sidebar {
   @extend %o-grid-no-left-gutter;
+  @extend %o-grid-3;
+  @extend %o-grid-m12;
+  @extend %o-grid-s12;
+}
+.o-techdocs-main {
+  @extend %o-grid-9;
+  @extend %o-grid-m12;
+  @extend %o-grid-s12;
 }
 
 .o-techdocs-nav {
