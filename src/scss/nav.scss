@@ -14,6 +14,10 @@
   @extend %o-grid-colspan-M12;
   @extend %o-grid-colspan-S12;
 }
+.o-techdocs-layout--full {
+  @extend %o-grid-col;
+  @extend %o-grid-colspan-12;
+}
 
 .o-techdocs-nav {
   margin-top: 0;
