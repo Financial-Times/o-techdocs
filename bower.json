@@ -12,7 +12,6 @@
     "ignore": [
     	"test",
         "Gruntfile.js",
-        "package.json",
-        "README.md"
+        "package.json"
     ]
 }
