@@ -1,11 +1,14 @@
 
 .o-techdocs {
-  padding-bottom: 40px;
   background-color: oColorsGetColorFor("page-background");
   color: oColorsGetColorFor("article-body-text");
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.428571429;
+}
+.o-techdocs--borderless {
+  margin: 0;
+  padding: 0;
 }
 
 .o-techdocs-content {
@@ -105,9 +108,9 @@
     margin-bottom: 20px;
     padding: 19px;
     min-height: 20px;
-    border: 1px solid oColorsGetColorFor("docs-aside-border");
+    border: 1px solid oColorsGetColorFor(docs-aside box, border);
     border-radius: 4px;
-    background-color: oColorsGetColorFor("docs-aside-background");
+    background-color: oColorsGetColorFor(box, background);
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
     h4 {
