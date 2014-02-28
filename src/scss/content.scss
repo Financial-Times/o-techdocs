@@ -1,17 +1,13 @@
 
 .o-techdocs {
   background-color: oColorsGetColorFor("page-background");
-  color: oColorsGetColorFor("article-body-text");
-  font-size: 14px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  line-height: 1.428571429;
-}
-.o-techdocs--borderless {
-  margin: 0;
-  padding: 0;
 }
 
 .o-techdocs-content {
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: oColorsGetColorFor("article-body-text");
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
   }
