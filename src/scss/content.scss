@@ -139,11 +139,11 @@
   }
 }
 
-.o-techdocs-table {
+div.o-techdocs-table {
   overflow: auto;
   width: 100%;
 }
-.o-techdocs-table__table {
+table.o-techdocs-table, div.o-techdocs-table > table {
   margin: 1em 0;
   width: 100%;
   border-spacing: 0;
@@ -163,17 +163,14 @@
     border-top: 1px solid #ddd;
     line-height: 1.428571429;
     text-align: left;
-  }
-  >thead>tr>th,
-  >tbody>tr>th,
-  >tr>th {
-    border-bottom: 2px solid oColorsGetColorFor("table-header-row-border");
-    vertical-align: bottom;
-  }
-  >tbody>tr>td,
-  >tr>td {
     border-bottom: 1px solid oColorsGetColorFor("table-row-border");
     vertical-align: top;
+  }
+  >thead>tr>th:not([scope=row]),
+  >tbody>tr>th:not([scope=row]),
+  >tr>th:not([scope=row]) {
+    border-bottom: 2px solid oColorsGetColorFor("table-header-row-border");
+    vertical-align: bottom;
   }
 }
 
