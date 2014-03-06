@@ -7,8 +7,5 @@
     "grunt-contrib-watch": "*",
     "grunt-browserify": "*",
     "debowerify": "*"
-  },
-  "scripts": {
-      "test": "origami-build-tools test"
   }
 }

@@ -1,9 +1,8 @@
-language: ruby
-rvm:
-  - 2.0
+language: node_js
+node_js:
+  - "0.10"
 before_install:
   - npm install -g https://github.com/Financial-Times/origami-build-tools/tarball/master
   - origami-build-tools install
 script:
-  - npm test
-  - "test/travis.rb"
+  - origami-build-tools test
