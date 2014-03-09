@@ -17,6 +17,8 @@
 .o-techdocs-layout--full {
   @extend %o-grid-col;
   @extend %o-grid-colspan-12;
+  @extend %o-grid-no-left-gutter;
+  @extend %o-grid-no-right-gutter;
 }
 
 .o-techdocs-nav {
