@@ -5,6 +5,7 @@ $o-grid-is-silent: false;
 /* Import grid and colors */
 @import 'o-grid/main';
 @import 'o-colors/main';
+@import 'o-ft-typography/main';
 
 /* Modules for docs styling */
 @import 'src/scss/nav';

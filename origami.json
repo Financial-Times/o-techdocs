@@ -5,6 +5,6 @@
 	"support": "andrew.betts@ft.com",
 	"supportStatus": "active",
 	"demos": [
-		"demos/demo.html"
+		"/demos/demo.html"
 	]
 }
