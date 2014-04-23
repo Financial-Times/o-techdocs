@@ -13,10 +13,16 @@
       @extend %o-ft-typography-heading-large;
     }
     h3 {
-      @extend %o-ft-typography-heading-medium;
+      @extend %o-ft-typography-article-subheading1;
     }
     h4 {
+      @extend %o-ft-typography-heading-medium;
+    }
+    h5 {
       @extend %o-ft-typography-heading-small;
+    }
+    .o-techdocs-leadbody {
+      @extend %o-ft-typography-body--lead;
     }
     a {
       @extend %o-ft-typography-body__link;
