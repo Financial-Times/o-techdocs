@@ -1,13 +1,20 @@
+$o-techdocs-is-silent: true !default;
+
 $o-grid-mq-type: width;
 $o-grid-is-fluid: true;
-$o-grid-is-silent: false;
 
-/* Import grid and colors */
 @import 'o-grid/main';
 @import 'o-colors/main';
+@import 'o-ft-typography/main';
 
-/* Modules for docs styling */
+@import 'src/scss/mixins';
+@import 'src/scss/page';
 @import 'src/scss/nav';
 @import 'src/scss/content';
+@import 'src/scss/table';
 @import 'src/scss/header';
 @import 'src/scss/prettify';
+
+@if (not $o-techdocs-is-silent) {
+  @include oTechdocsIncludeAll();
+}

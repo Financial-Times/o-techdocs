@@ -1,0 +1,10 @@
+@mixin oTechdocsIncludeAll($classname: o-techdocs) {
+  @include oTechdocsPage($classname);
+  @include oTechdocsHeader(#{$classname}-header);
+  @include oTechdocsHeaderResponsiveOverrides(#{$classname}-header);
+  @include oTechdocsFooter(#{$classname}-footer);
+  @include oTechdocsNav(#{$classname}-nav);
+  @include oTechdocsContent(#{$classname}-content);
+  @include oTechdocsTable(#{$classname}-table);
+  @include oTechdocsPrettyPrinted();
+}
