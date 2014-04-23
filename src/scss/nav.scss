@@ -1,81 +1,65 @@
-.o-techdocs-layout {
-  @extend %o-grid-row;
-}
-.o-techdocs-sidebar {
-  @extend %o-grid-col;
-  @extend %o-grid-no-left-gutter;
-  @extend %o-grid-colspan-3;
-  @extend %o-grid-colspan-M12;
-  @extend %o-grid-colspan-S12;
-}
-.o-techdocs-main {
-  @extend %o-grid-col;
-  @extend %o-grid-colspan-9;
-  @extend %o-grid-colspan-M12;
-  @extend %o-grid-colspan-S12;
-}
-.o-techdocs-layout--full {
-  @extend %o-grid-col;
-  @extend %o-grid-colspan-12;
-  @extend %o-grid-no-left-gutter;
-  @extend %o-grid-no-right-gutter;
-}
+@mixin oTechdocsNav($classname) {
 
-.o-techdocs-nav {
-  margin-top: 0;
-  margin-bottom: 10px;
-  list-style: none;
-  padding: 0;
-  li {
-    background-color: oColorsGetColorFor(box, background)
+  .#{$classname} {
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 0;
+    li {
+      background-color: oColorsGetColorFor(box, background)
+    }
+    a {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      padding: 6px 10px 6px 30px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: oColorsGetColorFor("link-text");
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: oColorsGetColorFor(docs-nav-active, background);
+      color: oColorsGetColorFor(link-hover, text);
+    }
   }
-  a {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    padding: 6px 10px 6px 30px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: oColorsGetColorFor("link-text");
-    text-decoration: none;
-  }
-  a:hover {
-    background-color: oColorsGetColorFor("docs-nav-active-background");
-    color: oColorsGetColorFor("link-hover-text");
-  }
-}
 
-.o-techdocs-nav__sub {
-  margin-bottom: 0;
-  padding: 0;
-  li > a {
-    padding: 3px 10px 3px 40px;
-    font-size: 90%;
+  .#{$classname}__sub {
+    margin-bottom: 0;
+    padding: 0;
+    li > a {
+      padding: 3px 10px 3px 40px;
+      font-size: 90%;
+    }
+    .#{$classname}__item--active > a {
+      padding-left: 25px;
+    }
   }
-  .o-techdocs-nav__item--active > a {
-    padding-left: 25px;
-  }
-}
 
-.o-techdocs-nav__item--active {
-  > a {
-    padding-left: 15px;
-    background-color: oColorsGetColorFor("docs-nav-active-background");
-    color: black;
-    font-weight: bold;
-    pointer-events: none;
+  .#{$classname}__item--active {
+    > a {
+      padding-left: 15px;
+      background-color: oColorsGetColorFor(docs-nav-active, background);
+      color: black;
+      font-weight: bold;
+      pointer-events: none;
+    }
+    > a:before {
+      display: inline-block;
+      width: 15px;
+      content: "▸";
+    }
   }
-  > a:before {
-    display: inline-block;
-    width: 15px;
-    content: "▸";
-  }
-}
 
-.o-techdocs-nav--page li a {
-  color: oColorsGetColorFor("docs-inpagenav-link-text");
-}
-.o-techdocs-nav--affix {
-  position: fixed;
-  top: 50px;
+  .#{$classname}--page {
+    li a {
+      color: oColorsGetColorFor(docs-inpagenav-link, text);
+    }
+  }
+
+  .#{$classname}--affix {
+    position: fixed;
+    top: 50px;
+  }
+
 }

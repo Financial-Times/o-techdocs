@@ -1,6 +1,6 @@
 ## Tech docs framework  [![Build Status](https://travis-ci.org/Financial-Times/o-techdocs.png?branch=master)](https://travis-ci.org/Financial-Times/o-techdocs)
 
-This module component provides documentation styles for techical documentation, API references and internal tools.
+This module component provides documentation styles for technical documentation, API references and internal tools.
 
 ## Using
 
@@ -10,15 +10,35 @@ Follow the standard Origami install and build process for a module.
 
 To test this module in isolation:
 
-1. Clone the repo
-1. Run `npm install` and `bower install` to install dependencies and build tools
-1. Run `grunt` to build the CSS and JS bundles
-1. Start a simple web server with the document root at the root of the repo, eg in OS X you could do:
-
-    python -m SimpleHTTPServer 8000
-
-1. Load `/demos/demo.html` on the web server host, eg:
-
-    http://localhost:8000/demos/demo.html
+1. Clone the repo.
+2. Install [origami-build-tools](https://github.com/Financial-Times/origami-build-tools) if you haven't already.
+3. Run `origami-build-tools install`
+4. Run `origami-build-tools demo --local`
+5. Open `demo.html` in your web browser.
 
 View the source of the demo.html file for extensive notes and examples on use of the various styles.
+
+### Styles
+
+To comply with the Origami spec, by default there will be no CSS output from the SASS.
+
+You can either turn off silent mode before you `@import` the __o-techdocs__ SASS, like this:
+
+```
+$o-techdocs-is-silent: false;
+@import "o-techdocs/main";
+```
+
+or, manually include the SASS you need:
+
+* `@include oTechdocsPage($classname)`;
+* `@include oTechdocsHeader($classname)`;
+* `@include oTechdocsFooter($classname)`;
+* `@include oTechdocsNav($classname)`;
+* `@include oTechdocsContent($classname)`;
+* `@include oTechdocsTable($classname)`;
+* `@include oTechdocsPrettyPrinted()`;
+
+or, for everything:
+
+`@include oTechdocsIncludeAll();`
