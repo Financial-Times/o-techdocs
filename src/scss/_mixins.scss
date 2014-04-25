@@ -5,6 +5,6 @@
   @include oTechdocsFooter(#{$classname}-footer);
   @include oTechdocsNav(#{$classname}-nav);
   @include oTechdocsContent(#{$classname}-content);
-  @include oTechdocsTable(#{$classname}-table);
+  @include oTechdocsTable();
   @include oTechdocsPrettyPrinted();
 }

@@ -1,6 +1,9 @@
 
 var $ = require('jquery');
 
-$(function() {
-	$('table.o-techdocs-table').removeClass('o-techdocs-table').wrap('<div class="o-techdocs-table"></div>');
+$.each($('table.o-table'), function(i, tableEl) {
+    tableEl = $(tableEl);
+    if (!tableEl.parent().hasClass("o-techdocs-table")) {
+        tableEl.wrap('<div class="o-techdocs-table"></div>');
+    }
 });

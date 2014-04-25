@@ -2,9 +2,9 @@
     "name": "o-techdocs",
     "dependencies": {
         "o-grid": "^2.1.1",
-        "o-colors": "^2.3.8",
+        "o-colors": "^2.3.9",
         "o-ft-typography": "^1.8.1",
-        "o-table": "^0.1.0",
+        "o-table": "^0.2.0",
         "jquery": "2.0"
     },
     "main": [

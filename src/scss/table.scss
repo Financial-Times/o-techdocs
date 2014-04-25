@@ -1,10 +1,9 @@
-@mixin oTechdocsTable($classname) {
-  @include oTableBase($classname);
-  div.#{$classname} {
+@mixin oTechdocsTable() {
+  div.o-techdocs-table {
     overflow: auto;
     width: 100%;
   }
-  div.#{$classname} > table {
-    @extend #{'.#{$classname}'};
+  div.o-techdocs-table > table.o-table {
+    @extend #{'.o-table'};
   }
 }

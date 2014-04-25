@@ -65,20 +65,17 @@ document.getElementsByTagName("body")[0].className = 'o-techdocs';
 
             <h2 id="tables">Tables</h2>
 
-            <p>Give the table a class of <code>o-techdocs-table</code>:</p>
+            <p><a href="registry.origami.ft.com/components/o-table">o-table</a> is used for table styling. At a minimum, give tables a class of <code>o-table</code>, but see <strong>o-table</strong>'s documentation for more detail.</p>
 
-            <table class='o-techdocs-table'>
-                <tr><th>Repo name</th><th>Host name</th></tr>
-                <tr><td>tweet-service</td><td>tweet.webservices.ft.com</td></tr>
-                <tr><td>nav-service</td><td>nav.webservices.ft.com</td></tr>
-                <tr><td>mostpopular-service</td><td>mostpopular.webservices.ft.com</td></tr>
-            </table>
-
-            <table class='o-techdocs-table'>
-                <tr><th scope='row'>Repo name</th><td>tweet-service</td></tr>
-                <tr><th scope='row'>Last updated</td><td>27 Feb 2014</td></tr>
-                <tr><th scope='row'>Support status</td><td>Active</td></tr>
-                <tr><th scope='row'>Validity</td><td>Valid</td></tr>
+            <table class='o-table o-table--horizontal-lines'>
+                <thead>
+                    <tr><th>Repo name</th><th>Host name</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>tweet-service</td><td>tweet.webservices.ft.com</td></tr>
+                    <tr><td>nav-service</td><td>nav.webservices.ft.com</td></tr>
+                    <tr><td>mostpopular-service</td><td>mostpopular.webservices.ft.com</td></tr>
+                </tbody>
             </table>
 
             To make tables horizontally scrollable on small screens, wrap them in a div, ie <code>&lt;div class="o-techdocs-table">&lt;table>...&lt;/table>&lt;/div></code> or include the techdocs JavaScript module, which will do that for you.
