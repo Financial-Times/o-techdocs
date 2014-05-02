@@ -6,7 +6,7 @@ $o-grid-is-fluid: true;
 @import 'o-grid/main';
 @import 'o-colors/main';
 @import 'o-ft-typography/main';
-$o-table-is-silent: false;
+$o-table-is-silent: $o-techdocs-is-silent;
 @import 'o-table/main';
 
 @import 'src/scss/mixins';
