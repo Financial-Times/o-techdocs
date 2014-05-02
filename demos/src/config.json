@@ -3,7 +3,8 @@
         "demo": {
             "template": "demos/src/demo.mustache",
             "sass": "demos/src/demo.scss",
-            "js": "main.js"
+            "js": "main.js",
+            "bodyClasses": "o-techdocs"
         }
     }
 }
