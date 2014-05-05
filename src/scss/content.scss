@@ -110,6 +110,22 @@
       display: none;
     }
 
+    .o-techdocs__permalink {
+      display: none;
+      font-family: sans-serif;
+      font-weight: normal;
+      margin-left: 10px;
+      color: #999;
+    }
+    h1:hover .o-techdocs__permalink,
+    h2:hover .o-techdocs__permalink,
+    h3:hover .o-techdocs__permalink,
+    h4:hover .o-techdocs__permalink,
+    h5:hover .o-techdocs__permalink,
+    h6:hover .o-techdocs__permalink {
+      display: inline;
+    }
+
     > *:first-child {
       margin-top: 0;
     }
