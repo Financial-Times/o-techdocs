@@ -4,7 +4,7 @@
     <p>Subtitle for the documentation</p>
 </div>
 
-<!-- Navigation menu and main content (you can omit the row container entirely if you don't have any nav) -->
+<!-- Navigation menu and main content -->
 <div class="o-techdocs-layout">
 
     <!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
@@ -98,6 +98,10 @@
                 <h5>Example heading for the aside</h5>
                 <p>Where features or elements of design are used in multiple websites, we need to build them to be usable in all those cases, and portable between them, rather than always building features solely in the context of one product.  These components should not be seen as an intrinsic part of <em>any</em> product, but instead as part of the <b>new digital FT</b>.</p>
             </aside>
+
+            <p>To hide an aside and display only when a link is clicked, give the aside a class of `o-techdocs__aside--toggleable` and an id, which can be anything.  Then create a link that targets the ID (<a href="#note-32">Demo</a>):</p>
+
+            <aside class='o-techdocs__aside--toggleable' id='note-32'>This is an extra note about something</aside>
 
             <h2 id='disabling-doc-styles'>Disabling doc styles</h2>
             <p>To make it easier to author content in markdown, styles are applied to naked tags inside any <code>.o-techdocs-content</code> element.  However, if you want to include content that you don't want to affect with tech doc styles, you can simply close the <code>.o-techdocs-content</code> and open a new one when you want back into auto-formatting.</p>
