@@ -1,3 +1,4 @@
+/*global $,require*/
 /**
  * Add a second navigation menu to quickly navigate to
  * anchors in the page.
@@ -74,7 +75,7 @@ $(function() {
 			} else if (docked && (scrolltop+dockmargin) < dockpoint) {
 				list.removeClass('o-techdocs-nav--affix');
 				list.width('auto');
-			};
+			}
 		}, 100);
 	});
 

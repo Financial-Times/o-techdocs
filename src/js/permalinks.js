@@ -1,3 +1,4 @@
+/*global $,require*/
 /**
  * Show permalink markers on headings with an ID
  */
