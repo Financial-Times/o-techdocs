@@ -1,31 +1,28 @@
-@mixin oTechdocsPage($classname) {
+@include oFtTypographyIncludeFont(body);
 
-  @include oFtTypographyIncludeFont(body);
-
-  .#{$classname} {
-    background-color: oColorsGetColorFor(page, background);
-    @extend %o-ft-typography-body;
-  }
-  .#{$classname}-layout {
-    @extend %o-grid-row;
-  }
-  .#{$classname}-sidebar {
-    @extend %o-grid-col;
-    @extend %o-grid-no-left-gutter;
-    @extend %o-grid-colspan-3;
-    @extend %o-grid-colspan-M12;
-    @extend %o-grid-colspan-S12;
-  }
-  .#{$classname}-main {
-    @extend %o-grid-col;
-    @extend %o-grid-colspan-9;
-    @extend %o-grid-colspan-M12;
-    @extend %o-grid-colspan-S12;
-  }
-  .#{$classname}-layout--full {
-    @extend %o-grid-col;
-    @extend %o-grid-colspan-12;
-    @extend %o-grid-no-left-gutter;
-    @extend %o-grid-no-right-gutter;
-  }
+.o-techdocs {
+  background-color: oColorsGetColorFor(page, background);
+  @extend %o-ft-typography-body;
+}
+.o-techdocs-layout {
+  @extend %o-grid-row;
+}
+.o-techdocs-sidebar {
+  @extend %o-grid-col;
+  @extend %o-grid-no-left-gutter;
+  @extend %o-grid-colspan-3;
+  @extend %o-grid-colspan-M12;
+  @extend %o-grid-colspan-S12;
+}
+.o-techdocs-main {
+  @extend %o-grid-col;
+  @extend %o-grid-colspan-9;
+  @extend %o-grid-colspan-M12;
+  @extend %o-grid-colspan-S12;
+}
+.o-techdocs-layout--full {
+  @extend %o-grid-col;
+  @extend %o-grid-colspan-12;
+  @extend %o-grid-no-left-gutter;
+  @extend %o-grid-no-right-gutter;
 }

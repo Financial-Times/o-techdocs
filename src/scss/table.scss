@@ -1,9 +1,19 @@
-@mixin oTechdocsTable() {
-  div.o-techdocs-table {
-    overflow: auto;
-    width: 100%;
-  }
-  div.o-techdocs-table > table.o-table {
-    @extend #{'.o-table'} !optional;
-  }
+.o-techdocs-table-wrapper {
+  @extend %o-table-wrapper;
+}
+
+.o-techdocs-content table {
+  @extend %o-table-base;
+}
+
+.o-techdocs-table--row-stripes {
+  @extend %o-table-row-stripes;
+}
+
+.o-techdocs-table--horizontal-lines {
+  @extend %o-table-horizontal-lines;
+}
+
+.o-techdocs-table--vertical-lines {
+  @extend %o-table-vertical-lines;
 }

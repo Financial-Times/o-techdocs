@@ -2,7 +2,7 @@
     "demos": {
         "demo": {
             "template": "demos/src/demo.mustache",
-            "sass": "demos/src/demo.scss",
+            "sass": "main.scss",
             "js": "main.js",
             "bodyClasses": "o-techdocs"
         }

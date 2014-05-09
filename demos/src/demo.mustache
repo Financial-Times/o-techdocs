@@ -31,7 +31,7 @@
 
             <h1>Sample content (h1)</h1>
 
-            <p class="o-techdocs-leadbody">The following is sample content demonstrating all the built in styles supported by the tech docs module.  We use standard FT styles where possible, and basics such as headings (<code>H1</code> to <code>H5</code>), bulleted and numbered lists, inline links and <code>&lt;code&gt;</code> are obviously supported, but the style samples here are designed to better support technical use cases rather than editorial ones.</p>
+            <p class="o-techdocs-leadbody">The following is sample content demonstrating all the built in styles supported by the <strong>o-techdocs</strong> module.  We use standard FT styles where possible, and basics such as headings (<code>H1</code> to <code>H5</code>), bulleted and numbered lists, inline links and <code>&lt;code&gt;</code> are obviously supported, but the style samples here are designed to better support technical use cases rather than editorial ones.</p>
 
             <p>The code examples are in the source of this page.</p>
 
@@ -47,9 +47,13 @@
 
             <h2 id="tables">Tables</h2>
 
-            <p><a href="registry.origami.ft.com/components/o-table">o-table</a> is used for table styling. At a minimum, give tables a class of <code>o-table</code>, but see <strong>o-table</strong>'s documentation for more detail.</p>
+            <p>Tables within <code>o-techdocs-content</code> elements will be automatically styled using <a href="http://registry.origami.ft.com/components/o-table">o-table</a>.</p>
 
-            <table class='o-table o-table--horizontal-lines'>
+            <p><strong>o-table</strong> styling modifier classes can be applied to the table element, but using the class name <code>o-techdocs-table</code> instead of just <code>o-techdocs</code>. See <strong>o-table</strong>'s <a href="http://registry.origami.ft.com/components/o-table">documentation</a> for more information.</p>
+
+            <p>For example, this table has been given the class <code>o-techdocs-table--horizontal-lines</code>:</p>
+
+            <table class='o-techdocs-table--horizontal-lines'>
                 <thead>
                     <tr><th>Repo name</th><th>Host name</th></tr>
                 </thead>
@@ -60,7 +64,7 @@
                 </tbody>
             </table>
 
-            To make tables horizontally scrollable on small screens, wrap them in a div, ie <code>&lt;div class="o-techdocs-table">&lt;table>...&lt;/table>&lt;/div></code> or include the techdocs JavaScript module, which will do that for you.
+            To make tables horizontally scrollable on small screens, wrap them in <code>&lt;div class="o-techdocs-table-wrapper">&lt;/div></code> or include the <strong>o-techdocs</strong> JavaScript module, which will do that for you.
 
             <h2 id='code'>Code</h2>
 
