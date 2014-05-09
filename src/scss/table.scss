@@ -2,9 +2,7 @@
   @extend %o-table-wrapper;
 }
 
-.o-techdocs-table,
-.o-techdocs-table > table,
-.o-techdocs-content > table {
+.o-techdocs-content table {
   @extend %o-table-base;
 }
 
