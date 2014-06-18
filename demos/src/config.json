@@ -1,10 +1,11 @@
 {
-    "demos": {
-        "demo": {
+    "demos": [
+        {
+            "name": "demo",
             "template": "demos/src/demo.mustache",
-            "sass": "main.scss",
+            "sass": "demos/src/demo.scss",
             "js": "main.js",
             "bodyClasses": "o-techdocs"
         }
-    }
+    ]
 }
