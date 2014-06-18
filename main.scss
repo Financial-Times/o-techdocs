@@ -6,6 +6,10 @@ $o-grid-is-fluid: true;
 @import 'o-ft-typography/main';
 @import 'o-table/main';
 
+$o-ft-header-brand-color: _oColorsGetPaletteColor(pink-tint3) !default;
+@import 'o-ft-header/main';
+
+@import 'src/scss/functions';
 @import 'src/scss/page';
 @import 'src/scss/nav';
 @import 'src/scss/content';
