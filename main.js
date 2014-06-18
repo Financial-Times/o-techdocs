@@ -7,7 +7,7 @@ require('o-table').wrap('.o-techdocs-content table', 'o-techdocs-table-wrapper')
 
 (function(){
     "use strict";
-    var Header = require('o-ft-header/main'),
+    var Header = require('o-ft-header'),
         headerEl = document.querySelector('[data-o-component="o-ft-header"]');
     if (headerEl) {
         new Header(headerEl);
