@@ -1,4 +1,5 @@
 .o-techdocs-nav {
+  @extend %o-hierarchical-nav--vertical-theme;
   margin-top: 0;
   margin-bottom: 10px;
   list-style: none;
@@ -20,21 +21,25 @@
     background-color: oColorsGetColorFor(docs-nav-active, background);
     color: oColorsGetColorFor(link-hover, text);
   }
+
+  .o-hierarchical-nav__parent > a > i {
+    float: right;
+  }
+
+  [data-o-hierarchical-nav-level="2"] {
+    margin-bottom: 0;
+    padding: 0;
+    li > a {
+      padding: 3px 10px 3px 40px;
+      font-size: 90%;
+    }
+    [aria-selected="true"] > a {
+      padding-left: 25px;
+    }
+  }
 }
 
-.o-techdocs-nav__sub {
-  margin-bottom: 0;
-  padding: 0;
-  li > a {
-    padding: 3px 10px 3px 40px;
-    font-size: 90%;
-  }
-  .o-techdocs-nav__item--active > a {
-    padding-left: 25px;
-  }
-}
-
-.o-techdocs-nav__item--active {
+[aria-selected="true"] {
   > a {
     padding-left: 15px;
     background-color: oColorsGetColorFor(docs-nav-active, background);

@@ -1,20 +1,21 @@
 {
-    "name": "o-techdocs",
-    "dependencies": {
-        "o-grid": "^2.1.1",
-        "o-colors": "^2.3.9",
-        "o-ft-typography": "^1.9.0",
-        "o-table": "^1.1.0",
-        "o-ft-header": "^2.1.1",
-        "jquery": "2.0"
-    },
-    "main": [
-    	"main.js",
-    	"main.scss"
-    ],
-    "ignore": [
-    	"test",
-        "Gruntfile.js",
-        "package.json"
-    ]
+  "name": "o-techdocs",
+  "dependencies": {
+    "o-grid": "^2.1.1",
+    "o-colors": "^2.3.9",
+    "o-ft-typography": "^1.9.0",
+    "o-table": "^1.1.0",
+    "o-ft-header": "^2.2.0",
+    "jquery": "2.0",
+    "o-hierarchical-nav": "~0.2.2"
+  },
+  "main": [
+    "main.js",
+    "main.scss"
+  ],
+  "ignore": [
+    "test",
+    "Gruntfile.js",
+    "package.json"
+  ]
 }
