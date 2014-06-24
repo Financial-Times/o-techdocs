@@ -60,11 +60,11 @@ $(function() {
 				}
 			});
 			if (candidate && candidate.id != currentheading) {
-				list.find('li').removeClass('o-techdocs-nav__item--active');
-				$('#o-techdocs-pagenav-'+candidate.id).addClass('o-techdocs-nav__item--active');
+				list.find('li').removeAttr('aria-selected');
+				$('#o-techdocs-pagenav-'+candidate.id).attr('aria-selected', 'true');
 				currentheading = candidate.id;
 			} else if (!candidate) {
-				list.find('li').removeClass('o-techdocs-nav__item--active');
+				list.find('li').removeAttr('aria-selected');
 			}
 
 			// Dock or undock the navigation menu
@@ -95,5 +95,8 @@ $(function() {
 		$('.o-techdocs-content h2[id]').each(function() {
 			headings.push({id:this.id, pos:$(this).offset().top});
 		});
+
+		// Open the parent for the selected element
+		$('[aria-selected="true"]').closest('.o-hierarchical-nav__parent').attr('aria-expanded', 'true');
 	});
 });

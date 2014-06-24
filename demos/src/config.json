@@ -5,7 +5,7 @@
             "template": "demos/src/demo.mustache",
             "sass": "demos/src/demo.scss",
             "js": "main.js",
-            "bodyClasses": "o-techdocs"
+            "bodyClasses": "o-techdocs o-hoverable-on"
         }
     ]
 }
