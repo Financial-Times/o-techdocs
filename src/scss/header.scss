@@ -12,7 +12,7 @@
 
 .o-techdocs__subtitle {
   margin: 0;
-  color: #333;
+  color: #333333;
 }
 
 .o-techdocs-footer {
@@ -20,9 +20,9 @@
   @extend %o-ft-typography-body;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px dotted #999;
+  border-top: 1px dotted #999999;
   a {
-    float: right;
     @extend %o-ft-typography-body__link;
+    float: right;
   }
 }

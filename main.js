@@ -8,15 +8,15 @@ require('o-table').wrap('.o-techdocs-content table', 'o-techdocs-table-wrapper')
 (function(){
     "use strict";
     var Header = require('o-ft-header'),
-    	oHierarchicalNav = require('o-hierarchical-nav'),
+    	OHierarchicalNav = require('o-hierarchical-nav'),
         headerEl = document.querySelector('[data-o-component="o-ft-header"]'),
-        navEl = document.querySelector('[data-o-component="o-hierarchical-nav"');
+        navEl = document.querySelector('[data-o-component="o-hierarchical-nav"]');
 
     if (headerEl) {
         new Header(headerEl);
     }
 
     if (navEl) {
-    	new oHierarchicalNav(navEl);
+    	new OHierarchicalNav(navEl);
     }
 }());

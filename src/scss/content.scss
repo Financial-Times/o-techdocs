@@ -7,8 +7,8 @@
     @extend %o-ft-typography-heading-xlarge;
   }
   h2 {
-    margin-top: 1.5em;
     @extend %o-ft-typography-heading-large;
+    margin-top: 1.5em;
   }
   h3 {
     @extend %o-ft-typography-article-subheading1;
@@ -76,15 +76,15 @@
   }
   img:not(.transparent) {
     padding: 1px;
-    border: 2px solid #bbb;
-    background-color: white;
+    border: 2px solid #bbbbbb;
+    background-color: #ffffff;
   }
   .alert-big {
     margin: 1em 0;
     font-size: 150%;
   }
 
-  /* Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags) */
+  // Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)
   li > p {
     margin-bottom: 0;
   }
@@ -113,7 +113,7 @@
     font-family: sans-serif;
     font-weight: normal;
     margin-left: 10px;
-    color: #999;
+    color: #999999;
   }
   h1:hover .o-techdocs__permalink,
   h2:hover .o-techdocs__permalink,
@@ -128,18 +128,18 @@
     margin-top: 0;
   }
 
-  /* Theme GitHub gists to match FT style */
-  .gist .gist-file {
+  // Theme GitHub gists to match FT style
+  .gist-file {
     border: 1px solid oColorsGetColorFor(block-code-sample, border);
     border-radius: 4px;
-    .gist-data {
+  }
+  .gist-data {
+    background-color: oColorsGetColorFor(block-code-sample, background);
+    .line-numbers {
+      color: oColorsGetColorFor(block-code-sample, text);
       background-color: oColorsGetColorFor(block-code-sample, background);
-      .line-numbers {
-        color: oColorsGetColorFor(block-code-sample, text);
-        background-color: oColorsGetColorFor(block-code-sample, background);
-        border-right: none;
-        padding: 1em;
-      }
+      border-right: 0;
+      padding: 1em;
     }
   }
 }

@@ -5,7 +5,7 @@
   list-style: none;
   padding: 0;
   li {
-    background-color: oColorsGetColorFor(box, background)
+    background-color: oColorsGetColorFor(box, background);
   }
   a {
     position: relative;
@@ -43,7 +43,7 @@
   > a {
     padding-left: 15px;
     background-color: oColorsGetColorFor(docs-nav-active, background);
-    color: black;
+    color: #000000;
     font-weight: bold;
     pointer-events: none;
   }
