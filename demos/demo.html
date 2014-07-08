@@ -1,20 +1,33 @@
-<header data-o-component="o-ft-header" data-o-version="{{o-ft-header.module-version}}" class="o-ft-header">
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="o-useragent-ie7 o-hoverable-on"> <![endif]-->
+<!--[if IE 8]>         <html class="o-useragent-ie8 o-hoverable-on"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="o-hoverable-on"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>o-techdocs: demo demo</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <style>body { margin: 0; }.demo-js .o--if-nojs { display: none; }</style>
+    <link rel="stylesheet" href="/bundles/css?modules=o-techdocs" />
+</head>
+<body class="o-techdocs o-hoverable-on test">
+    <script>(function(d) {var b = d.getElementsByTagName('body')[0];b.className = b.className + ' demo-js';})(document);</script>
+    
+    <header data-o-component="o-ft-header" data-o-version="2.3.2" class="o-ft-header">
     <div class="o-ft-header__container">
-        <div class="o-ft-header__brand">
-            <div class="o-ft-header__logo o-ft-header__logo--ft">
-                <a href="http://www.ft.com"><abbr title="Financial Times">FT</abbr></a>
-                <span class="o-techdocs__logo"></span>
-            </div>
-        </div>
         <div class="o-ft-header__content">
             <div class="o-ft-header__primary">
-                <div class="o-ft-header__primary__left">
-                    <h1 class="o-ft-header__title">Documentation for a thing</h1>
+                <div class="o-ft-header__primary__left demo__primary--placeholder">
+                    <div class="o-ft-header__logo o-ft-header__logo--ft">
+                        <a href="http://www.ft.com"><abbr title="Financial Times">FT</abbr></a>
+                    </div>
+                    <h1 class="o-ft-header__title">Documentation title</h1>
                 </div>
             </div>
             <div class="o-ft-header__secondary">
-                <div class="o-ft-header__secondary__left">
-                    <p class="o-techdocs__subtitle">Subtitle for the documentation</p>
+                <div class="o-ft-header__secondary__left demo__secondary--placeholder">
+                    <div class="o-ft-header__breadcrumb">
+                        <a href="/">Bread</a> » crumb
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,7 +39,7 @@
 
     <!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
     <div class="o-techdocs-sidebar">
-        <nav class="o-hierarchical-nav o-techdocs-nav" data-o-component="o-hierarchical-nav" data-o-version="{{o-hierarchical-nav.module-version}}" data-o-hierarchical-nav-orientiation='vertical'>
+        <nav class="o-hierarchical-nav o-techdocs-nav" data-o-component="o-hierarchical-nav" data-o-version="0.2.2" data-o-hierarchical-nav-orientiation='vertical'>
             <ul data-o-hierarchical-nav-level="1">
                 <li><a href="#">Link title 1</a></li>
                 <li><a href="#">Link title 2</a></li>
@@ -46,7 +59,7 @@
 
     <!-- Main content (outer div for layout, inner for formatting) -->
     <div class='o-techdocs-main'>
-        <div class='o-techdocs-content'>
+        		<div class='o-techdocs-content'>
 
             <h1>Sample content (h1)</h1>
 
@@ -93,25 +106,27 @@
 
             <?prettify linenums=1?>
 <pre><code>$.ajax({
-    url: "/api/getWeather",
-    data: {
-    zipcode: 97201
+    "url": "/api/getWeather",
+    "data": {
+        "zipcode": 97201
     },
-    success: function( data ) {
-    $( "#weather-temp" ).html( "<strong>" + data + "</strong> degrees" );
+    "success": function( data ) {
+        $( "#weather-temp" ).html( "<strong>" + data + "</strong> degrees" );
     }
-    });</code></pre>
+});</code></pre>
 
             <p>To trigger syntax highlighting using <a href='https://code.google.com/p/google-code-prettify/'>prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code>, or add the <code>prettify</code> class, as documented in the <a href='https://code.google.com/p/google-code-prettify/wiki/GettingStarted'>prettify wifi</a>.  Since prettify auto-loads all its lang files, we use it from the Cloudflare CDN.  Put this at the end of your <code>&lt;body&gt;</code> to enable support:</p>
 
-<pre><code>&lt;script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'>&lt;/script>
-    &lt;script>prettyPrint()&lt;/script></code></pre>
+            <?prettify linenums=1?>
+            <pre><code>
+&lt;script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'>&lt;/script>
+&lt;script>prettyPrint()&lt;/script></code></pre>
 
             <h2 id='images'>Images</h2>
 
-            <p>Images will be auto-scaled to the width of the content area and given a border.</p>
+            <p>Images will be auto-scaled to no more than the width of the content area (but will not be scaled up) and given a border.</p>
 
-            <p><img src='src/image.jpg' alt='Montreal skyline' /></p>
+            <p><img src='http://im.ft-static.com/content/images/a1b992be-fb2c-43a8-92d8-6044c0f10408.img' alt='Image from FT.com' /></p>
 
             <h2 id='asides'>Asides</h2>
 
@@ -138,6 +153,7 @@
         <div class='o-techdocs-content'>
             <p>Continue with formatted content in another <code>.o-techdocs-content</code> element after your raw content is finished.</p>
         </div>
+
     </div>
 
 </div> <!-- /row containing nav and content -->
@@ -149,3 +165,8 @@
 <!-- Add this if you want syntax highlighting on your page -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'></script>
 <script>prettyPrint()</script>
+
+    <script src="/bundles/js?modules=o-techdocs"></script>
+    <script src="//registry.origami.ft.com/embedapi?autoload=resize"></script>
+</body>
+</html>

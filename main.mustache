@@ -1,0 +1,61 @@
+<header data-o-component="o-ft-header" data-o-version="2.3.2" class="o-ft-header">
+    <div class="o-ft-header__container">
+        <div class="o-ft-header__content">
+            <div class="o-ft-header__primary">
+                <div class="o-ft-header__primary__left demo__primary--placeholder">
+                    <div class="o-ft-header__logo o-ft-header__logo--ft">
+                        <a href="http://www.ft.com"><abbr title="Financial Times">FT</abbr></a>
+                    </div>
+                    <h1 class="o-ft-header__title">{{oTechdocs.title}}</h1>
+                </div>
+            </div>
+            <div class="o-ft-header__secondary">
+                <div class="o-ft-header__secondary__left demo__secondary--placeholder">
+                    <div class="o-ft-header__breadcrumb">
+                        {{{oTechdocs.breadcrumb}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation menu and main content -->
+<div class="o-techdocs-layout">
+
+    {{#oTechdocs.hasSidebar}}
+    <!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
+    <div class="o-techdocs-sidebar">
+        <nav class="o-hierarchical-nav o-techdocs-nav" data-o-component="o-hierarchical-nav" data-o-version="0.2.2" data-o-hierarchical-nav-orientiation='vertical'>
+            <ul data-o-hierarchical-nav-level="1">
+                <li><a href="#">Link title 1</a></li>
+                <li><a href="#">Link title 2</a></li>
+                <li><a href="#">Link title 3</a></li>
+                <li class="o-hierarchical-nav__parent"><a href="#">Link title 4 <i class="o-hierarchical-nav__parent__down-arrow"></i></a>
+                    <ul data-o-hierarchical-nav-level="2">
+                        <li><a href="#">Sub link 1</a></li>
+                        <li aria-selected="true"><a href="#">Sub link 2 (active)</a></li>
+                        <li><a href="#">Sub link 3</a></li>
+                        <li><a href="#">Sub link 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Link title 5</a></li>
+            </ul>
+        </nav>
+    </div>
+    {{/oTechdocs.hasSidebar}}
+
+    <!-- Main content (outer div for layout, inner for formatting) -->
+    <div class='o-techdocs-main'>
+        {{{oTechdocs.content}}}
+    </div>
+
+</div> <!-- /row containing nav and content -->
+
+<div class='o-techdocs-footer'>
+    <p><a href='http://github.com/financial-times/ft-origami'>View project on Github</a>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
+</div>
+
+<!-- Add this if you want syntax highlighting on your page -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'></script>
+<script>prettyPrint()</script>
