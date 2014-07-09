@@ -6,7 +6,7 @@ $o-grid-is-fluid: true;
 @import 'o-ft-typography/main';
 @import 'o-table/main';
 
-$o-ft-header-brand-color: _oColorsGetPaletteColor(pink-tint3) !default;
+$o-ft-header-brand-color: oColorsGetPaletteColor(blue) !default;
 @import 'o-ft-header/main';
 @import 'o-hierarchical-nav/main';
 

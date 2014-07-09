@@ -3,11 +3,14 @@
 }
 
 .o-techdocs__logo {
-  display: block;
-  margin-left: 80px;
-  width: 74px;
-  height: 75px;
-  background: url(oTechdocsGetHeaderIcon(grey-tint2, grey-tint3)) no-repeat center 10px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  background-size: 60px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-image: url(oTechdocsGetHeaderIcon(grey-tint2, grey-tint3));
 }
 
 .o-techdocs__subtitle {
