@@ -3,6 +3,8 @@
 require('./src/js/nav');
 require('./src/js/reveals');
 require('./src/js/permalinks');
+require('./src/js/gist-it');
+
 require('o-table').wrap('.o-techdocs-content table', 'o-techdocs-table-wrapper');
 
 (function(){

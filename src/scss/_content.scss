@@ -129,17 +129,15 @@
   }
 
   // Theme GitHub gists to match FT style
-  .gist-file {
-    border: 1px solid oColorsGetColorFor(block-code-sample, border);
-    border-radius: 4px;
-  }
   .gist-data {
-    background-color: oColorsGetColorFor(block-code-sample, background);
     .line-numbers {
       color: oColorsGetColorFor(block-code-sample, text);
       background-color: oColorsGetColorFor(block-code-sample, background);
       border-right: 0;
       padding: 1em;
     }
+  }
+  .gist-meta{
+    display: none;
   }
 }
