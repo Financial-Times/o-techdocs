@@ -1,30 +1,10 @@
-<header data-o-component="o-ft-header" data-o-version="2.3.2" class="o-ft-header">
-    <div class="o-ft-header__container">
-        <div class="o-ft-header__content">
-            <div class="o-ft-header__primary">
-                <div class="o-ft-header__primary__left demo__primary--placeholder">
-                    <div class="o-ft-header__logo o-ft-header__logo--ft">
-                        <a href="http://www.ft.com"><abbr title="Financial Times">FT</abbr></a>
-                        <span class="o-techdocs__logo"></span>
-                    </div>
-                    <h1 class="o-ft-header__title">{{oTechdocs.title}}</h1>
-                </div>
-            </div>
-            <div class="o-ft-header__secondary">
-                <div class="o-ft-header__secondary__left demo__secondary--placeholder">
-                    <div class="o-ft-header__breadcrumb">
-                        {{{oTechdocs.breadcrumb}}}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+
+{{{ o-ft-header }}}
 
 <!-- Navigation menu and main content -->
 <div class="o-techdocs-layout">
 
-    {{#oTechdocs.hasSidebar}}
+    {{#o-techdocs.hasSidebar}}
     <!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
     <div class="o-techdocs-sidebar">
         <nav class="o-hierarchical-nav o-techdocs-nav" data-o-component="o-hierarchical-nav" data-o-version="0.2.2" data-o-hierarchical-nav-orientiation='vertical'>
@@ -44,11 +24,11 @@
             </ul>
         </nav>
     </div>
-    {{/oTechdocs.hasSidebar}}
+    {{/o-techdocs.hasSidebar}}
 
     <!-- Main content (outer div for layout, inner for formatting) -->
     <div class='o-techdocs-main'>
-        {{{oTechdocs.content}}}
+        {{{o-techdocs.content}}}
     </div>
 
 </div> <!-- /row containing nav and content -->
