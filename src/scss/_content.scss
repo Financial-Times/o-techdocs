@@ -125,9 +125,12 @@
       margin-top: 0;
     }
   }
-
   .o-techdocs__aside--toggleable {
     display: none;
+  }
+
+  iframe {
+    max-width: 100%;
   }
 
   .o-techdocs__permalink {
