@@ -11,7 +11,7 @@
       padding: 6px 10px 6px 30px;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: oColorsGetColorFor(link text);
+      color: oColorsGetColorFor(link, text);
       text-decoration: none;
     }
     > a:hover {
