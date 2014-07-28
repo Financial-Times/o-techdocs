@@ -1,9 +1,44 @@
-@include oFtTypographyIncludeFont(body);
-
 .o-techdocs {
-  @extend %o-ft-typography-body;
-  background-color: oColorsGetColorFor(page, background);
+  background-color: oColorsGetPaletteColor(white);
+  .o-ft-header {
+    margin-bottom: 45px;
+  }
+  .o-techdocs__logo {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    background-size: 60px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-image: url(oTechdocsGetHeaderIcon(grey-tint2, grey-tint3));
+  }
+  footer {
+    @extend %o-grid-row;
+    @extend %o-grid-col;
+    @extend %o-grid-colspan-12;
+    background: #333;
+    color: #888;
+    font-size: 12px;
+    margin-top: 20px;
+    overflow: hidden;
+    font-family: sans-serif;
+    p {
+      margin: 1.5em;
+    }
+    .right {
+      float: right;
+    }
+    a {
+      color: rgb(189, 180, 153);
+      text-decoration: none;
+      &:hover {
+        color: rgb(253, 226, 143);
+      }
+    }
+  }
 }
+
 .o-techdocs-layout {
   @extend %o-grid-row;
 }
@@ -23,6 +58,4 @@
 .o-techdocs-layout--full {
   @extend %o-grid-col;
   @extend %o-grid-colspan-12;
-  @extend %o-grid-no-left-gutter;
-  @extend %o-grid-no-right-gutter;
 }

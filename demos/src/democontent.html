@@ -12,19 +12,13 @@
 
             <h4>Headings (h4)</h4>
 
-            <h5>Headings (h5)</h5>
-
-            <p>For best results and to enable the nav to auto-index your content easily, use <code>H1</code> once at the top of the document and then correctly nest any uses of <code>H2</code> to <code>H5</code>.
+            <p>For best results and to enable in-page navigation to be automatically created, use <code>H1</code> once at the top of the document and then correctly nest any uses of <code>H2</code> to <code>H4</code>.  If you do this properly, in-page navigation will appear on the left in dark red under the main navigation (if you have a sidebar).
 
             <h2 id="tables">Tables</h2>
 
-            <p>Tables within <code>o-techdocs-content</code> elements will be automatically styled using <a href="http://registry.origami.ft.com/components/o-table">o-table</a>.</p>
+            <p>Use normal HTML markup for tables.</p>
 
-            <p><strong>o-table</strong> styling modifier classes can be applied to the table element, but using the class name <code>o-techdocs-table</code> instead of just <code>o-techdocs</code>. See <strong>o-table</strong>'s <a href="http://registry.origami.ft.com/components/o-table">documentation</a> for more information.</p>
-
-            <p>For example, this table has been given the class <code>o-techdocs-table--horizontal-lines</code>:</p>
-
-            <table class='o-techdocs-table--horizontal-lines'>
+            <table>
                 <thead>
                     <tr><th>Repo name</th><th>Host name</th></tr>
                 </thead>
@@ -35,7 +29,18 @@
                 </tbody>
             </table>
 
-            To make tables horizontally scrollable on small screens, wrap them in <code>&lt;div class="o-techdocs-table-wrapper">&lt;/div></code> or include the <strong>o-techdocs</strong> JavaScript module, which will do that for you.
+            <p>Add <code>scope="row"</code> to <code>tr</code> tags to indicate header cells that apply to a row rather than a column:</p>
+
+            <table>
+                <tbody>
+                    <tr><th scope='row'>Model name</th><td>Macbook Air</td></tr>
+                    <tr><th scope='row'>Processor name</th><td>Intel Core i7</td></tr>
+                    <tr><th scope='row'>Total number of cores</th><td>2</td></tr>
+                    <tr><th scope='row'>Boot ROM version</th><td>MBA61.0099.B01</td></tr>
+                </tbody>
+            </table>
+
+            <p>To make tables horizontally scrollable on small screens, wrap them in <code>&lt;div class="o-techdocs-table-wrapper">&lt;/div></code> or include the <strong>o-techdocs</strong> JavaScript module, which will do that for you.</p>
 
             <h2 id='code'>Code</h2>
 
@@ -57,15 +62,110 @@
             <p>To trigger syntax highlighting using <a href='https://code.google.com/p/google-code-prettify/'>prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code>, or add the <code>prettify</code> class, as documented in the <a href='https://code.google.com/p/google-code-prettify/wiki/GettingStarted'>prettify wifi</a>.  Since prettify auto-loads all its lang files, we use it from the Cloudflare CDN.  Put this at the end of your <code>&lt;body&gt;</code> to enable support:</p>
 
             <?prettify linenums=1?>
-            <pre><code>
-&lt;script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'>&lt;/script>
+            <pre><code>&lt;script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'>&lt;/script>
 &lt;script>prettyPrint()&lt;/script></code></pre>
+
+            <p>For large code samples, the code block may be constrained to a reasonable height and made to scroll vertically by adding a <code>long-code</code> class to the <code>pre</code> tag (here we also opt out of syntax highlighting and line numbering):
+
+            <pre class='long-code'>50 random words
+===============
+aquacade
+volatilise
+boniface
+centesimo
+unfaked
+unraftered
+upstart
+hemocyanin
+meaninglessness
+whitehead
+oxime
+angelus
+obtundent
+readvertisement
+limited
+misemphasized
+subintegumental
+nates
+ethyle
+gasolineless
+biophysics
+reprography
+soluble
+qualitative
+vaporetto
+raphaelle
+equipollency
+taipei
+lunacy
+symploce
+overconcentrated
+logograph
+ashur
+uncondemned
+nipigon
+gomerel
+impregnation
+insaneness
+avifaunally
+projectable
+disputing
+sprightful
+nonschematically
+normandy
+basis
+discomposing
+stroking
+auberon
+bioptic
+pockier</code></pre>
+
+            <h3>Variables</h3>
+
+            <p>To highlight variables that should be replaced by real values, use the <code>var</code> tag.  This is often used as part of part of a table, to document parameters to an API or method:</p>
+
+            <p><code>GET /v1/polyfill<var>{minify}</var>.<var>{type}</var></code></p>
+
+            <table>
+            <tbody>
+                <tr>
+                    <th>Param</th><th>Where</th><th>Description</th>
+                </tr><tr>
+                    <td><var>minify</var></td>
+                    <td>URL</td>
+                    <td>
+                        Whether to minify the result.  If omitted, output will include the full polyfill source, and a header comment with debug information about the user agent and which polyfills have been included in the bundle.  If set to <code>.min</code>, the output will be minified.
+                    </td>
+                </tr><tr>
+                    <td><var>type</var></td>
+                    <td>URL</td>
+                    <td>
+                        Set to <code>js</code> or <code>css</code>.
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+
+            <p>Unlike <code>code</code>, text marked up as <code>var</code> cannot wrap, so should be restricted to short names unlikely to fill the width of the screen.</p>
+
 
             <h2 id='images'>Images</h2>
 
-            <p>Images will be auto-scaled to no more than the width of the content area (but will not be scaled up) and given a border.</p>
+            <p>Images will be auto-scaled to no more than the width of the content area (but will not be scaled up) and given a border.  To separate images from text, wrap the image element in a paragraph tag:</p>
 
             <p><img src='http://im.ft-static.com/content/images/a1b992be-fb2c-43a8-92d8-6044c0f10408.img' alt='Image from FT.com' /></p>
+
+            <p>If you want to suppress the border (normally because your image is transparent), add a <code>transparent</code> class to the <code>img</code> tag:</p>
+
+            <p><img class='transparent' src='http://www.w3.org/TR/PNG/png-figures/fig53.png' alt='W3C diagram' /></p>
+
+            <p>Multiple images can be laid side by side in a single paragraph:</p>
+
+            <p>
+                <img src='http://im.ft-static.com/content/images/76a339be-1656-11e4-8210-00144feabdc0.img'/>
+                <img src='http://im.ft-static.com/content/images/64dba0d4-5e9c-42a8-98c8-b6859c905c56.img'/>
+                <img src='http://im.ft-static.com/content/images/cee92e8b-517e-43ee-950c-bdd4e736299e.img'/>
+            </p>
 
             <h2 id='asides'>Asides</h2>
 

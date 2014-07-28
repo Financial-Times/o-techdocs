@@ -1,19 +1,19 @@
 .o-techdocs-table-wrapper {
-  @extend %o-table-wrapper;
+  overflow: scroll;
 }
 
 .o-techdocs-content table {
-  @extend %o-table-base;
-}
+  border-collapse: collapse;
+  border: 1px solid $o-techdocs-color-grey2;
+  margin: 1em 0;
 
-.o-techdocs-table--row-stripes {
-  @extend %o-table-row-stripes;
-}
-
-.o-techdocs-table--horizontal-lines {
-  @extend %o-table-horizontal-lines;
-}
-
-.o-techdocs-table--vertical-lines {
-  @extend %o-table-vertical-lines;
+  > thead > tr > th, > thead > tr > td, > tbody > tr > td, > tbody > tr > th {
+    @extend %o-techdocs-font;
+    padding: 10px 6px;
+    border-bottom: 1px solid $o-techdocs-color-grey2;
+    text-align: left;
+  }
+  > thead > tr > th, > tbody > tr > th {
+    background-color: $o-techdocs-color-grey2;
+  }
 }
