@@ -106,7 +106,7 @@
 
             <p>To make tables horizontally scrollable on small screens, wrap them in <code>&lt;div class="o-techdocs-table-wrapper">&lt;/div></code> or include the <strong>o-techdocs</strong> JavaScript module, which will do that for you.</p>
 
-            <h2 id='code'>Code</h2>
+            <h2 id='code'>Source code</h2>
 
             <p>For inline code, wrap the content in a <code>&lt;code&gt;</code> tag.</p>
 
@@ -123,15 +123,9 @@
     }
 });</code></pre>
 
-            <p>To trigger syntax highlighting using <a href='https://code.google.com/p/google-code-prettify/'>prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code>, or add the <code>prettify</code> class, as documented in the <a href='https://code.google.com/p/google-code-prettify/wiki/GettingStarted'>prettify wifi</a>.  Since prettify auto-loads all its lang files, we use it from the Cloudflare CDN.  Put this at the end of your <code>&lt;body&gt;</code> to enable support:</p>
-
-            <?prettify linenums=1?>
-            <pre><code>&lt;script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'>&lt;/script>
-&lt;script>prettyPrint()&lt;/script></code></pre>
-
             <p>For large code samples, the code block may be constrained to a reasonable height and made to scroll vertically by adding a <code>long-code</code> class to the <code>pre</code> tag (here we also opt out of syntax highlighting and line numbering):
 
-            <pre class='long-code'>50 random words
+            <pre class='long-code'><code>50 random words
 ===============
 aquacade
 volatilise
@@ -184,6 +178,15 @@ auberon
 bioptic
 pockier</code></pre>
 
+            <h3>Syntax highlighting</h3>
+
+            <p>To trigger syntax highlighting using <a href='https://code.google.com/p/google-code-prettify/'>prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code>, or add the <code>prettify</code> class, as documented in the <a href='https://code.google.com/p/google-code-prettify/wiki/GettingStarted'>prettify wifi</a>.  Since prettify auto-loads all its lang files, we use it from the Cloudflare CDN.  Put this at the end of your <code>&lt;body&gt;</code> to enable support:</p>
+
+            <?prettify linenums=1?>
+            <pre><code>&lt;script src='//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js'>&lt;/script>
+&lt;script>prettyPrint()&lt;/script></code></pre>
+
+
             <h3>Variables</h3>
 
             <p>To highlight variables that should be replaced by real values, use the <code>var</code> tag.  This is often used as part of part of a table, to document parameters to an API or method:</p>
@@ -211,6 +214,19 @@ pockier</code></pre>
             </table>
 
             <p>Unlike <code>code</code>, text marked up as <code>var</code> cannot wrap, so should be restricted to short names unlikely to fill the width of the screen.</p>
+
+            <h3>Terminal input</h3>
+
+            <p>For terminal input, use the <code>kbd</code> (for input) and <code>output</code> (for output) tags, inside a <code>&lt;pre class='cli'&gt;</code>:</p>
+
+            <pre class='cli'><kbd>jekyll serve --watch --baseurl=''</kbd>
+<output>Configuration file: /Users/user.name/sandboxes/local/style-guide/_config.yml
+Source: /Users/user.name/sandboxes/local/style-guide
+Destination: /Users/user.name/sandboxes/local/style-guide/_site
+Generating... done.
+Auto-regeneration: enabled
+Server address: http://0.0.0.0:4000
+Server running... press ctrl-c to stop.</output></pre>
 
 
             <h2 id='images'>Images</h2>
