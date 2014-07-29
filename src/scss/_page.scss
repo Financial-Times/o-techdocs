@@ -17,24 +17,16 @@
     @extend %o-grid-row;
     @extend %o-grid-col;
     @extend %o-grid-colspan-12;
-    background: #333;
-    color: #888;
+    @extend %o-techdocs-font;
     font-size: 12px;
     margin-top: 20px;
     overflow: hidden;
-    font-family: sans-serif;
+    border-top: 1px dotted $o-techdocs-color-grey3;
     p {
       margin: 1.5em;
     }
     .right {
       float: right;
-    }
-    a {
-      color: rgb(189, 180, 153);
-      text-decoration: none;
-      &:hover {
-        color: rgb(253, 226, 143);
-      }
     }
   }
 }
