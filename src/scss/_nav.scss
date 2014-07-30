@@ -1,62 +1,56 @@
 .o-techdocs-nav {
-  @extend %o-hierarchical-nav--vertical-theme;
-  margin-top: 0;
-  margin-bottom: 10px;
-  list-style: none;
+  margin: 0;
   padding: 0;
-  li {
-    background-color: oColorsGetColorFor(box, background);
+  list-style: none;
+  > li {
+    @extend %o-techdocs-font;
+    > a {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      padding: 6px 10px 6px 30px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: oColorsGetColorFor(link, text);
+      text-decoration: none;
+    }
+    > a:hover {
+      background-color: $o-techdocs-color-grey2;
+    }
   }
-  a {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    padding: 6px 10px 6px 30px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: oColorsGetColorFor("link-text");
-    text-decoration: none;
-  }
-  a:hover {
-    background-color: oColorsGetColorFor(docs-nav-active, background);
-    color: oColorsGetColorFor(link-hover, text);
+  > li[aria-selected="true"] {
+    > a {
+      padding-left: 15px;
+      color: oColorsGetPaletteColor(black);
+      font-weight: bold;
+      pointer-events: none;
+    }
+    > a:before {
+      display: inline-block;
+      width: 15px;
+      content: "▸";
+    }
   }
 
-  .o-hierarchical-nav__parent > a > i {
-    float: right;
-  }
-
-  [data-o-hierarchical-nav-level="2"] {
+  .o-techdocs-nav--sub {
     margin-bottom: 0;
     padding: 0;
-    li > a {
+    > li > a {
       padding: 3px 10px 3px 40px;
       font-size: 90%;
     }
-    [aria-selected="true"] > a {
+    > li[aria-selected="true"] > a {
       padding-left: 25px;
     }
   }
-}
 
-[aria-selected="true"] {
-  > a {
-    padding-left: 15px;
-    background-color: oColorsGetColorFor(docs-nav-active, background);
-    color: #000000;
-    font-weight: bold;
-    pointer-events: none;
-  }
-  > a:before {
-    display: inline-block;
-    width: 15px;
-    content: "▸";
-  }
 }
-
 .o-techdocs-nav--page {
+  border-top: 1px dotted $o-techdocs-color-grey2;
+  margin-top: 20px;
+  padding-top: 20px;
   li a {
-    color: oColorsGetColorFor(docs-inpagenav-link, text);
+    color: oColorsGetPaletteColor(claret);
   }
 }
 

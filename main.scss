@@ -1,19 +1,24 @@
+
+/* Origami imports. Order of variable definitions is important */
 $o-grid-mq-type: width;
 $o-grid-is-fluid: true;
-
 @import 'o-grid/main';
 @import 'o-colors/main';
-@import 'o-ft-typography/main';
-@import 'o-table/main';
-
-$o-ft-header-brand-color: oColorsGetPaletteColor(blue) !default;
+$o-ft-header-brand-color: #4A95DB;
 @import 'o-ft-header/main';
-@import 'o-hierarchical-nav/main';
+
+
+$o-techdocs-color-grey1: #f5f5f5;
+$o-techdocs-color-grey2: #eeeeee;
+$o-techdocs-color-grey3: #cccccc;
+
+$o-techdocs-color-charcoal: #222222;
+$o-techdocs-color-green: #008800;
+$o-techdocs-color-purple: #B400B4;
 
 @import 'src/scss/functions';
+@import 'src/scss/content';
 @import 'src/scss/page';
 @import 'src/scss/nav';
-@import 'src/scss/content';
 @import 'src/scss/table';
-@import 'src/scss/header';
 @import 'src/scss/prettify';

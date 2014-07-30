@@ -1,41 +1,61 @@
-@include oFtTypographyIncludeFont(heading);
-@include oFtTypographyIncludeFont(body);
+%o-techdocs-font {
+  font-family: "Helvetica Neue" sans-serif;
+  color: $o-techdocs-color-charcoal;
+  font-size: 14px;
+  line-height: 1.5;
+  a {
+    color: oColorsGetColorFor(link, text);
+  }
+}
 
 .o-techdocs-content {
-  @extend %o-ft-typography-body;
+
+  @extend %o-techdocs-font;
+
   h1 {
-    @extend %o-ft-typography-heading-xlarge;
+    font-weight: normal;
+    font-size: 34px;
   }
   h2 {
-    @extend %o-ft-typography-heading-large;
-    margin-top: 1.5em;
+    font-weight: normal;
+    font-size: 26px;
+    border-bottom: 1px solid $o-techdocs-color-grey2;
+    padding-bottom: 2px;
+    margin: 35px 0 15px 0;
   }
   h3 {
-    @extend %o-ft-typography-article-subheading1;
+    font-weight: normal;
+    font-size: 21px;
+    margin: 30px 0 15px 0;
   }
   h4 {
-    @extend %o-ft-typography-heading-medium;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 25px 0 15px 0;
   }
-  h5 {
-    @extend %o-ft-typography-heading-small;
+  p, h5, h6 {
+    font-weight: normal;
+    font-size: 14px;
   }
   .o-techdocs-leadbody {
-    @extend %o-ft-typography-body--lead;
-  }
-  a {
-    @extend %o-ft-typography-body__link;
+
   }
   code,
-  pre {
+  pre,
+  var,
+  kbd,
+  output {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   }
   code {
-    padding: 2px 4px;
-    border-radius: 4px;
-    background-color: oColorsGetColorFor(inline-code-sample, background);
-    color: oColorsGetColorFor(inline-code-sample, text);
+    background-color: $o-techdocs-color-grey1;
+    color: $o-techdocs-color-green;
     white-space: pre-wrap;
-    font-size: 90%;
+  }
+  var {
+    font-style: italic;
+    white-space: nowrap;
+    color: $o-techdocs-color-purple;
   }
 
   pre {
@@ -43,35 +63,54 @@
     overflow-x: auto;
     margin: 0 0 10px;
     padding: 9.5px;
-    border: 1px solid oColorsGetColorFor(block-code-sample, border);
-    border-radius: 4px;
-    background-color: oColorsGetColorFor(block-code-sample, background);
-    color: oColorsGetColorFor(block-code-sample, text);
+    border: 1px solid $o-techdocs-color-grey2;
+    background-color: $o-techdocs-color-grey1;
+    color: $o-techdocs-color-charcoal;
     word-wrap: inherit;
     word-break: break-all;
-    font-size: 13px;
-    line-height: 1.428571429;
+    font-size: 11px;
+    line-height: 1.5;
+    > code {
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      color: inherit;
+      white-space: pre;
+      font-size: inherit;
+      li.L1, li.L3, li.L5, li.L7, li.L9 {
+        /* Stripe rows if desired */
+      }
+    }
+  }
+  pre.long-code {
+    overflow-y: scroll;
+    max-height: 340px;
+  }
+  pre.cli {
+    background: $o-techdocs-color-charcoal;
+    kbd,
+    output {
+      padding-left:15px;
+      display: inline-block;
+    }
+    kbd {
+      color: white;
+      &::before {
+        content: '>';
+        margin-left: -15px;
+        float:left;
+      }
+    }
+    output {
+      color: $o-techdocs-color-grey3;
+    }
   }
 
   pre.prettyprint {
     margin-bottom: 20px;
   }
-  pre code {
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    color: inherit;
-    white-space: pre;
-    font-size: inherit;
-  }
 
-  .pre-scrollable {
-    overflow-y: scroll;
-    max-height: 340px;
-  }
   img {
-    display: block;
-    margin: 0 auto;
     max-width: 100%;
   }
   img:not(.transparent) {
@@ -79,9 +118,8 @@
     border: 2px solid #bbbbbb;
     background-color: #ffffff;
   }
-  .alert-big {
-    margin: 1em 0;
-    font-size: 150%;
+  .alert-big, .o-techdocs-leadbody {
+    font-size: 130%;
   }
 
   // Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)
@@ -91,21 +129,28 @@
 
   aside {
     margin-bottom: 20px;
-    padding: 19px;
-    min-height: 20px;
-    border: 1px solid oColorsGetColorFor(docs-aside box, border);
-    border-radius: 4px;
-    background-color: oColorsGetColorFor(box, background);
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    h4 {
+    padding: 15px;
+    overflow: hidden;
+    border-left: 5px solid oColorsGetPaletteColor(claret);
+    background-color: $o-techdocs-color-grey1;
+    > h4, > h5 {
+      color: oColorsGetPaletteColor(claret);
+      font-size: 18px;
+      margin: 14px 0 0 0;
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
+    > *:first-child {
       margin-top: 0;
-      margin-bottom: 5px;
     }
   }
-
   .o-techdocs__aside--toggleable {
     display: none;
+  }
+
+  iframe {
+    max-width: 100%;
   }
 
   .o-techdocs__permalink {
@@ -113,15 +158,17 @@
     font-family: sans-serif;
     font-weight: normal;
     margin-left: 10px;
-    color: #999999;
-  }
-  h1:hover .o-techdocs__permalink,
-  h2:hover .o-techdocs__permalink,
-  h3:hover .o-techdocs__permalink,
-  h4:hover .o-techdocs__permalink,
-  h5:hover .o-techdocs__permalink,
-  h6:hover .o-techdocs__permalink {
-    display: inline;
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 80%;
+    h1:hover > &,
+    h2:hover > &,
+    h3:hover > &,
+    h4:hover > &,
+    h5:hover > &,
+    h6:hover > & {
+      display: inline;
+    }
   }
 
   > *:first-child {
@@ -137,7 +184,7 @@
       padding: 1em;
     }
   }
-  .gist-meta{
+  .gist-meta {
     display: none;
   }
 }

@@ -23,10 +23,6 @@ $(function() {
 	// Determine border tolerance for highlighting nav sections (once immediately, and then on resize)
 	calcScrollMargin();
 
-	// Calculate the dock point for the menu
-	dockpoint = list.offset().top;
-	dockmargin = 50;
-
 	function calcScrollMargin() {
 		scrollmargin = $(window).height() / 8;
 	}
@@ -96,7 +92,8 @@ $(function() {
 			headings.push({id:this.id, pos:$(this).offset().top});
 		});
 
-		// Open the parent for the selected element
-		$('[aria-selected="true"]').closest('.o-hierarchical-nav__parent').attr('aria-expanded', 'true');
+		// Calculate the dock point for the menu
+		dockpoint = list.offset().top;
+		dockmargin = 50;
 	});
 });
