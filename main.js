@@ -7,11 +7,8 @@ require('./src/js/permalinks');
 require('./src/js/gist-it');
 
 (function(){
-    "use strict";
-    var Header = require('o-ft-header'),
-        headerEl = document.querySelector('[data-o-component="o-ft-header"]');
-
-    if (headerEl) {
-        new Header(headerEl);
-    }
+	"use strict";
+	document.addEventListener("DOMContentLoaded", function() {
+		document.dispatchEvent(new CustomEvent('o.DOMContentLoaded'));
+	});
 }());
