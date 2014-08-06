@@ -162,14 +162,14 @@
     color: #cccccc;
     text-decoration: none;
     font-size: 80%;
-    h1:hover > &,
-    h2:hover > &,
-    h3:hover > &,
-    h4:hover > &,
-    h5:hover > &,
-    h6:hover > & {
-      display: inline;
-    }
+  }
+  h1:hover > .o-techdocs__permalink,
+  h2:hover > .o-techdocs__permalink,
+  h3:hover > .o-techdocs__permalink,
+  h4:hover > .o-techdocs__permalink,
+  h5:hover > .o-techdocs__permalink,
+  h6:hover > .o-techdocs__permalink {
+    display: inline;
   }
 
   > *:first-child {
