@@ -5,6 +5,7 @@ require('./src/js/tables');
 require('./src/js/reveals');
 require('./src/js/permalinks');
 require('./src/js/gist-it');
+require('o-ft-header');
 
 (function(){
 	"use strict";
