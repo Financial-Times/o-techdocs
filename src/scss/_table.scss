@@ -1,21 +1,17 @@
-
 .o-techdocs-content {
   table {
     border-collapse: collapse;
     border: 1px solid $o-techdocs-color-grey2;
     margin: 1em 0;
 
-    > thead > tr > td,
-    > tbody > tr > td,
-    > thead > tr > th,
-    > tbody > tr > th {
+    td,
+    th {
       @extend %o-techdocs-font;
       padding: 10px 6px;
       border-bottom: 1px solid $o-techdocs-color-grey2;
       text-align: left;
     }
-    > thead > tr > th,
-    > tbody > tr > th {
+    th {
       background-color: $o-techdocs-color-grey2;
     }
   }

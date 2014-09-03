@@ -1,7 +1,8 @@
-/*global $,require*/
+/*global require*/
 /**
  * Show permalink markers on headings with an ID
  */
+'use strict';
 
 var $ = require('jquery');
 

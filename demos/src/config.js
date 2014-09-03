@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     "demos": {
         "demo": {
@@ -6,11 +8,11 @@ module.exports = {
             "js": "main.js",
             "data": {
                 "o-ft-header": (function() {
-                    return require('fs').readFileSync('demos/src/demoheader.html')
+                    return require('fs').readFileSync('demos/src/demoheader.html');
                 }()),
                 "o-techdocs": {
                     "content": (function() {
-                        return require('fs').readFileSync('demos/src/democontent.html')
+                        return require('fs').readFileSync('demos/src/democontent.html');
                     }()),
                     "hasSidebar": true
                 }

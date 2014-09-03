@@ -1,7 +1,8 @@
-/*global $,require*/
+/*global require*/
 /**
  * Support displaying additional content on clicking reveal links
  */
+'use strict';
 
 var $ = require('jquery');
 
@@ -14,5 +15,5 @@ $(function() {
 				e.preventDefault();
 			}
 		}
-	})
+	});
 });

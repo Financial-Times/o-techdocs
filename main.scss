@@ -1,10 +1,10 @@
 
-/* Origami imports. Order of variable definitions is important */
+// Origami imports. Order of variable definitions is important 
 $o-grid-mq-type: width;
 $o-grid-is-fluid: true;
 @import 'o-grid/main';
 @import 'o-colors/main';
-$o-ft-header-brand-color: #4A95DB;
+$o-ft-header-brand-color: #4a95db;
 @import 'o-ft-header/main';
 
 
@@ -14,8 +14,9 @@ $o-techdocs-color-grey3: #cccccc;
 
 $o-techdocs-color-charcoal: #222222;
 $o-techdocs-color-green: #008800;
-$o-techdocs-color-purple: #B400B4;
+$o-techdocs-color-purple: #b400b4;
 
+@import 'src/scss/color-use-cases';
 @import 'src/scss/functions';
 @import 'src/scss/content';
 @import 'src/scss/page';
