@@ -22,7 +22,11 @@
     margin-top: 20px;
     overflow: hidden;
     border-top: 1px dotted $o-techdocs-color-grey3;
-    padding: 10px 0;
+
+    /* Do not use padding shortcut to avoid overriding left and right padding added by grid */
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     p {
       margin: 0.7em 0;
     }
