@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = {
-    "demos": {
-        "demo": {
+    "demos": [
+        {
+            "name": "demo",
             "template": "main.mustache",
             "sass": "main.scss",
             "js": "main.js",
@@ -19,5 +20,5 @@ module.exports = {
             },
             "bodyClasses": "o-techdocs o-hoverable-on"
         }
-    }
+    ]
 };
