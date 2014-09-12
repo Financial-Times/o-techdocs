@@ -1,0 +1,14 @@
+@include oColorsSetUseCase(o-techdocs-block-code-sample, background, pink-tint1);
+@include oColorsSetUseCase(o-techdocs-block-code-sample, border, pink-tint2);
+@include oColorsSetUseCase(o-techdocs-block-code-sample, text, grey-tint5);
+
+@include oColorsSetUseCase(o-techdocs-status-ok, text, white);
+@include oColorsSetUseCase(o-techdocs-status-ok, background, green);
+@include oColorsSetUseCase(o-techdocs-status-error, text, white);
+@include oColorsSetUseCase(o-techdocs-status-error, background, red);
+@include oColorsSetUseCase(o-techdocs-status-severity-1, text, white);
+@include oColorsSetUseCase(o-techdocs-status-severity-1, background, blue-tint1);
+@include oColorsSetUseCase(o-techdocs-status-severity-2, text, white);
+@include oColorsSetUseCase(o-techdocs-status-severity-2, background, orange-tint1);
+@include oColorsSetUseCase(o-techdocs-status-severity-3, text, white);
+@include oColorsSetUseCase(o-techdocs-status-severity-3, background, yellow-tint1);

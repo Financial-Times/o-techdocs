@@ -1,7 +1,8 @@
-/*global $,require*/
+/*global require*/
 /**
  * Wrap tables
  */
+'use strict';
 
 var $ = require('jquery');
 

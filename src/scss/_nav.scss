@@ -31,20 +31,20 @@
       content: "▸";
     }
   }
-
-  .o-techdocs-nav--sub {
-    margin-bottom: 0;
-    padding: 0;
-    > li > a {
-      padding: 3px 10px 3px 40px;
-      font-size: 90%;
-    }
-    > li[aria-selected="true"] > a {
-      padding-left: 25px;
-    }
-  }
-
 }
+
+.o-techdocs-nav--sub {
+  margin-bottom: 0;
+  padding: 0;
+  > li > a {
+    padding: 3px 10px 3px 40px;
+    font-size: 90%;
+  }
+  > li[aria-selected="true"] > a {
+    padding-left: 25px;
+  }
+}
+
 .o-techdocs-nav--page {
   border-top: 1px dotted $o-techdocs-color-grey2;
   margin-top: 20px;

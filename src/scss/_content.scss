@@ -21,17 +21,17 @@
     font-size: 26px;
     border-bottom: 1px solid $o-techdocs-color-grey2;
     padding-bottom: 2px;
-    margin: 35px 0 15px 0;
+    margin: 35px 0 15px;
   }
   h3 {
     font-weight: normal;
     font-size: 21px;
-    margin: 30px 0 15px 0;
+    margin: 30px 0 15px;
   }
   h4 {
     font-weight: normal;
     font-size: 18px;
-    margin: 25px 0 15px 0;
+    margin: 25px 0 15px;
   }
   p, h5, h6 {
     font-weight: normal;
@@ -77,9 +77,9 @@
       color: inherit;
       white-space: pre;
       font-size: inherit;
-      li.L1, li.L3, li.L5, li.L7, li.L9 {
-        /* Stripe rows if desired */
-      }
+    }
+    li.l1, li.l3, li.l5, li.l7, li.l9 {
+      // Stripe rows if desired 
     }
   }
   pre.long-code {
@@ -90,7 +90,7 @@
     background: $o-techdocs-color-charcoal;
     kbd,
     output {
-      padding-left:15px;
+      padding-left: 15px;
       display: inline-block;
     }
     kbd {
@@ -98,7 +98,7 @@
       &::before {
         content: '>';
         margin-left: -15px;
-        float:left;
+        float: left;
       }
     }
     output {
@@ -136,7 +136,7 @@
     > h4, > h5 {
       color: oColorsGetPaletteColor(claret);
       font-size: 18px;
-      margin: 14px 0 0 0;
+      margin: 14px 0 0;
     }
     > *:last-child {
       margin-bottom: 0;
@@ -179,8 +179,8 @@
   // Theme GitHub gists to match FT style
   .gist-data {
     .line-numbers {
-      color: oColorsGetColorFor(block-code-sample, text);
-      background-color: oColorsGetColorFor(block-code-sample, background);
+      color: oColorsGetColorFor(o-techdocs-block-code-sample, text);
+      background-color: oColorsGetColorFor(o-techdocs-block-code-sample, background);
       border-right: 0;
       padding: 1em;
     }

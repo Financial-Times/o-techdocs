@@ -1,8 +1,9 @@
-/*global $,require*/
+/*global require*/
 /**
  * Add a second navigation menu to quickly navigate to
  * anchors in the page.
  */
+'use strict';
 
 var $ = require('jquery');
 
@@ -55,7 +56,7 @@ $(function() {
 					return false;
 				}
 			});
-			if (candidate && candidate.id != currentheading) {
+			if (candidate && candidate.id !== currentheading) {
 				list.find('li').removeAttr('aria-selected');
 				$('#o-techdocs-pagenav-'+candidate.id).attr('aria-selected', 'true');
 				currentheading = candidate.id;
