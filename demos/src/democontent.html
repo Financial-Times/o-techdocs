@@ -1,10 +1,11 @@
-		<div class='o-techdocs-content'>
+		<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css'>
+        <div class='o-techdocs-content'>
 
             <h1>Sample content (h1)</h1>
 
-            <p class="o-techdocs-leadbody">The following is sample content demonstrating all the built in styles supported by the <strong>o-techdocs</strong> module.  We use standard FT styles where possible, and basics such as headings (<code>H1</code> to <code>H5</code>), bulleted and numbered lists, inline links and <code>&lt;code&gt;</code> are obviously supported, but the style samples here are designed to better support technical use cases rather than editorial ones.</p>
+            <p class="o-techdocs-leadbody">The following is sample content demonstrating all the built in styles supported by the <strong>o-techdocs</strong> module.  Basics such as headings (<code>H1</code> to <code>H5</code>), bulleted and numbered lists, inline links and <code>&lt;code&gt;</code> are obviously supported, and additonal style components have been designed to better support technical use cases rather than editorial ones.</p>
 
-            <p>The code examples are in the source of this page.</p>
+            <p>The code examples are in the source of this page.  To apply tag-based styling, wrap content in a <code>.o-techdocs-content</code> class.  Tag-based styling will only apply to tags that are direct descendents of <code>.o-techdocs-content</code>.  Class-based styles will work anywhere.</p>
 
             <h2 id='headings'>Headings (h2)</h2>
 
@@ -16,16 +17,16 @@
 
             <h2 id="tables">Tables</h2>
 
-            <p>Use normal HTML markup for tables.</p>
+            <p>Use normal HTML markup for tables. Add a <code>right-align</code> class to cells for right alignment, normally for numeric data.</p>
 
             <table>
                 <thead>
-                    <tr><th>Repo name</th><th>Host name</th></tr>
+                    <tr><th>Repo name</th><th>Host name</th><th class='right-align'>Count</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>tweet-service</td><td>tweet.webservices.ft.com</td></tr>
-                    <tr><td>nav-service</td><td>nav.webservices.ft.com</td></tr>
-                    <tr><td>mostpopular-service</td><td>mostpopular.webservices.ft.com</td></tr>
+                    <tr><td>tweet-service</td><td>tweet.webservices.ft.com</td><td class='right-align'>65</td></tr>
+                    <tr><td>nav-service</td><td>nav.webservices.ft.com</td><td class='right-align'>5,231</td></tr>
+                    <tr><td>mostpopular-service</td><td>mostpopular.webservices.ft.com</td><td class='right-align'>7</td></tr>
                 </tbody>
             </table>
 
@@ -42,7 +43,7 @@
 
             <p>To make tables horizontally scrollable on small screens, wrap them in <code>&lt;div class="o-techdocs-table-wrapper">&lt;/div></code> or include the <strong>o-techdocs</strong> JavaScript module, which will do that for you.</p>
 
-            <h2 id='code'>Source code</h2>
+            <h2 id='code'>Source code and syntax</h2>
 
             <p>For inline code, wrap the content in a <code>&lt;code&gt;</code> tag.</p>
 
@@ -151,7 +152,7 @@ pockier</code></pre>
 
             <p>Unlike <code>code</code>, text marked up as <code>var</code> cannot wrap, so should be restricted to short names unlikely to fill the width of the screen.</p>
 
-            <h3>Terminal input</h3>
+            <h3>Terminal/console input and output</h3>
 
             <p>For terminal input, use the <code>kbd</code> (for input) and <code>output</code> (for output) tags, inside a <code>&lt;pre class='cli'&gt;</code>:</p>
 
@@ -208,6 +209,107 @@ Server running... press ctrl-c to stop.</output></pre>
         <div class='o-techdocs-content'>
             <p>Continue with formatted content in another <code>.o-techdocs-content</code> element after your raw content is finished.</p>
 
+
+            <h2 id='cards'>Cards</h2>
+
+            <p>Cards are incedibly useful for a variety of applications, normally for teasers, records, or alerts.  For more information on good uses of cards, see <a href='https://speakerdeck.com/christse/patterns-of-card-ui-design'>Patterns of card UI design</a>.  Use <code>.o-techdocs-card</code> to create a card.
+
+            <div class='o-techdocs-card'>
+                <div class='o-techdocs-card__context'>
+                    <img src='http://png-3.findicons.com/files/icons/1714/dropline_neu/128/network_server.png' class='o-techdocs-card__icon'/>
+                    <div class='o-techdocs-card__heading'>
+                        <div class='o-techdocs-card__title'>Origami registry</div>
+                        <div class='o-techdocs-card__subtitle'>registry.origami.ft.com</div>
+                    </div>
+                </div>
+                <div class='o-techdocs-card__content'>Standard card, with card icon and action buttons.  Cards are limited to 500px wide.</div>
+                <div class='o-techdocs-card__actions'>
+                    <button class='o-techdocs-card__actionbutton'>Button 1</button>
+                    <button class='o-techdocs-card__actionbutton'>Button 2</button>
+                </div>
+            </div>
+
+            <div class='o-techdocs-card'>
+                <div class='o-techdocs-card__context'>
+                    <div class='o-techdocs-card__icon'><i class="fa fa-calendar"></i></div>
+                    <div class='o-techdocs-card__heading'>
+                        <div class='o-techdocs-card__title'>Card with no content</div>
+                        <div class='o-techdocs-card__subtitle'>Just a title and optional subtitle, using Font Awesome icon</div>
+                    </div>
+                    <div class='o-techdocs-card__quickactions'>
+                        <button class='o-techdocs-card__actionbutton'>Button</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class='o-techdocs-card'>
+                <div class='o-techdocs-card__context'>
+                    <div class='o-techdocs-card__heading'>
+                        <div class='o-techdocs-card__title'>Title only, no icon or subtitle</div>
+                    </div>
+                    <div class='o-techdocs-card__quickactions'>
+                        <button class='o-techdocs-card__actionbutton'>Button</button>
+                    </div>
+                </div>
+            </div>
+
+            <a href='' class='o-techdocs-card'>
+                <div class='o-techdocs-card__context'>
+                    <div class='o-techdocs-card__heading'>
+                        <div class='o-techdocs-card__title'>Whole card is clickable</div>
+                    </div>
+                </div>
+                <div class='o-techdocs-card__content'>
+                    Make the whole card clickable by using an <code>&lt;a&gt;</code> tag instead of a <code>&lt;div&gt;</code>
+                </div>
+            </a>
+
+            <p>Cards can also be themed to denote severities (useful for monitoring applications) and are quite effective when combined with <a href='http://registry.origami.ft.com/components/o-grid'>o-grid</a>:</p>
+
+            <!-- Load o-grid just for this demo, since it's not part of techdocs -->
+            <link rel='stylesheet' href='//build.origami.ft.com/bundles/css?modules=o-grid@^2.1.5' />
+
+            <div class='o-grid-row' style='margin-left: -10px; margin-right: -10px'>
+                <div data-o-grid-colspan='12 M6 L4 XL3'>
+                    <a href='' class='o-techdocs-card'>
+                        <div class='o-techdocs-card__context'>
+                            <div class='o-techdocs-card__heading'>
+                                <div class='o-techdocs-card__title'>FT Labs utilities</div>
+                                <div class='o-techdocs-card__subtitle'>utils.labs.ft.com</div>
+                            </div>
+                        </div>
+                        <div class='o-techdocs-card__content'>Standard clickable card</div>
+                    </a>
+                </div>
+                <div data-o-grid-colspan='12 M6 L4 XL3'>
+                    <div class='o-techdocs-card o-techdocs-card--sev1'>
+                        <div class='o-techdocs-card__context'>
+                            <div class='o-techdocs-card__heading'>
+                                <div class='o-techdocs-card__title'>Origami registry</div>
+                                <div class='o-techdocs-card__subtitle'>registry.origami.ft.com</div>
+                            </div>
+                        </div>
+                        <div class='o-techdocs-card__content'>"Severity 1" theme, with actions (Icons can be used in action buttons)</div>
+                        <div class='o-techdocs-card__actions'>
+                            <button class='o-techdocs-card__actionbutton'><i class="fa fa-check-circle"></i> Acknowledge</button>
+                            <button class='o-techdocs-card__actionbutton'><i class="fa fa-plus-circle"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-o-grid-colspan='12 M6 L4 XL3'>
+                    <a href='' class='o-techdocs-card o-techdocs-card--sev2'>
+                        <div class='o-techdocs-card__context'>
+                            <div class='o-techdocs-card__heading'>
+                                <div class='o-techdocs-card__title'>Origami build service</div>
+                                <div class='o-techdocs-card__subtitle'>origin-pr.build.origami.ft.com</div>
+                            </div>
+                        </div>
+                        <div class='o-techdocs-card__content'>"Severity 2" theme, with a clickable card</div>
+                    </a>
+                </div>
+            </div>
+
+
             <h2 id='embedded-content'>Embedded content</h2>
 
             <p>You can also embed content into docs from other sources, like the <a href='http://registry.origami.ft.com'>Origami registry</a>.  In the following examples, one IFRAME has a fixed width (which will be overridden and reduced if the window is too narrow to contain it) and the other has a fluid 100% width.  The height of the IFRAMEs is set automatically based on their content, for which you need to include the registry embedder script.</p>
@@ -222,4 +324,8 @@ Server running... press ctrl-c to stop.</output></pre>
 
             <iframe style='width: 100%' scrolling='no' src='http://registry.origami.ft.com/components/o-ft-buttons/demos/visual/demos/individual.html?embed=1'></iframe>
 
-        </div>
+
+
+
+
+        </div> <!-- /o-techdocs-content -->
