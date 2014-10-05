@@ -1,7 +1,6 @@
 %o-techdocs-font {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: $o-techdocs-color-charcoal;
-  font-weight: 300;
   font-size: 15px;
   line-height: 1.5;
   a {
@@ -13,38 +12,27 @@
 
   @extend %o-techdocs-font;
 
-  h1 {
-    font-weight: normal;
+  > h1, > h2, > h3, > h4, > h5, > h6, > p {
+    font-weight: 300;
+  }
+  > h1 {
     font-size: 34px;
   }
-  h2 {
-    font-weight: normal;
+  > h2 {
     font-size: 26px;
     border-bottom: 1px solid $o-techdocs-color-grey2;
     padding-bottom: 2px;
     margin: 35px 0 15px;
   }
-  h3 {
-    font-weight: normal;
+  > h3 {
     font-size: 21px;
     margin: 30px 0 15px;
   }
-  h4 {
-    font-weight: normal;
+  > h4 {
     font-size: 18px;
     margin: 25px 0 15px;
   }
-  p, h5, h6 {
-    font-weight: normal;
-  }
-  .o-techdocs-leadbody {
-
-  }
-  code,
-  pre,
-  var,
-  kbd,
-  output {
+  > code, > pre, > var, > kbd, > output {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   }
   code {
@@ -58,7 +46,7 @@
     color: $o-techdocs-color-purple;
   }
 
-  pre {
+  > pre {
     display: block;
     overflow-x: auto;
     margin: 0 0 10px;
@@ -82,11 +70,11 @@
       // Stripe rows if desired
     }
   }
-  pre.long-code {
+  > pre.long-code {
     overflow-y: scroll;
     max-height: 340px;
   }
-  pre.cli {
+  > pre.cli {
     background: $o-techdocs-color-charcoal;
     kbd,
     output {
@@ -106,28 +94,31 @@
     }
   }
 
-  pre.prettyprint {
+  > pre.prettyprint {
     margin-bottom: 20px;
   }
 
-  img {
+  > img {
     max-width: 100%;
   }
-  img:not(.transparent) {
+  > img:not(.transparent) {
     padding: 1px;
     border: 2px solid #bbbbbb;
     background-color: #ffffff;
   }
-  .alert-big, .o-techdocs-leadbody {
+  > .alert-big,
+  .o-techdocs-leadbody {
     font-size: 130%;
   }
 
   // Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)
-  li > p {
+  // Leaky tree allows for nested lists
+  > ul li > p,
+  > ol li > p {
     margin-bottom: 0;
   }
 
-  aside {
+  > aside {
     margin-bottom: 20px;
     padding: 15px;
     overflow: hidden;
@@ -149,7 +140,7 @@
     display: none;
   }
 
-  iframe {
+  > iframe {
     max-width: 100%;
     border: 0;
   }
@@ -163,12 +154,12 @@
     text-decoration: none;
     font-size: 80%;
   }
-  h1:hover > .o-techdocs__permalink,
-  h2:hover > .o-techdocs__permalink,
-  h3:hover > .o-techdocs__permalink,
-  h4:hover > .o-techdocs__permalink,
-  h5:hover > .o-techdocs__permalink,
-  h6:hover > .o-techdocs__permalink {
+  > h1:hover > .o-techdocs__permalink,
+  > h2:hover > .o-techdocs__permalink,
+  > h3:hover > .o-techdocs__permalink,
+  > h4:hover > .o-techdocs__permalink,
+  > h5:hover > .o-techdocs__permalink,
+  > h6:hover > .o-techdocs__permalink {
     display: inline;
   }
 
@@ -177,7 +168,7 @@
   }
 
   // Theme GitHub gists to match FT style
-  .gist-data {
+  > .gist-data {
     .line-numbers {
       color: oColorsGetColorFor(o-techdocs-block-code-sample, text);
       background-color: oColorsGetColorFor(o-techdocs-block-code-sample, background);
@@ -185,7 +176,7 @@
       padding: 1em;
     }
   }
-  .gist-meta {
+  > .gist-meta {
     display: none;
   }
 }

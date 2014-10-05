@@ -1,25 +1,33 @@
-.o-techdocs-content {
-  table {
-    border-collapse: collapse;
-    border: 1px solid $o-techdocs-color-grey2;
-    margin: 1em 0;
+.o-techdocs-content > table,
+.o-techdocs-table-wrapper > table {
+  border-collapse: collapse;
+  border: 1px solid $o-techdocs-color-grey2;
+  margin: 1em 0;
 
-    td,
-    th {
-      @extend %o-techdocs-font;
-      padding: 10px 6px;
-      border-bottom: 1px solid $o-techdocs-color-grey2;
-      text-align: left;
-    }
-    th {
-      background-color: $o-techdocs-color-grey2;
-    }
+  td,
+  th {
+    @extend %o-techdocs-font;
+    padding: 10px 6px;
+    border-bottom: 1px solid $o-techdocs-color-grey2;
+    text-align: left;
   }
-  > .o-techdocs-table-wrapper {
-    overflow: auto;
-    margin: 1em 0;
-    > table {
-      margin: 0;
-    }
+  th {
+    background-color: $o-techdocs-color-grey2;
+    color: $o-techdocs-color-charcoal-lighter;
+  }
+  td.right-align,
+  th.right-align {
+    text-align: right;
+  }
+  td.left-align,
+  tr.left-align {
+    text-align: left;
+  }
+}
+.o-techdocs-table-wrapper {
+  overflow: auto;
+  margin: 1em 0;
+  > table {
+    margin: 0;
   }
 }

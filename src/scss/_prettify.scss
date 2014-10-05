@@ -1,82 +1,84 @@
-.prettyprinted .linenums li {
-  color: #a7a59b;
-}
+.prettyprinted {
+  .linenums li {
+    color: #a7a59b;
+  }
 
-.pln {
-  color: #000000;
-}
+  .pln {
+    color: #000000;
+  }
 
-@media screen {
-  .str {
-    color: #008800;
+  @media screen {
+    .str {
+      color: #008800;
+    }
+    .kwd {
+      color: #000088;
+    }
+    .com {
+      color: #880000;
+    }
+    .typ {
+      color: #660066;
+    }
+    .lit {
+      color: #006666;
+    }
+    .pun, .opn, .clo {
+      color: #666600;
+    }
+    .tag {
+      color: #000088;
+    }
+    .atn {
+      color: #660066;
+    }
+    .atv {
+      color: #008800;
+    }
+    .dec, .var {
+      color: #660066;
+    }
+    .fun {
+      color: #ff0000;
+    }
   }
-  .kwd {
-    color: #000088;
-  }
-  .com {
-    color: #880000;
-  }
-  .typ {
-    color: #660066;
-  }
-  .lit {
-    color: #006666;
-  }
-  .pun, .opn, .clo {
-    color: #666600;
-  }
-  .tag {
-    color: #000088;
-  }
-  .atn {
-    color: #660066;
-  }
-  .atv {
-    color: #008800;
-  }
-  .dec, .var {
-    color: #660066;
-  }
-  .fun {
-    color: #ff0000;
-  }
-}
 
-@media print, projection {
-  .str {
-    color: #006600;
+  @media print, projection {
+    .str {
+      color: #006600;
+    }
+    .kwd {
+      color: #000066;
+      font-weight: bold;
+    }
+    .com {
+      color: #660000;
+      font-style: italic;
+    }
+    .typ {
+      color: #440044;
+      font-weight: bold;
+    }
+    .lit {
+      color: #004444;
+    }
+    .pun, .opn, .clo {
+      color: #444400;
+    }
+    .tag {
+      color: #000066;
+      font-weight: bold;
+    }
+    .atn {
+      color: #440044;
+    }
+    .atv {
+      color: #006600;
+    }
   }
-  .kwd {
-    color: #000066;
-    font-weight: bold;
-  }
-  .com {
-    color: #660000;
-    font-style: italic;
-  }
-  .typ {
-    color: #440044;
-    font-weight: bold;
-  }
-  .lit {
-    color: #004444;
-  }
-  .pun, .opn, .clo {
-    color: #444400;
-  }
-  .tag {
-    color: #000066;
-    font-weight: bold;
-  }
-  .atn {
-    color: #440044;
-  }
-  .atv {
-    color: #006600;
-  }
-}
 
-ol.linenums {
-  margin-top: 0;
-  margin-bottom: 0;
+  ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
