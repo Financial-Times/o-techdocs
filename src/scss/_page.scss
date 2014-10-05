@@ -3,16 +3,6 @@
   .o-ft-header {
     margin-bottom: 45px;
   }
-  .o-techdocs__logo {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    vertical-align: middle;
-    background-size: 60px;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    background-image: url(oTechdocsGetHeaderIcon(grey-tint2, grey-tint3));
-  }
   footer {
     @extend %o-grid-row;
     @extend %o-grid-col;
