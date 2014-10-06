@@ -185,6 +185,18 @@ pockier</code></pre>
 &lt;script>prettyPrint()&lt;/script></code></pre>
 
 
+            <h3>GitHub samples / gists</h3>
+
+            <p>GitHub gist embeds work, but using <a href='https://gist-it.appspot.com/'>Gist-It</a> is preferred.  To include one, write a <code>&lt;div&gt;</code> tag in the following form:</p>
+
+            <?prettify linenums=1?>
+            <pre><code>&lt;div class='o-techdocs-gist' data-repo="{{owner}}/{{repo}}" data-branch="{{branch}}" data-path="{{path}}">&lt;/div></code></pre>
+
+            Live example:
+
+            <div class='o-techdocs-gist' data-repo="financial-times/o-techdocs" data-branch="master" data-path="/origami.json"></div>
+
+
             <h3>Variables</h3>
 
             <p>To highlight variables that should be replaced by real values, use the <code>var</code> tag.  This is often used as part of part of a table, to document parameters to an API or method:</p>
