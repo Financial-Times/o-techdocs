@@ -1,10 +1,8 @@
-/* Card */
-
 .o-techdocs-card {
   max-width: 500px;
   width: 100%;
-  box-shadow: 1px 1px 3px 0px rgba(100,100,100,0.5);
-  background: #eee;
+  box-shadow: 1px 1px 3px 0px rgba(100, 100, 100, 0.5);
+  background: #eeeeee;
   display: block;
   border: 1px solid #f0f0f0;
   margin: 1em 0;
@@ -14,7 +12,7 @@ a.o-techdocs-card {
   text-decoration: none;
 }
 a.o-techdocs-card:hover {
-  box-shadow: 1px 1px 3px 2px #5296C4;
+  box-shadow: 1px 1px 3px 2px #5296c4;
 }
 a.o-techdocs-card .o-techdocs-card__actions,
 a.o-techdocs-card .o-techdocs-card__quickactions {
@@ -22,7 +20,7 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 }
 
 
-/* Context: top of card */
+// Context: top of card
 
 .o-techdocs-card__context {
   padding: 10px;
@@ -30,7 +28,7 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
   display: flex;
 }
 .o-techdocs-card__context + .o-techdocs-card__content {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
 }
 .o-techdocs-card__icon {
   width: 30px;
@@ -66,7 +64,7 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 }
 
 
-/* Content */
+// Content
 
 .o-techdocs-card__content {
   padding: 10px;
@@ -74,37 +72,37 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 }
 
 
-/* Action bar */
+// Action bar
 
 .o-techdocs-card__actions {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
 }
 .o-techdocs-card__actionbutton {
-  border: none;
+  border: 0;
   margin: 0px 3px 0px 0px;
   padding: 8px;
-  background-color: #ddd;
+  background-color: #dddddd;
   font-size: 13px;
   cursor: pointer;
 }
 .o-techdocs-card__actionbutton:hover {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 
-/* Theme variations */
+// Theme variations
 
 .o-techdocs-card--sev1 .o-techdocs-card__context {
-  background-color: #c00;
+  background-color: #cc0000;
   color: white;
 }
 .o-techdocs-card--sev1 {
-  border-color: #c00
+  border-color: #cc0000;
 }
 .o-techdocs-card--sev2 .o-techdocs-card__context {
-  background-color: #F38800;
+  background-color: #f38800;
   color: white;
 }
 .o-techdocs-card--sev2 {
-  border-color: #F38800
+  border-color: #f38800;
 }

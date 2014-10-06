@@ -115,8 +115,7 @@
   }
 
   // Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)
-  ul li > p,
-  ol li > p {
+  li > p {
     margin-bottom: 0;
   }
 
@@ -178,11 +177,11 @@
     .gist-data {
       background-color: $o-techdocs-color-grey1;
       border-bottom: 0;
-     .line-numbers {
-        background-color: $o-techdocs-color-grey1;
-        border-right: 0;
-        padding: 1em;
-      }
+    }
+   .line-numbers {
+      background-color: $o-techdocs-color-grey1;
+      border-right: 0;
+      padding: 1em;
     }
     .gist-meta {
       display: none;
