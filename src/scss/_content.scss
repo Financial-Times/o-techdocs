@@ -12,24 +12,23 @@
 
   @extend %o-techdocs-font;
 
-  > h1, > h2, > h3, > h4, > aside > h4, > h5, > h6, > p {
+  h1, h2, h3, h4, h5, h6, p {
     font-weight: 300;
   }
-  > h1 {
+  h1 {
     font-size: 34px;
   }
-  > h2 {
+  h2 {
     font-size: 26px;
     border-bottom: 1px solid $o-techdocs-color-grey2;
     padding-bottom: 2px;
     margin: 35px 0 15px;
   }
-  > h3 {
+  h3 {
     font-size: 21px;
     margin: 30px 0 15px;
   }
-  > h4,
-  > aside > h4 {
+  h4 {
     font-size: 18px;
     margin: 25px 0 15px;
   }
@@ -155,12 +154,12 @@
     text-decoration: none;
     font-size: 80%;
   }
-  > h1:hover > .o-techdocs__permalink,
-  > h2:hover > .o-techdocs__permalink,
-  > h3:hover > .o-techdocs__permalink,
-  > h4:hover > .o-techdocs__permalink,
-  > h5:hover > .o-techdocs__permalink,
-  > h6:hover > .o-techdocs__permalink {
+  h1:hover > .o-techdocs__permalink,
+  h2:hover > .o-techdocs__permalink,
+  h3:hover > .o-techdocs__permalink,
+  h4:hover > .o-techdocs__permalink,
+  h5:hover > .o-techdocs__permalink,
+  h6:hover > .o-techdocs__permalink {
     display: inline;
   }
 
