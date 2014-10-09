@@ -4,14 +4,17 @@
   border: 1px solid $o-techdocs-color-grey2;
   margin: 1em 0;
 
-  td,
-  th {
+  > #{unquote("thead > tr > td")},
+  > #{unquote("tbody > tr > td")},
+  > #{unquote("thead > tr > th")},
+  > #{unquote("tbody > tr > th")} {
     @extend %o-techdocs-font;
     padding: 10px 6px;
     border-bottom: 1px solid $o-techdocs-color-grey2;
     text-align: left;
   }
-  th {
+  > #{unquote("thead > tr > th")},
+  > #{unquote("tbody > tr > th")} {
     background-color: $o-techdocs-color-grey2;
     color: $o-techdocs-color-charcoal-lighter;
   }

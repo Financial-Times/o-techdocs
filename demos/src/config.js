@@ -8,13 +8,9 @@ module.exports = {
             "sass": "main.scss",
             "js": "main.js",
             "data": {
-                "o-ft-header": (function() {
-                    return require('fs').readFileSync('demos/src/demoheader.html');
-                }()),
+                "o-ft-header": require('fs').readFileSync('demos/src/demoheader.html'),
                 "o-techdocs": {
-                    "content": (function() {
-                        return require('fs').readFileSync('demos/src/democontent.html');
-                    }()),
+                    "content": require('fs').readFileSync('demos/src/democontent.html'),
                     "hasSidebar": true
                 }
             },
