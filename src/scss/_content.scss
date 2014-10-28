@@ -1,189 +1,189 @@
 %o-techdocs-font {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: $o-techdocs-color-charcoal;
-  font-size: 15px;
-  line-height: 1.5;
-  a {
-    color: oColorsGetColorFor(link, text);
-  }
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: $o-techdocs-color-charcoal;
+	font-size: 15px;
+	line-height: 1.5;
+	a {
+		color: oColorsGetColorFor(link, text);
+	}
 }
 
 .o-techdocs-content {
 
-  @extend %o-techdocs-font;
+	@extend %o-techdocs-font;
 
-  h1, h2, h3, h4, h5, h6, p {
-    font-weight: 300;
-  }
-  h1 {
-    font-size: 34px;
-  }
-  h2 {
-    font-size: 26px;
-    border-bottom: 1px solid $o-techdocs-color-grey2;
-    padding-bottom: 2px;
-    margin: 35px 0 15px;
-  }
-  h3 {
-    font-size: 21px;
-    margin: 30px 0 15px;
-  }
-  h4 {
-    font-size: 18px;
-    margin: 25px 0 15px;
-  }
-  code, pre, var, kbd, output {
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  }
-  code {
-    background-color: $o-techdocs-color-grey1;
-    color: $o-techdocs-color-green;
-    white-space: pre-wrap;
-  }
-  var {
-    font-style: italic;
-    white-space: nowrap;
-    color: $o-techdocs-color-purple;
-  }
+	h1, h2, h3, h4, h5, h6, p {
+		font-weight: 300;
+	}
+	h1 {
+		font-size: 34px;
+	}
+	h2 {
+		font-size: 26px;
+		border-bottom: 1px solid $o-techdocs-color-grey2;
+		padding-bottom: 2px;
+		margin: 35px 0 15px;
+	}
+	h3 {
+		font-size: 21px;
+		margin: 30px 0 15px;
+	}
+	h4 {
+		font-size: 18px;
+		margin: 25px 0 15px;
+	}
+	code, pre, var, kbd, output {
+		font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	}
+	code {
+		background-color: $o-techdocs-color-grey1;
+		color: $o-techdocs-color-green;
+		white-space: pre-wrap;
+	}
+	var {
+		font-style: italic;
+		white-space: nowrap;
+		color: $o-techdocs-color-purple;
+	}
 
-  pre {
-    display: block;
-    overflow-x: auto;
-    margin: 0 0 10px;
-    padding: 9.5px;
-    border: 1px solid $o-techdocs-color-grey2;
-    background-color: $o-techdocs-color-grey1;
-    color: $o-techdocs-color-charcoal;
-    word-wrap: inherit;
-    word-break: break-all;
-    font-size: 11px;
-    line-height: 1.5;
-    > code {
-      padding: 0;
-      border: 0;
-      background-color: transparent;
-      color: inherit;
-      white-space: pre;
-      font-size: inherit;
-    }
-    li.l1, li.l3, li.l5, li.l7, li.l9 {
-      // Stripe rows if desired
-    }
-  }
-  pre.long-code {
-    overflow-y: scroll;
-    max-height: 340px;
-  }
-  pre.cli {
-    background: $o-techdocs-color-charcoal;
-    kbd,
-    output {
-      padding-left: 15px;
-      display: inline-block;
-    }
-    kbd {
-      color: white;
-      &::before {
-        content: '>';
-        margin-left: -15px;
-        float: left;
-      }
-    }
-    output {
-      color: $o-techdocs-color-grey3;
-    }
-  }
+	pre {
+		display: block;
+		overflow-x: auto;
+		margin: 0 0 10px;
+		padding: 9.5px;
+		border: 1px solid $o-techdocs-color-grey2;
+		background-color: $o-techdocs-color-grey1;
+		color: $o-techdocs-color-charcoal;
+		word-wrap: inherit;
+		word-break: break-all;
+		font-size: 11px;
+		line-height: 1.5;
+		> code {
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			color: inherit;
+			white-space: pre;
+			font-size: inherit;
+		}
+		li.l1, li.l3, li.l5, li.l7, li.l9 {
+			// Stripe rows if desired
+		}
+	}
+	pre.long-code {
+		overflow-y: scroll;
+		max-height: 340px;
+	}
+	pre.cli {
+		background: $o-techdocs-color-charcoal;
+		kbd,
+		output {
+			padding-left: 15px;
+			display: inline-block;
+		}
+		kbd {
+			color: white;
+			&::before {
+				content: '>';
+				margin-left: -15px;
+				float: left;
+			}
+		}
+		output {
+			color: $o-techdocs-color-grey3;
+		}
+	}
 
-  pre.prettyprint {
-    margin-bottom: 20px;
-  }
+	pre.prettyprint {
+		margin-bottom: 20px;
+	}
 
-  > img,
-  > p > img {
-    max-width: 100%;
-  }
-  > img:not(.transparent),
-  > p > img:not(.transparent) {
-    padding: 1px;
-    border: 2px solid #bbbbbb;
-    background-color: #ffffff;
-  }
-  > .alert-big,
-  .o-techdocs-leadbody {
-    font-size: 130%;
-  }
+	> img,
+	> p > img {
+		max-width: 100%;
+	}
+	> img:not(.transparent),
+	> p > img:not(.transparent) {
+		padding: 1px;
+		border: 2px solid #bbbbbb;
+		background-color: #ffffff;
+	}
+	> .alert-big,
+	.o-techdocs-leadbody {
+		font-size: 130%;
+	}
 
-  // Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)
-  li > p {
-    margin-bottom: 0;
-  }
+	// Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)
+	li > p {
+		margin-bottom: 0;
+	}
 
-  > aside {
-    margin-bottom: 20px;
-    padding: 15px;
-    overflow: hidden;
-    border-left: 5px solid oColorsGetPaletteColor(claret);
-    background-color: $o-techdocs-color-grey1;
-    > h4, > h5 {
-      color: oColorsGetPaletteColor(claret);
-      font-size: 18px;
-      margin: 14px 0 0;
-    }
-    > *:last-child {
-      margin-bottom: 0;
-    }
-    > *:first-child {
-      margin-top: 0;
-    }
-  }
-  .o-techdocs__aside--toggleable {
-    display: none;
-  }
+	> aside {
+		margin-bottom: 20px;
+		padding: 15px;
+		overflow: hidden;
+		border-left: 5px solid oColorsGetPaletteColor(claret);
+		background-color: $o-techdocs-color-grey1;
+		> h4, > h5 {
+			color: oColorsGetPaletteColor(claret);
+			font-size: 18px;
+			margin: 14px 0 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+		> *:first-child {
+			margin-top: 0;
+		}
+	}
+	.o-techdocs__aside--toggleable {
+		display: none;
+	}
 
-  iframe {
-    max-width: 100%;
-    border: 0;
-  }
+	iframe {
+		max-width: 100%;
+		border: 0;
+	}
 
-  .o-techdocs__permalink {
-    display: none;
-    font-family: sans-serif;
-    font-weight: normal;
-    margin-left: 10px;
-    color: #cccccc;
-    text-decoration: none;
-    font-size: 80%;
-  }
-  h1:hover > .o-techdocs__permalink,
-  h2:hover > .o-techdocs__permalink,
-  h3:hover > .o-techdocs__permalink,
-  h4:hover > .o-techdocs__permalink,
-  h5:hover > .o-techdocs__permalink,
-  h6:hover > .o-techdocs__permalink {
-    display: inline;
-  }
+	.o-techdocs__permalink {
+		display: none;
+		font-family: sans-serif;
+		font-weight: normal;
+		margin-left: 10px;
+		color: #cccccc;
+		text-decoration: none;
+		font-size: 80%;
+	}
+	h1:hover > .o-techdocs__permalink,
+	h2:hover > .o-techdocs__permalink,
+	h3:hover > .o-techdocs__permalink,
+	h4:hover > .o-techdocs__permalink,
+	h5:hover > .o-techdocs__permalink,
+	h6:hover > .o-techdocs__permalink {
+		display: inline;
+	}
 
-  > *:first-child {
-    margin-top: 0;
-  }
+	> *:first-child {
+		margin-top: 0;
+	}
 
-  // Theme GitHub gists to match FT style
-  // This styling still differs a bit from the <pre class='prettyprint'> styles so better to use the gist-it.appspot.com service
-  .gist, .gist-it-gist {
-    .gist-file {
-      border: 1px solid $o-techdocs-color-grey2;
-    }
-    .gist-data {
-      background-color: $o-techdocs-color-grey1;
-      border-bottom: 0;
-    }
-   .line-numbers {
-      background-color: $o-techdocs-color-grey1;
-      border-right: 0;
-      padding: 1em;
-    }
-    .gist-meta {
-      display: none;
-    }
-  }
+	// Theme GitHub gists to match FT style
+	// This styling still differs a bit from the <pre class='prettyprint'> styles so better to use the gist-it.appspot.com service
+	.gist, .gist-it-gist {
+		.gist-file {
+			border: 1px solid $o-techdocs-color-grey2;
+		}
+		.gist-data {
+			background-color: $o-techdocs-color-grey1;
+			border-bottom: 0;
+		}
+	.line-numbers {
+			background-color: $o-techdocs-color-grey1;
+			border-right: 0;
+			padding: 1em;
+		}
+		.gist-meta {
+			display: none;
+		}
+	}
 }

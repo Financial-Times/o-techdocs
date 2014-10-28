@@ -4,36 +4,36 @@
 <!-- Navigation menu and main content -->
 <div class="o-techdocs-layout">
 
-    {{#o-techdocs.hasSidebar}}
-    <!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
-    <div class="o-techdocs-sidebar">
-        <ul class="o-techdocs-nav">
-            <li><a href="#">Link title 1</a></li>
-            <li><a href="#">Link title 2</a></li>
-            <li><a href="#">Link title 3</a></li>
-            <li><a href="#">Link title 4</a>
-                <ul class="o-techdocs-nav o-techdocs-nav--sub">
-                    <li><a href="#">Sub link 1</a></li>
-                    <li aria-selected="true"><a href="#">Sub link 2 (selected)</a></li>
-                    <li><a href="#">Sub link 3</a></li>
-                    <li><a href="#">Sub link 4</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Link title 5</a></li>
-        </ul>
-    </div>
-    {{/o-techdocs.hasSidebar}}
+	{{#o-techdocs.hasSidebar}}
+	<!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
+	<div class="o-techdocs-sidebar">
+		<ul class="o-techdocs-nav">
+			<li><a href="#">Link title 1</a></li>
+			<li><a href="#">Link title 2</a></li>
+			<li><a href="#">Link title 3</a></li>
+			<li><a href="#">Link title 4</a>
+				<ul class="o-techdocs-nav o-techdocs-nav--sub">
+					<li><a href="#">Sub link 1</a></li>
+					<li aria-selected="true"><a href="#">Sub link 2 (selected)</a></li>
+					<li><a href="#">Sub link 3</a></li>
+					<li><a href="#">Sub link 4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Link title 5</a></li>
+		</ul>
+	</div>
+	{{/o-techdocs.hasSidebar}}
 
-    <!-- Main content (outer div for layout, inner for formatting) -->
-    <div class='o-techdocs-main'>
-        {{{o-techdocs.content}}}
-    </div>
+	<!-- Main content (outer div for layout, inner for formatting) -->
+	<div class='o-techdocs-main'>
+		{{{o-techdocs.content}}}
+	</div>
 
 </div> <!-- /row containing nav and content -->
 
 <footer>
-    <p class='right'><a href='http://github.com/financial-times/ft-origami'>View project on Github</a></p>
-    <p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
+	<p class='right'><a href='http://github.com/financial-times/ft-origami'>View project on Github</a></p>
+	<p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
 </footer>
 
 <!-- Add this if you want syntax highlighting on your page -->
