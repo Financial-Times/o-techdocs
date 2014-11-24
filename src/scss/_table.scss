@@ -1,33 +1,36 @@
 .o-techdocs-content > table,
 .o-techdocs-table-wrapper > table {
-  border-collapse: collapse;
-  border: 1px solid $o-techdocs-color-grey2;
-  margin: 1em 0;
+	border-collapse: collapse;
+	border: 1px solid $o-techdocs-color-grey2;
+	margin: 1em 0;
 
-  td,
-  th {
-    @extend %o-techdocs-font;
-    padding: 10px 6px;
-    border-bottom: 1px solid $o-techdocs-color-grey2;
-    text-align: left;
-  }
-  th {
-    background-color: $o-techdocs-color-grey2;
-    color: $o-techdocs-color-charcoal-lighter;
-  }
-  td.right-align,
-  th.right-align {
-    text-align: right;
-  }
-  td.left-align,
-  tr.left-align {
-    text-align: left;
-  }
+	> thead > tr > td,
+	> tbody > tr > td,
+	> thead > tr > th,
+	> tbody > tr > th {
+		@extend %o-techdocs-font;
+		padding: 10px 6px;
+		border-bottom: 1px solid $o-techdocs-color-grey2;
+		text-align: left;
+	}
+	> thead > tr > th,
+	> tbody > tr > th {
+		background-color: $o-techdocs-color-grey2;
+		color: $o-techdocs-color-charcoal-lighter;
+	}
+	td.right-align,
+	th.right-align {
+		text-align: right;
+	}
+	td.left-align,
+	tr.left-align {
+		text-align: left;
+	}
 }
 .o-techdocs-table-wrapper {
-  overflow: auto;
-  margin: 1em 0;
-  > table {
-    margin: 0;
-  }
+	overflow: auto;
+	margin: 1em 0;
+	> table {
+		margin: 0;
+	}
 }

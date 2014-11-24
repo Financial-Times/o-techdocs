@@ -1,60 +1,60 @@
 .o-techdocs-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  > li {
-    @extend %o-techdocs-font;
-    > a {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      padding: 6px 10px 6px 30px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: oColorsGetColorFor(link, text);
-      text-decoration: none;
-    }
-    > a:hover {
-      background-color: $o-techdocs-color-grey2;
-    }
-  }
-  > li[aria-selected="true"] {
-    > a {
-      padding-left: 15px;
-      color: oColorsGetPaletteColor(black);
-      font-weight: bold;
-      pointer-events: none;
-    }
-    > a:before {
-      display: inline-block;
-      width: 15px;
-      content: "▸";
-    }
-  }
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	> li {
+		@extend %o-techdocs-font;
+		> a {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			padding: 6px 10px 6px 30px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: oColorsGetColorFor(link, text);
+			text-decoration: none;
+		}
+		> a:hover {
+			background-color: $o-techdocs-color-grey2;
+		}
+	}
+	> li[aria-selected="true"] {
+		> a {
+			padding-left: 15px;
+			color: oColorsGetPaletteColor(black);
+			font-weight: bold;
+			pointer-events: none;
+		}
+		> a:before {
+			display: inline-block;
+			width: 15px;
+			content: "▸";
+		}
+	}
 }
 
 .o-techdocs-nav--sub {
-  margin-bottom: 0;
-  padding: 0;
-  > li > a {
-    padding: 3px 10px 3px 40px;
-    font-size: 90%;
-  }
-  > li[aria-selected="true"] > a {
-    padding-left: 25px;
-  }
+	margin-bottom: 0;
+	padding: 0;
+	> li > a {
+		padding: 3px 10px 3px 40px;
+		font-size: 90%;
+	}
+	> li[aria-selected="true"] > a {
+		padding-left: 25px;
+	}
 }
 
 .o-techdocs-nav--page {
-  border-top: 1px dotted $o-techdocs-color-grey2;
-  margin-top: 20px;
-  padding-top: 20px;
-  li a {
-    color: oColorsGetPaletteColor(claret);
-  }
+	border-top: 1px dotted $o-techdocs-color-grey2;
+	margin-top: 20px;
+	padding-top: 20px;
+	li a {
+		color: oColorsGetPaletteColor(claret);
+	}
 }
 
 .o-techdocs-nav--affix {
-  position: fixed;
-  top: 50px;
+	position: fixed;
+	top: 50px;
 }
