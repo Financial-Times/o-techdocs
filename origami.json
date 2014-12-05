@@ -1,14 +1,14 @@
 {
-	"description": "A framework for building technical documentation and tool UIs",
-	"origamiType": "module",
-	"origamiVersion": 1,
-	"support": "andrew.betts@ft.com",
-	"supportStatus": "active",
-	"demos": [
-		{
-			"title": "demo",
-			"path": "demos/demo.html",
-			"expanded": true
-		}
-	]
+    "description": "A framework for building technical documentation and tool UIs",
+    "origamiType": "module",
+    "origamiVersion": 1,
+    "support": "andrew.betts@ft.com",
+    "supportStatus": "active",
+    "demos": [
+        {
+            "path": "/demos/demo.html",
+            "expanded": true,
+            "description": ""
+        }
+    ]
 }
