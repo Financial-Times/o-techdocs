@@ -13,6 +13,9 @@ $(function() {
 			if (el.length && el.hasClass('o-techdocs__aside--toggleable')) {
 				el.toggle();
 				e.preventDefault();
+
+				// Avoid triggering on higher level o-techdocs-content containers
+				e.stopPropagation();
 			}
 		}
 	});
