@@ -6,6 +6,7 @@
 'use strict';
 
 var $ = require('jquery');
+var getCurrentLayout = require('o-grid').getCurrentLayout;
 
 $(function() {
 	var list = '', lis = [], scrollmargin, scrolltimer, resizetimer, dockpoint, dockmargin, headings = [], currentheading;
@@ -16,7 +17,7 @@ $(function() {
 		lis.push('<li id="o-techdocs-pagenav-'+this.id+'"><a href="#'+this.id+'">'+this.innerHTML+'</a></li>');
 	});
 	if (lis.length < 2) return;
-	list = $('<ul class="o-techdocs-nav o-techdocs-nav--page o-grid-col|12|">'+lis.join('')+'</ul>');
+	list = $('<ul class="o-techdocs-nav o-techdocs-nav--page" data-o-grid-colspan="12">'+lis.join('')+'</ul>');
 
 	// Insert the new nav list after the existing one
 	$('.o-techdocs-sidebar').append(list);
@@ -40,6 +41,10 @@ $(function() {
 	// On scroll, determine which section is in view, and highlight it
 	$(document).on('scroll', function() {
 		if (scrolltimer) return;
+
+		// Fix navigation only in large layouts
+		var affixInCurrentLayout = /^(L|XL)$/.test(getCurrentLayout());
+
 		scrolltimer = setTimeout(function() {
 			scrolltimer = null;
 			var scrolltop = $(document).scrollTop();
@@ -67,8 +72,10 @@ $(function() {
 			// Dock or undock the navigation menu
 			var docked = list.hasClass('o-techdocs-nav--affix');
 			if (!docked && (scrolltop+dockmargin) > dockpoint) {
-				list.addClass('o-techdocs-nav--affix');
-				list.width($('.o-techdocs-nav').eq(0).width());
+				if (affixInCurrentLayout) {
+					list.addClass('o-techdocs-nav--affix');
+					list.width($('.o-techdocs-nav').eq(0).width());
+				}
 			} else if (docked && (scrolltop+dockmargin) < dockpoint) {
 				list.removeClass('o-techdocs-nav--affix');
 				list.width('auto');
