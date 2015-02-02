@@ -28,12 +28,10 @@ $(function() {
 			window[callbackName] = undefined;
 
 			// If available, re-run prettify so that the new content is highlighted
-			if ("prettyPrint" in window) {
-				window.prettyPrint();
-			}
+			if ("prettyPrint" in window) window.prettyPrint();
 		};
 
-		var sc = document.createElement('script'); sc.src = url;
+		var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true; sc.src = url;
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
 	});
 });
