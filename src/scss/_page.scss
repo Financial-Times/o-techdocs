@@ -1,40 +1,48 @@
 .o-techdocs {
 	background-color: oColorsGetPaletteColor(white);
-
-	.o-header {
+	.o-ft-header {
 		margin-bottom: 45px;
 	}
+	footer {
+		@extend %o-grid-row;
+		@extend %o-grid-col;
+		@extend %o-grid-colspan-12;
+		@extend %o-techdocs-font;
+		font-size: 12px;
+		margin-top: 20px;
+		overflow: hidden;
+		border-top: 1px dotted $o-techdocs-color-grey3;
+
+		// Do not use padding shortcut, to avoid overriding left and right padding added by grid
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		p {
+			margin: 0.7em 0;
+		}
+		.right {
+			float: right;
+		}
+	}
 }
-.o-techdocs-footer__inner {
-	@include oGridColumn(full-width);
-}
+
 .o-techdocs-layout {
-	@include oGridRow;
+	@extend %o-grid-row;
 }
 .o-techdocs-sidebar {
-	@include oGridColumn((default: 12, L: 3));
+	@extend %o-grid-col;
+	@extend %o-grid-no-left-gutter;
+	@extend %o-grid-colspan-3;
+	@extend %o-grid-colspan-M12;
+	@extend %o-grid-colspan-S12;
 }
 .o-techdocs-main {
-	@include oGridColumn((default: 12, L: 9));
+	@extend %o-grid-col;
+	@extend %o-grid-colspan-9;
+	@extend %o-grid-colspan-M12;
+	@extend %o-grid-colspan-S12;
 }
 .o-techdocs-layout--full {
-	@include oGridColumn(full-width);
-}
-.o-techdocs-footer {
-	@extend %o-techdocs-font;
-	@include oGridRow;
-	font-size: 12px;
-	margin-top: 20px;
-	border-top: 1px dotted $o-techdocs-color-grey3;
-
-	// Do not use padding shortcut, to avoid overriding left and right padding added by grid
-	padding-top: 10px;
-	padding-bottom: 10px;
-
-	p {
-		margin: 0.7em 0;
-	}
-	.right {
-		float: right;
-	}
+	@extend %o-grid-col;
+	@extend %o-grid-colspan-12;
 }

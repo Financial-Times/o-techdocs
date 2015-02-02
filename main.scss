@@ -1,5 +1,8 @@
-$o-grid-is-silent: false;
 
+// Origami imports. Order of variable definitions is important
+$o-grid-mq-type: width;
+$o-grid-is-fluid: true;
+@import 'o-grid/main';
 @import 'o-colors/main';
 @import 'src/scss/color-use-cases';
 
