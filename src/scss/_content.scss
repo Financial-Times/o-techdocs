@@ -1,5 +1,7 @@
+// scss-lint:disable QualifyingElement
+
 %o-techdocs-font {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
 	color: $o-techdocs-color-charcoal;
 	font-size: 15px;
 	line-height: 1.5;
@@ -12,7 +14,13 @@
 
 	@extend %o-techdocs-font;
 
-	h1, h2, h3, h4, h5, h6, p {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
 		font-weight: 300;
 	}
 	h1 {
@@ -32,7 +40,11 @@
 		font-size: 18px;
 		margin: 25px 0 15px;
 	}
-	code, pre, var, kbd, output {
+	code,
+	pre,
+	var,
+	kbd,
+	output {
 		font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	}
 	code {
@@ -46,7 +58,7 @@
 		color: $o-techdocs-color-purple;
 	}
 
-	pre {
+	pre { // Override defaults
 		display: block;
 		overflow-x: auto;
 		margin: 0 0 10px;
@@ -58,6 +70,7 @@
 		word-break: break-all;
 		font-size: 11px;
 		line-height: 1.5;
+
 		> code {
 			padding: 0;
 			border: 0;
@@ -66,7 +79,11 @@
 			white-space: pre;
 			font-size: inherit;
 		}
-		li.l1, li.l3, li.l5, li.l7, li.l9 {
+		li.l1,
+		li.l3,
+		li.l5,
+		li.l7,
+		li.l9 {
 			// Stripe rows if desired
 		}
 	}
@@ -83,7 +100,9 @@
 		}
 		kbd {
 			color: white;
-			&::before {
+
+			// scss-lint:disable NestingDepth
+			&:before {
 				content: '>';
 				margin-left: -15px;
 				float: left;
@@ -124,7 +143,8 @@
 		overflow: hidden;
 		border-left: 5px solid oColorsGetPaletteColor(claret);
 		background-color: $o-techdocs-color-grey1;
-		> h4, > h5 {
+		> h4,
+		> h5 {
 			color: oColorsGetPaletteColor(claret);
 			font-size: 18px;
 			margin: 14px 0 0;
@@ -169,7 +189,8 @@
 
 	// Theme GitHub gists to match FT style
 	// This styling still differs a bit from the <pre class='prettyprint'> styles so better to use the gist-it.appspot.com service
-	.gist, .gist-it-gist {
+	.gist,
+	.gist-it-gist {
 		.gist-file {
 			border: 1px solid $o-techdocs-color-grey2;
 		}
@@ -177,7 +198,7 @@
 			background-color: $o-techdocs-color-grey1;
 			border-bottom: 0;
 		}
-	.line-numbers {
+		.line-numbers {
 			background-color: $o-techdocs-color-grey1;
 			border-right: 0;
 			padding: 1em;

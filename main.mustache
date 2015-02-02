@@ -1,5 +1,5 @@
 
-{{{ o-ft-header }}}
+{{{ o-header }}}
 
 <!-- Navigation menu and main content -->
 <div class="o-techdocs-layout">
@@ -31,11 +31,13 @@
 
 </div> <!-- /row containing nav and content -->
 
-<footer>
-	<p class="right"><a href="http://github.com/financial-times/ft-origami">View project on GitHub</a></p>
-	<p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
+<footer class="o-techdocs-footer">
+	<div class="o-techdocs-footer__inner">
+		<p class="right"><a href="http://github.com/financial-times/ft-origami">View project on GitHub</a></p>
+		<p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
+	</div>
 </footer>
 
 <!-- Add this if you want syntax highlighting on your page -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
-<script>prettyPrint()</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+<script>addEventListener('load', function(event) { prettyPrint(); }, false);</script>

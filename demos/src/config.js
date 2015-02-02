@@ -1,14 +1,17 @@
 'use strict';
 
 module.exports = {
+	"options": {
+		"name": "demo",
+		"template": "main.mustache",
+		"sass": "demos/src/scss/main.scss",
+		"js": "main.js",
+		"dependencies": ["o-fonts@^1.4.0","o-grid@^3.0.0"]
+	},
 	"demos": [
 		{
-			"name": "demo",
-			"template": "main.mustache",
-			"sass": "main.scss",
-			"js": "main.js",
 			"data": {
-				"o-ft-header": require('fs').readFileSync('demos/src/demoheader.html'),
+				"o-header": require('fs').readFileSync('demos/src/demoheader.html'),
 				"o-techdocs": {
 					"content": require('fs').readFileSync('demos/src/democontent.html'),
 					"hasSidebar": true
