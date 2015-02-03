@@ -21,3 +21,9 @@ View the source of the demo.html file for extensive notes and examples on use of
 ### Styles
 
 __o-techdocs__ has no silent mode, so the provided CSS classes beginning with `o-techdocs` must be used. See the demo page for examples.
+
+## Upgrading from v3.x.x to v4.x.x
+
+1. Assign a `o-techdocs-footer` class to the technical docs `<footer>` elements
+2. Wrap the footer's contents inside a `<div class="o-techdocs-footer__inner">`
+3. Rename the `right` class in the footer to `o-techdocs-footer__secondary`
