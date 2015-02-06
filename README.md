@@ -27,3 +27,5 @@ __o-techdocs__ has no silent mode, so the provided CSS classes beginning with `o
 1. Assign a `o-techdocs-footer` class to the technical docs `<footer>` elements
 2. Wrap the footer's contents inside a `<div class="o-techdocs-footer__inner">`
 3. Rename the `right` class in the footer to `o-techdocs-footer__secondary`
+4. Rename `o-ft-header` into `o-header`
+5. Wrap the children of `o-header__container` inside a new `<div class="o-header__inner">`
