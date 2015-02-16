@@ -29,3 +29,4 @@ __o-techdocs__ has no silent mode, so the provided CSS classes beginning with `o
 3. Rename the `right` class in the footer to `o-techdocs-footer__secondary`
 4. Rename `o-ft-header` into `o-header`
 5. Wrap the children of `o-header__container` inside a new `<div class="o-header__inner">`
+6. `o-techdocs-layout--full` is deprecated fo single column layouts. Add the class `o-techdocs-main--fullwidth` to `o-techdocs-main` instead.

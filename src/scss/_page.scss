@@ -1,3 +1,4 @@
+// scss-lint:disable QualifyingElement
 .o-techdocs {
 	background-color: oColorsGetPaletteColor(white);
 
@@ -14,7 +15,7 @@
 .o-techdocs-main {
 	@include oGridColumn((default: 12, L: 9));
 }
-.o-techdocs-layout--full {
+.o-techdocs-main--fullwidth {
 	@include oGridColumn(full-width);
 }
 .o-techdocs-footer {
