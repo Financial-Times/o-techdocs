@@ -10,10 +10,10 @@
 	@include oGridRow;
 }
 .o-techdocs-sidebar {
-	@include oGridColumn((default: 12, L: 3));
+	@include oGridColumn((default: 12, M: 4, L: 3));
 }
 .o-techdocs-main {
-	@include oGridColumn((default: 12, L: 9));
+	@include oGridColumn((default: 12, M: 8, L: 9));
 }
 .o-techdocs-main--fullwidth {
 	@include oGridColumn(full-width);
