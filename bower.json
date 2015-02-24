@@ -1,10 +1,10 @@
 {
   "name": "o-techdocs",
   "dependencies": {
-    "o-grid": "^2.1.1",
     "o-colors": "^2.3.9",
-    "o-ft-header": "^2.5.3",
-    "jquery": "2.0"
+    "o-header": "^3.0.0",
+    "o-grid": "^3.0.0",
+    "jquery": "^2.0.0"
   },
   "main": [
     "main.js",

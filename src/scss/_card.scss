@@ -1,3 +1,4 @@
+// scss-lint:disable QualifyingElement
 .o-techdocs-card {
 	max-width: 500px;
 	width: 100%;
@@ -75,11 +76,12 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 // Action bar
 
 .o-techdocs-card__actions {
+	padding: 10px;
 	border-top: 1px solid #dddddd;
 }
 .o-techdocs-card__actionbutton {
 	border: 0;
-	margin: 0px 3px 0px 0px;
+	margin-right: 5px;
 	padding: 8px;
 	background-color: #dddddd;
 	font-size: 13px;
