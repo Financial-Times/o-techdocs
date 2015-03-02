@@ -4,7 +4,8 @@
     "o-colors": "^2.3.9",
     "o-header": "^3.0.0",
     "o-grid": "^3.0.0",
-    "jquery": "^2.0.0"
+    "jquery": "^2.0.0",
+    "highlight.js": "Financial-Times/highlight.js-shim"
   },
   "main": [
     "main.js",
