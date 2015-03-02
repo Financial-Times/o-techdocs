@@ -1,11 +1,10 @@
 // scss-lint:disable VendorPrefixes
 
 
-/*
-
-Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
-
-*/
+/**
+ * Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+ * Modified by the FT: Adds a few SCSS tweaks
+ */
 
 .hljs {
 	display: block;
@@ -30,8 +29,8 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 .hljs-winutils,
 .method,
 .hljs-addition,
-.css .hljs-tag,
 .scss .hljs-tag,
+.css .hljs-tag,
 .hljs-request,
 .hljs-status,
 .nginx .hljs-title {
