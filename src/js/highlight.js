@@ -30,6 +30,8 @@ hljs.configure({
 	]
 });
 
+window.hljs = hljs;
+
 $(function() {
 	hljs.initHighlighting();
 });
