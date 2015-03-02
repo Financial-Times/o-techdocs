@@ -4,6 +4,7 @@
 'use strict';
 
 var $ = require('jquery');
+var hljs = require('highlight.js');
 
 $(function() {
 
@@ -19,18 +20,14 @@ $(function() {
 		window[callbackName] = function(content) {
 
 			// Extract just the prettyprint bit, which can then use techdocs standard styling
-			content = content.replace(/^[\s\S]*(<pre [^>]*>)([\s\S]*?<\/pre>)[\s\S]*$/, "<pre class='prettyprint linenums'>$2");
-
-			// Replace tabs with 4 spaces since by default tabs in <pre> render at 8-spaces wide
-			content = content.replace(/\t/g, '    ');
+			content = content.replace(/^[\s\S]*(<pre [^>]*>)([\s\S]*?<\/pre>)[\s\S]*$/, "<pre><code>$2");
+			content = content.replace(/<\/pre>$/, "</code></pre>");
 
 			el.innerHTML = content;
 			window[callbackName] = undefined;
 
 			// If available, re-run prettify so that the new content is highlighted
-			if ("prettyPrint" in window) {
-				window.prettyPrint();
-			}
+			hljs.highlightBlock($(el).find('code').get(0));
 		};
 
 		var sc = document.createElement('script'); sc.src = url;

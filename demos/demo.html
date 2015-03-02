@@ -113,7 +113,6 @@
 
 <p>For blocks, wrap in <code>&lt;pre&gt;&lt;code&gt;</code>:</p>
 
-<?prettify linenums=1?>
 <pre><code>$.ajax({
 	"url": "/api/getWeather",
 	"data": {
@@ -181,18 +180,12 @@ pockier</code></pre>
 
 <h3>Syntax highlighting</h3>
 
-<p>To trigger syntax highlighting using <a href="https://code.google.com/p/google-code-prettify/">prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code>, or add the <code>prettify</code> class, as documented in the <a href="https://code.google.com/p/google-code-prettify/wiki/GettingStarted">prettify wifi</a>.  Since prettify auto-loads all its lang files, we use it from the Cloudflare CDN.  Put this in your page to enable support:</p>
-
-<?prettify linenums=1?>
-<pre><code>&lt;script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js">&lt;/script>
-&lt;script&gt;addEventListener('load', function(event) { prettyPrint(); }, false);&lt;/script&gt;</code></pre>
-
+<p>o-techdocs brings syntax highlighting out of the box.</p>
 
 <h3>GitHub samples / gists</h3>
 
 <p>GitHub gist embeds work, but using <a href="https://gist-it.appspot.com/">Gist-It</a> is preferred.  To include one, write a <code>&lt;div&gt;</code> tag in the following form:</p>
 
-<?prettify linenums=1?>
 <pre><code>&lt;div class="o-techdocs-gist" data-repo="{{owner}}/{{repo}}" data-branch="{{branch}}" data-path="{{path}}">&lt;/div></code></pre>
 
 Live example:
@@ -411,10 +404,6 @@ Server running... press ctrl-c to stop.</output></pre>
 		<p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
 	</div>
 </footer>
-
-<!-- Add this if you want syntax highlighting on your page -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
-<script>addEventListener('load', function(event) { prettyPrint(); }, false);</script>
 
 <script src="/bundles/js?modules=o-techdocs,o-fonts@^1.4.0,o-grid@^3.0.0"></script>
 <script src="//registry.origami.ft.com/embedapi?autoload=resize"></script>

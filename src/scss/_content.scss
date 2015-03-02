@@ -76,6 +76,7 @@
 		word-break: break-all;
 		font-size: 12px;
 		line-height: 1.5;
+		tab-size: 4;
 
 		> code {
 			padding: 0;
@@ -117,10 +118,6 @@
 		output {
 			color: $o-techdocs-color-grey3;
 		}
-	}
-
-	pre.prettyprint {
-		margin-bottom: 20px;
 	}
 
 	> img,
