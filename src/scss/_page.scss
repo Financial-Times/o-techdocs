@@ -23,9 +23,6 @@
 	@include oGridRow;
 	font-size: 12px;
 	margin-top: 20px;
-	border-top: 1px dotted $o-techdocs-color-grey3;
-
-	// Do not use padding shortcut, to avoid overriding left and right padding added by grid
 	padding-top: 10px;
 	padding-bottom: 10px;
 
@@ -35,6 +32,7 @@
 }
 .o-techdocs-footer__inner {
 	@include oGridColumn(full-width);
+	border-top: 1px dotted $o-techdocs-color-grey3;
 }
 .o-techdocs-footer__secondary {
 	float: right;
