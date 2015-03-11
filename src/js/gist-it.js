@@ -26,7 +26,7 @@ $(function() {
 			el.innerHTML = content;
 			window[callbackName] = undefined;
 
-			// If available, re-run highlighter so that the new content is highlighted
+			// Re-run highlighter so that the new content is highlighted
 			hljs.highlightBlock($(el).find('code').get(0));
 		};
 
