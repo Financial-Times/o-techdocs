@@ -1,5 +1,6 @@
 /*global require*/
 
+require('./src/js/highlight');
 require('./src/js/nav');
 require('./src/js/tables');
 require('./src/js/reveals');

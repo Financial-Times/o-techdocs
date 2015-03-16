@@ -19,19 +19,10 @@
 		<div class="o-header__inner">
 			<div class="o-header__primary">
 				<div class="o-header__primary__left">
-					<div class="o-header__logo o-header__logo--ft">
-						<a href="http://www.ft.com"><abbr title="Financial Times">FT</abbr></a>
-					</div>
-					<h1 class="o-header__title">Documentation title</h1>
-				</div>
-			</div>
-			<div class="o-header__secondary">
-				<div class="o-header__secondary__left demo__secondary--placeholder">
-					<!--  Uncomment this to enable a breadcrumb if you want one
-
-					<div class="o-header__breadcrumb">
-						<a href="">Bread</a> » crumb
-					</div> -->
+					<a class="o-header__logo o-header__logo--ft" href="http://www.ft.com">
+						<abbr title="Financial Times">FT</abbr>
+						<h1 class="o-header__title">Documentation title</h1>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -113,7 +104,6 @@
 
 <p>For blocks, wrap in <code>&lt;pre&gt;&lt;code&gt;</code>:</p>
 
-<?prettify linenums=1?>
 <pre><code>$.ajax({
 	"url": "/api/getWeather",
 	"data": {
@@ -126,7 +116,7 @@
 
 <p>For large code samples, the code block may be constrained to a reasonable height and made to scroll vertically by adding a <code>long-code</code> class to the <code>pre</code> tag (here we also opt out of syntax highlighting and line numbering):
 
-<pre class="long-code"><code>50 random words
+<pre class="long-code"><code class="markdown">50 random words
 ===============
 aquacade
 volatilise
@@ -181,18 +171,12 @@ pockier</code></pre>
 
 <h3>Syntax highlighting</h3>
 
-<p>To trigger syntax highlighting using <a href="https://code.google.com/p/google-code-prettify/">prettify</a>, prefix the <code>&lt;pre&gt;</code> with a prettify inline hint such as <code>&lt;?prettify linenums=1?&gt;</code>, or add the <code>prettify</code> class, as documented in the <a href="https://code.google.com/p/google-code-prettify/wiki/GettingStarted">prettify wifi</a>.  Since prettify auto-loads all its lang files, we use it from the Cloudflare CDN.  Put this in your page to enable support:</p>
-
-<?prettify linenums=1?>
-<pre><code>&lt;script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js">&lt;/script>
-&lt;script&gt;addEventListener('load', function(event) { prettyPrint(); }, false);&lt;/script&gt;</code></pre>
-
+<p>o-techdocs brings syntax highlighting out of the box using <a href="https://highlightjs.org">Highlight.js</a>.</p>
 
 <h3>GitHub samples / gists</h3>
 
 <p>GitHub gist embeds work, but using <a href="https://gist-it.appspot.com/">Gist-It</a> is preferred.  To include one, write a <code>&lt;div&gt;</code> tag in the following form:</p>
 
-<?prettify linenums=1?>
 <pre><code>&lt;div class="o-techdocs-gist" data-repo="{{owner}}/{{repo}}" data-branch="{{branch}}" data-path="{{path}}">&lt;/div></code></pre>
 
 Live example:
@@ -344,7 +328,7 @@ Server running... press ctrl-c to stop.</output></pre>
 
 
 <div class="o-grid-row">
-	<div data-o-grid-colspan="12 M6 L4 XL3">
+	<div data-o-grid-colspan="12 M6 L4">
 		<a href="" class="o-techdocs-card">
 			<div class="o-techdocs-card__context">
 				<div class="o-techdocs-card__heading">
@@ -355,7 +339,7 @@ Server running... press ctrl-c to stop.</output></pre>
 			<div class="o-techdocs-card__content">Standard clickable card</div>
 		</a>
 	</div>
-	<div data-o-grid-colspan="12 M6 L4 XL3">
+	<div data-o-grid-colspan="12 M6 L4">
 		<div class="o-techdocs-card o-techdocs-card--sev1">
 			<div class="o-techdocs-card__context">
 				<div class="o-techdocs-card__heading">
@@ -370,7 +354,7 @@ Server running... press ctrl-c to stop.</output></pre>
 			</div>
 		</div>
 	</div>
-	<div data-o-grid-colspan="12 M6 L4 XL3">
+	<div data-o-grid-colspan="12 M6 L4">
 		<a href="" class="o-techdocs-card o-techdocs-card--sev2">
 			<div class="o-techdocs-card__context">
 				<div class="o-techdocs-card__heading">
@@ -396,7 +380,7 @@ Server running... press ctrl-c to stop.</output></pre>
 
 <h3>Buttons</h3>
 
-<iframe style="width: 100%" scrolling="no" src="http://registry.origami.ft.com/components/o-ft-buttons/demos/visual/demos/individual.html?embed=1"></iframe>
+<iframe style="width: 100%" scrolling="no" src="http://registry.origami.ft.com/components/o-buttons/demos/visual/demos/individual.html?embed=1"></iframe>
 
 
 </div> <!-- /o-techdocs-content -->
@@ -411,10 +395,6 @@ Server running... press ctrl-c to stop.</output></pre>
 		<p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
 	</div>
 </footer>
-
-<!-- Add this if you want syntax highlighting on your page -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
-<script>addEventListener('load', function(event) { prettyPrint(); }, false);</script>
 
 <script src="/bundles/js?modules=o-techdocs,o-fonts@^1.4.0,o-grid@^3.0.0"></script>
 <script src="//registry.origami.ft.com/embedapi?autoload=resize"></script>

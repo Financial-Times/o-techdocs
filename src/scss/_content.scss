@@ -75,6 +75,7 @@
 		word-break: break-all;
 		font-size: 12px;
 		line-height: 1.5;
+		tab-size: 4;
 
 		> code {
 			padding: 0;
@@ -118,12 +119,9 @@
 		}
 	}
 
-	pre.prettyprint {
-		margin-bottom: 20px;
-	}
-
 	img {
 		max-width: 100%;
+		height: auto;
 	}
 
 	> .alert-big,
