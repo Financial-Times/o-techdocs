@@ -11,7 +11,6 @@
 }
 
 .o-techdocs-content {
-
 	@extend %o-techdocs-font;
 
 	h1,
@@ -123,16 +122,10 @@
 		margin-bottom: 20px;
 	}
 
-	> img,
-	> p > img {
+	img {
 		max-width: 100%;
 	}
-	> img:not(.transparent),
-	> p > img:not(.transparent) {
-		padding: 1px;
-		border: 2px solid #bbbbbb;
-		background-color: #ffffff;
-	}
+
 	> .alert-big,
 	.o-techdocs-leadbody {
 		font-size: 130%;
