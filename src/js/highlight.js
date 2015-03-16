@@ -1,7 +1,6 @@
 /*global require*/
 /**
- * Add a second navigation menu to quickly navigate to
- * anchors in the page.
+ * Syntax highlighting using highlight.js - https://highlightjs.org/
  */
 'use strict';
 
