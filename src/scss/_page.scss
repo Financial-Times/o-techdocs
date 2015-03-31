@@ -25,14 +25,14 @@
 	margin-top: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	border-top: 1px dotted $o-techdocs-color-grey3;
 
 	p {
-		margin: 0.7em 0;
+		margin: 0 0 10px;
 	}
 }
 .o-techdocs-footer__inner {
 	@include oGridColumn(full-width);
-	border-top: 1px dotted $o-techdocs-color-grey3;
 }
 .o-techdocs-footer__secondary {
 	float: right;
