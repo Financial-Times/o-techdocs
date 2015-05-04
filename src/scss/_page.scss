@@ -5,6 +5,9 @@
 	.o-header {
 		margin-bottom: 45px;
 	}
+	[aria-hidden=true] {
+		display: none;
+	}
 }
 .o-techdocs-layout {
 	@include oGridRow;

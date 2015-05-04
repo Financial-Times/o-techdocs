@@ -3,10 +3,9 @@
  */
 'use strict';
 
-var $ = require('jquery');
 var hljs = require('highlight.js');
 
-$(function() {
+document.addEventListener('o.DOMContentLoaded', function() {
 
 	[].slice.call(document.querySelectorAll('.o-techdocs-gist')).forEach(function(el) {
 
@@ -33,4 +32,4 @@ $(function() {
 		var sc = document.createElement('script'); sc.src = url;
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
 	});
-});
+}, false);

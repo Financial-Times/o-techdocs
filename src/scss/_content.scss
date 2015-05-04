@@ -180,7 +180,9 @@
 	.o-techdocs__aside--toggleable {
 		display: none;
 	}
-
+	o-techdocs__aside--visible {
+		display: block;
+	}
 	iframe {
 		max-width: 100%;
 		border: 0;

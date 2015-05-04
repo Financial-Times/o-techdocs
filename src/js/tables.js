@@ -2,10 +2,14 @@
 /**
  * Wrap tables
  */
+
 'use strict';
 
-var $ = require('jquery');
-
-$(function() {
-	$('.o-techdocs-content > table').wrap('<div class="o-techdocs-table-wrapper"></div>');
-});
+document.addEventListener('o.DOMContentLoaded', function() {
+	Array.of(document.querySelectorAll('.o-techdocs-content > table')).forEach(function(el) {
+		var wrapper = document.createElement('div');
+		wrapper.className = "o-techdocs-table-wrapper";
+		el.parentNode.insertBefore(wrapper, el);
+		wrapper.appendChild(el);
+	});
+}, false);
