@@ -6,7 +6,7 @@
 'use strict';
 
 document.addEventListener('o.DOMContentLoaded', function() {
-	Array.of(document.querySelectorAll('.o-techdocs-content > table')).forEach(function(el) {
+	Array.from(document.querySelectorAll('.o-techdocs-content > table')).forEach(function(el) {
 		var wrapper = document.createElement('div');
 		wrapper.className = "o-techdocs-table-wrapper";
 		el.parentNode.insertBefore(wrapper, el);

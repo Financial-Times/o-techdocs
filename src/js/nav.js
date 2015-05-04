@@ -15,11 +15,13 @@ oViewport.listenTo('scroll');
 oViewport.listenTo('resize');
 
 document.addEventListener('o.DOMContentLoaded', function() {
-	var list = '', lis = [], scrollmargin, scrolltimer, resizetimer, dockpoint, dockmargin, headings = [], currentheading;
-	var qsa = document.querySelectorAll, qs = document.querySelector;
+	var list = '', lis = [], scrollmargin, scrolltimer, resizetimer, headings = [], currentheading;
+	var qsa = document.querySelectorAll.bind(document), qs = document.querySelector.bind(document);
+	var sidebar = qs('.o-techdocs-sidebar');
+	var dockpoint = offset(sidebar) + sidebar.scrollHeight;
 
 	// Find heading 2s and build a link list.  Only proceed if there would be more than one item in the list
-	Array.of(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
+	Array.from(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
 		headings.push({id:el.id, pos:offset(el)});
 		lis.push('<li id="o-techdocs-pagenav-'+el.id+'"><a href="#'+el.id+'">'+el.innerHTML+'</a></li>');
 	});
@@ -30,7 +32,7 @@ document.addEventListener('o.DOMContentLoaded', function() {
 	list.innerHTML = lis.join('');
 
 	// Insert the new nav list after the existing one
-	qs('.o-techdocs-sidebar').appendChild(list);
+	sidebar.appendChild(list);
 
 	// Determine border tolerance for highlighting nav sections (once immediately, and then on resize)
 	calcScrollMargin();
@@ -49,6 +51,7 @@ document.addEventListener('o.DOMContentLoaded', function() {
 			os += el.offsetTop;
 			el = el.offsetParent;
 		}
+		return os;
 	}
 
 	function showHideMenu() {
@@ -62,8 +65,7 @@ document.addEventListener('o.DOMContentLoaded', function() {
 
 	// On scroll, determine which section is in view, and highlight it
 	document.addEventListener('oViewport.scroll', function() {
-		var affixInCurrentLayout = /^(L|XL)$/.test(getCurrentLayout());
-		var scrolltop = document.scrollTop;
+		var scrolltop = window.pageYOffset || document.body.scrollTop;
 		var scrollos = scrolltop + scrollmargin;
 		var candidate;
 		headings.forEach(function(heading) {
@@ -78,23 +80,23 @@ document.addEventListener('o.DOMContentLoaded', function() {
 			}
 		});
 		if (candidate && candidate.id !== currentheading) {
-			Array.of(list.querySelectorAll('li')).forEach(function(el) {
+			Array.from(list.querySelectorAll('li')).forEach(function(el) {
 				el.setAttribute('aria-selected', 'false');
 			});
 			document.getElementById('o-techdocs-pagenav-'+candidate.id).setAttribute('aria-selected', 'true');
 			currentheading = candidate.id;
 		} else if (!candidate) {
-			Array.of(list.querySelectorAll('li')).forEach(function(el) {
+			Array.from(list.querySelectorAll('li')).forEach(function(el) {
 				el.setAttribute('aria-selected', 'false');
 			});
 		}
 
 		// Dock or undock the navigation menu
 		var docked = list.classList.contains('o-techdocs-nav--affix');
-		if (!docked && (scrolltop+dockmargin) > dockpoint) {
+		if (!docked && scrolltop > dockpoint) {
 			list.classList.add('o-techdocs-nav--affix');
 			list.style.width = qs('.o-techdocs-nav').offsetWidth + 'px';
-		} else if (docked && (scrolltop+dockmargin) < dockpoint) {
+		} else if (docked && scrolltop < dockpoint) {
 			list.classList.remove('o-techdocs-nav--affix');
 			list.style.width = 'auto';
 		}
@@ -107,15 +109,14 @@ document.addEventListener('o.DOMContentLoaded', function() {
 	});
 
 	// On window load, recache all the heading positions as they may have moved since DOMReady, due to images being loaded in
-	// REVIEW: This ought to be o.load, but I don't think we reliably fire that...
+	// REVIEW: Binding to a native event is a bad practice in a component.  This ought to be o.load, but the demos don't fire it
 	window.addEventListener('load', function() {
 		headings = [];
-		Array.of(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
+		Array.from(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
 			headings.push({id:el.id, pos:offset(el)});
 		});
 
 		// Calculate the dock point for the menu
-		dockpoint = offset(list);
-		dockmargin = 50;
+		dockpoint = offset(sidebar) + sidebar.scrollHeight;
 	}, false);
 }, false);

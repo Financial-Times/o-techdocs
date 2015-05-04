@@ -3,11 +3,12 @@
  */
 'use strict';
 
-var hljs = require('highlight.js');
 
 document.addEventListener('o.DOMContentLoaded', function() {
 
-	[].slice.call(document.querySelectorAll('.o-techdocs-gist')).forEach(function(el) {
+	var hljs = require('highlight.js');
+
+	Array.from(document.querySelectorAll('.o-techdocs-gist')).forEach(function(el) {
 
 		var repo = el.getAttribute('data-repo');
 		var branch = el.getAttribute('data-branch') || 'master';
@@ -26,7 +27,7 @@ document.addEventListener('o.DOMContentLoaded', function() {
 			window[callbackName] = undefined;
 
 			// Re-run highlighter so that the new content is highlighted
-			hljs.highlightBlock($(el).find('code').get(0));
+			hljs.highlightBlock(el.querySelector('code'));
 		};
 
 		var sc = document.createElement('script'); sc.src = url;
