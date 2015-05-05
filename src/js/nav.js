@@ -1,21 +1,17 @@
-/*global require*/
 /**
  * Add a second navigation menu to quickly navigate to
  * anchors in the page.
  *
  */
- /* jshint browser:true */
 
 'use strict';
-
-var getCurrentLayout = require('o-grid').getCurrentLayout;
 
 var oViewport = require('o-viewport');
 oViewport.listenTo('scroll');
 oViewport.listenTo('resize');
 
 document.addEventListener('o.DOMContentLoaded', function() {
-	var list = '', lis = [], scrollmargin, scrolltimer, resizetimer, headings = [], currentheading;
+	var list = '', lis = [], scrollmargin, headings = [], currentheading;
 	var qsa = document.querySelectorAll.bind(document), qs = document.querySelector.bind(document);
 	var sidebar = qs('.o-techdocs-sidebar');
 	var dockpoint = offset(sidebar) + sidebar.scrollHeight;

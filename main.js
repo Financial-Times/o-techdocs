@@ -1,3 +1,5 @@
+"use strict";
+
 require('./src/js/highlight');
 require('./src/js/nav');
 require('./src/js/tables');

@@ -1,4 +1,3 @@
-/*global require*/
 /**
  * Show permalink markers on headings with an ID
  */
@@ -6,7 +5,6 @@
 'use strict';
 
 document.addEventListener('o.DOMContentLoaded', function() {
-	var d = document;
 	var contEl = document.querySelector('.o-techdocs-content');
 	Array.from(contEl.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(function(el) {
 		return el.id;

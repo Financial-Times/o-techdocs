@@ -1,4 +1,3 @@
-/*global require*/
 /**
  * Support displaying additional content on clicking reveal links
  */
