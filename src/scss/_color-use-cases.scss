@@ -1,12 +1,12 @@
-@include oColorsSetUseCase(product-brand, background, blue);
+@include oColorsSetUseCase(product-brand, background, 'blue');
 
-@include oColorsSetUseCase(o-techdocs-block-code-sample, background, pink-tint1);
-@include oColorsSetUseCase(o-techdocs-block-code-sample, border, pink-tint2);
-@include oColorsSetUseCase(o-techdocs-block-code-sample, text, grey-tint5);
-@include oColorsSetUseCase(o-techdocs-status-sev1, background, red);
-@include oColorsSetUseCase(o-techdocs-status-sev1, text, white);
-@include oColorsSetUseCase(o-techdocs-status-sev2, text, white);
-@include oColorsSetUseCase(o-techdocs-status-sev2, background, orange);
+@include oColorsSetUseCase(o-techdocs-block-code-sample, background, 'pink-tint1');
+@include oColorsSetUseCase(o-techdocs-block-code-sample, border, 'pink-tint2');
+@include oColorsSetUseCase(o-techdocs-block-code-sample, text, 'grey-tint5');
+@include oColorsSetUseCase(o-techdocs-status-sev1, background, 'red');
+@include oColorsSetUseCase(o-techdocs-status-sev1, text, 'white');
+@include oColorsSetUseCase(o-techdocs-status-sev2, text, 'white');
+@include oColorsSetUseCase(o-techdocs-status-sev2, background, 'orange');
 
 
 // Colors not in FT palette
