@@ -1,11 +1,5 @@
 "use strict";
 
-require('./src/js/highlight');
-require('./src/js/nav');
-require('./src/js/tables');
-require('./src/js/reveals');
-require('./src/js/permalinks');
-require('./src/js/gist-it');
 require('o-header');
 
 // Hack: Array.from is not in the polyfill service's default set.  Once it is this can be removed.
@@ -45,5 +39,20 @@ if (!('from' in Array)) {
 			return array;
 		},
 		writable: true
+var techdocsModules = [
+	require('./src/js/highlight'),
+	require('./src/js/nav'),
+	require('./src/js/tables'),
+	require('./src/js/reveals'),
+	require('./src/js/permalinks'),
+	require('./src/js/gist-it')
+];
+
+function init() {
+	techdocsModules.forEach(function(module) {
+		module();
 	});
 }
+
+document.addEventListener('o.DOMContentLoaded', init, false);
+exports.init = init;

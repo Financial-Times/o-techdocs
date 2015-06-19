@@ -4,7 +4,7 @@
 
 'use strict';
 
-document.addEventListener('o.DOMContentLoaded', function() {
+module.exports = function() {
 	var contEl = document.querySelector('.o-techdocs-content');
 	Array.from(contEl.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(function(el) {
 		return el.id;
@@ -16,4 +16,4 @@ document.addEventListener('o.DOMContentLoaded', function() {
 		a.innerHTML = "&#x00B6;";
 		el.appendChild(a);
 	});
-}, false);
+};

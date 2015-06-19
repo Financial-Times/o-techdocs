@@ -4,7 +4,7 @@
 
 'use strict';
 
-document.addEventListener('o.DOMContentLoaded', function() {
+module.exports = function() {
 	document.querySelector('.o-techdocs-content').addEventListener('click', function(e) {
 		if (e.target.tagName.toUpperCase() === 'A' && e.target.getAttribute('href').indexOf('#') === 0) {
 			var el = document.querySelector(e.target.getAttribute('href'));
@@ -17,4 +17,4 @@ document.addEventListener('o.DOMContentLoaded', function() {
 			}
 		}
 	});
-}, false);
+};

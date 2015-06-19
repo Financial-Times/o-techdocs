@@ -28,4 +28,4 @@ hljs.configure({
 	]
 });
 
-document.addEventListener('o.DOMContentLoaded', hljs.initHighlighting, false);
+module.exports = hljs.initHighlighting;

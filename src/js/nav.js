@@ -10,7 +10,7 @@ var oViewport = require('o-viewport');
 oViewport.listenTo('scroll');
 oViewport.listenTo('resize');
 
-document.addEventListener('o.DOMContentLoaded', function() {
+module.exports = function() {
 	var list = '', lis = [], scrollmargin, headings = [], currentheading;
 	var qsa = document.querySelectorAll.bind(document), qs = document.querySelector.bind(document);
 	var sidebar = qs('.o-techdocs-sidebar');
@@ -115,4 +115,4 @@ document.addEventListener('o.DOMContentLoaded', function() {
 		// Calculate the dock point for the menu
 		dockpoint = offset(sidebar) + sidebar.scrollHeight;
 	}, false);
-}, false);
+};

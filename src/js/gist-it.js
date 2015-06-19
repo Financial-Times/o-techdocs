@@ -4,7 +4,7 @@
 'use strict';
 
 
-document.addEventListener('o.DOMContentLoaded', function() {
+module.exports = function() {
 
 	var hljs = require('highlight.js');
 
@@ -33,4 +33,4 @@ document.addEventListener('o.DOMContentLoaded', function() {
 		var sc = document.createElement('script'); sc.src = url;
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
 	});
-}, false);
+};
