@@ -12,8 +12,9 @@ oViewport.listenTo('resize');
 
 module.exports = function() {
 	var list = '', lis = [], scrollmargin, headings = [], currentheading;
-	var qsa = document.querySelectorAll.bind(document), qs = document.querySelector.bind(document);
-	var sidebar = qs('.o-techdocs-sidebar');
+	var qsa = document.querySelectorAll.bind(document);
+	var qs = document.querySelector.bind(document);
+	var sidebar = qs('.o-techdocs-sidebar ul');
 	var dockpoint = offset(sidebar) + sidebar.scrollHeight;
 
 	// Find heading 2s and build a link list.  Only proceed if there would be more than one item in the list
@@ -28,7 +29,7 @@ module.exports = function() {
 	list.innerHTML = lis.join('');
 
 	// Insert the new nav list after the existing one
-	sidebar.appendChild(list);
+	sidebar.parentNode.appendChild(list);
 
 	// Determine border tolerance for highlighting nav sections (once immediately, and then on resize)
 	calcScrollMargin();
@@ -41,11 +42,12 @@ module.exports = function() {
 		return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 	}
 
+	// Return the vertical offset of the top of the element from the top of the document
 	function offset(el) {
-		var os = 0;
-		while (el.offsetParent) {
-			os += el.offsetTop;
-			el = el.offsetParent;
+		var os = 0, treeEl = el;
+		while (treeEl) {
+			os += treeEl.offsetTop;
+			treeEl = treeEl.offsetParent;
 		}
 		return os;
 	}
