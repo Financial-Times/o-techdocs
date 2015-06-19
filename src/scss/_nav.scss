@@ -23,7 +23,7 @@
 	> li[aria-selected="true"] {
 		> a {
 			padding-left: 15px;
-			color: oColorsGetPaletteColor(black);
+			color: oColorsGetPaletteColor('black');
 			font-weight: bold;
 			pointer-events: none;
 		}
@@ -52,7 +52,7 @@
 	margin-top: 20px;
 	padding-top: 20px;
 	li a {
-		color: oColorsGetPaletteColor(claret);
+		color: oColorsGetPaletteColor('claret');
 	}
 }
 
