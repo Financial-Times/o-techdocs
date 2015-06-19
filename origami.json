@@ -4,6 +4,11 @@
     "origamiVersion": 1,
     "support": "andrew.betts@ft.com",
     "supportStatus": "active",
+    "browserFeatures": {
+        "required": [
+            "Array.from"
+        ]
+    },
     "demos": [
         {
             "path": "/demos/demo.html",
