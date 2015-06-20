@@ -6,7 +6,7 @@
 
 module.exports = function() {
 	var contEl = document.querySelector('.o-techdocs-content');
-	Array.from(contEl.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(function(el) {
+	[].slice.call(contEl.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(function(el) {
 		return el.id;
 	}).forEach(function(el) {
 		var a = document.createElement('a');

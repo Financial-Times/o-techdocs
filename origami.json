@@ -6,7 +6,10 @@
     "supportStatus": "active",
     "browserFeatures": {
         "required": [
-            "Array.from"
+            "document.querySelector",
+            "Element.prototype.classList",
+            "Array.prototype.forEach",
+
         ]
     },
     "demos": [

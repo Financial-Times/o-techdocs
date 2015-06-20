@@ -8,7 +8,7 @@ module.exports = function() {
 
 	var hljs = require('highlight.js');
 
-	Array.from(document.querySelectorAll('.o-techdocs-gist')).forEach(function(el) {
+	[].slice.call(document.querySelectorAll('.o-techdocs-gist')).forEach(function(el) {
 
 		var repo = el.getAttribute('data-repo');
 		var branch = el.getAttribute('data-branch') || 'master';

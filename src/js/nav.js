@@ -18,7 +18,7 @@ module.exports = function() {
 	var dockpoint = offset(sidebar) + sidebar.scrollHeight;
 
 	// Find heading 2s and build a link list.  Only proceed if there would be more than one item in the list
-	Array.from(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
+	[].slice.call(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
 		headings.push({id:el.id, pos:offset(el)});
 		lis.push('<li id="o-techdocs-pagenav-'+el.id+'"><a href="#'+el.id+'">'+el.innerHTML+'</a></li>');
 	});
@@ -78,13 +78,13 @@ module.exports = function() {
 			}
 		});
 		if (candidate && candidate.id !== currentheading) {
-			Array.from(list.querySelectorAll('li')).forEach(function(el) {
+			[].slice.call(list.querySelectorAll('li')).forEach(function(el) {
 				el.setAttribute('aria-selected', 'false');
 			});
 			document.getElementById('o-techdocs-pagenav-'+candidate.id).setAttribute('aria-selected', 'true');
 			currentheading = candidate.id;
 		} else if (!candidate) {
-			Array.from(list.querySelectorAll('li')).forEach(function(el) {
+			[].slice.call(list.querySelectorAll('li')).forEach(function(el) {
 				el.setAttribute('aria-selected', 'false');
 			});
 		}
@@ -110,7 +110,7 @@ module.exports = function() {
 	// REVIEW: Binding to a native event is a bad practice in a component.  This ought to be o.load, but the demos don't fire it
 	window.addEventListener('load', function() {
 		headings = [];
-		Array.from(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
+		[].slice.call(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
 			headings.push({id:el.id, pos:offset(el)});
 		});
 
