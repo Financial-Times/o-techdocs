@@ -35,11 +35,7 @@ module.exports = function() {
 	calcScrollMargin();
 
 	function calcScrollMargin() {
-		scrollmargin = viewportHeight() / 8;
-	}
-
-	function viewportHeight() {
-		return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		scrollmargin = oViewport.getSize().height / 8;
 	}
 
 	// Return the vertical offset of the top of the element from the top of the document
