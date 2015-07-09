@@ -8,8 +8,7 @@
         "required": [
             "document.querySelector",
             "Element.prototype.classList",
-            "Array.prototype.forEach",
-
+            "Array.prototype.forEach"
         ]
     },
     "demos": [
