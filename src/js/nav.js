@@ -103,8 +103,7 @@ module.exports = function() {
 	});
 
 	// On window load, recache all the heading positions as they may have moved since DOMReady, due to images being loaded in
-	// REVIEW: Binding to a native event is a bad practice in a component.  This ought to be o.load, but the demos don't fire it
-	window.addEventListener('load', function() {
+	window.addEventListener('o.load', function() {
 		headings = [];
 		[].slice.call(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
 			headings.push({id:el.id, pos:offset(el)});
