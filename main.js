@@ -1,16 +1,21 @@
-/*global require*/
+"use strict";
 
-require('./src/js/highlight');
-require('./src/js/nav');
-require('./src/js/tables');
-require('./src/js/reveals');
-require('./src/js/permalinks');
-require('./src/js/gist-it');
 require('o-header');
 
-(function(){
-	"use strict";
-	document.addEventListener("DOMContentLoaded", function() {
-		document.dispatchEvent(new CustomEvent('o.DOMContentLoaded'));
+var techdocsModules = [
+	require('./src/js/highlight'),
+	require('./src/js/nav'),
+	require('./src/js/tables'),
+	require('./src/js/reveals'),
+	require('./src/js/permalinks'),
+	require('./src/js/gist-it')
+];
+
+function init() {
+	techdocsModules.forEach(function(module) {
+		module();
 	});
-}());
+}
+
+document.addEventListener('o.DOMContentLoaded', init, false);
+exports.init = init;

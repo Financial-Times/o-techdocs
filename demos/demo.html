@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<!--[if IE 7]>         <html class="o-useragent-ie7 o-hoverable-on"> <![endif]-->
-<!--[if IE 8]>         <html class="o-useragent-ie8 o-hoverable-on"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="o-hoverable-on"> <!--<![endif]-->
+<html class="o-hoverable-on o-techdocs o-hoverable-on">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<title>o-techdocs: demo demo</title>
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js?features=default"></script>
+	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js?features=document.querySelector,Element.prototype.classList,Array.prototype.forEach,default"></script>
 	<style>body { margin: 0; } .demo-js .o--if-nojs { display: none; }</style>
 	<script>(function(d) { d.className = d.className + ' demo-js'; })(document.documentElement);</script>
 	<link rel="stylesheet" href="/bundles/css?modules=o-techdocs:/demos/src/scss/main.scss,o-fonts@^1.4.0,o-grid@^3.0.0" />
 </head>
-<body class="o-techdocs o-hoverable-on">
+<body>
 
 <header data-o-component="o-header" class="o-header">
 	<div class="o-header__container">
@@ -228,13 +226,9 @@ Server running... press ctrl-c to stop.</output></pre>
 
 <h2 id="images">Images</h2>
 
-<p>Images will be auto-scaled to no more than the width of the content area (but will not be scaled up) and given a border.  To separate images from text, wrap the image element in a paragraph tag:</p>
+<p>Images will be auto-scaled to no more than the width of the content area (but will not be scaled up).  To separate images from text, wrap the image element in a paragraph tag:</p>
 
 <p><img src="http://im.ft-static.com/content/images/a1b992be-fb2c-43a8-92d8-6044c0f10408.img" alt="Image from FT.com" /></p>
-
-<p>If you want to suppress the border (normally because your image is transparent), add a <code>transparent</code> class to the <code>img</code> tag:</p>
-
-<p><img class="transparent" src="http://www.w3.org/TR/PNG/png-figures/fig53.png" alt="W3C diagram" /></p>
 
 <p>Multiple images can be laid side by side in a single paragraph:</p>
 

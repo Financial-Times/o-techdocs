@@ -4,7 +4,6 @@
  */
 'use strict';
 
-var $ = require('jquery');
 var hljs = require('highlight.js');
 hljs.configure({
 	languages: [
@@ -29,8 +28,4 @@ hljs.configure({
 	]
 });
 
-window.hljs = hljs;
-
-$(function() {
-	hljs.initHighlighting();
-});
+module.exports = hljs.initHighlighting;

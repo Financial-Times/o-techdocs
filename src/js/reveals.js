@@ -1,17 +1,15 @@
-/*global require*/
 /**
  * Support displaying additional content on clicking reveal links
  */
+
 'use strict';
 
-var $ = require('jquery');
-
-$(function() {
-	$('.o-techdocs-content').on('click', 'a', function(e) {
-		if ($(this).attr('href').indexOf('#') === 0) {
-			var el = $($(this).attr('href'));
-			if (el.length && el.hasClass('o-techdocs__aside--toggleable')) {
-				el.toggle();
+module.exports = function() {
+	document.querySelector('.o-techdocs-content').addEventListener('click', function(e) {
+		if (e.target.tagName.toUpperCase() === 'A' && e.target.getAttribute('href').indexOf('#') === 0) {
+			var el = document.querySelector(e.target.getAttribute('href'));
+			if (el && el.classList.contains('o-techdocs__aside--toggleable')) {
+				el.classList.toggle('o-techdocs__aside--visible');
 				e.preventDefault();
 
 				// Avoid triggering on higher level o-techdocs-content containers
@@ -19,4 +17,4 @@ $(function() {
 			}
 		}
 	});
-});
+};

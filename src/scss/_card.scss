@@ -1,7 +1,6 @@
 // scss-lint:disable QualifyingElement
 .o-techdocs-card {
 	max-width: 500px;
-	width: 100%;
 	box-shadow: 1px 1px 3px 0px rgba(100, 100, 100, 0.5);
 	background: #eeeeee;
 	display: block;
@@ -71,6 +70,8 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 .o-techdocs-card__content {
 	padding: 10px;
 	font-size: 90%;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 

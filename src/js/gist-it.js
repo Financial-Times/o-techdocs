@@ -3,10 +3,10 @@
  */
 'use strict';
 
-var $ = require('jquery');
-var hljs = require('highlight.js');
 
-$(function() {
+module.exports = function() {
+
+	var hljs = require('highlight.js');
 
 	[].slice.call(document.querySelectorAll('.o-techdocs-gist')).forEach(function(el) {
 
@@ -27,10 +27,10 @@ $(function() {
 			window[callbackName] = undefined;
 
 			// Re-run highlighter so that the new content is highlighted
-			hljs.highlightBlock($(el).find('code').get(0));
+			hljs.highlightBlock(el.querySelector('code'));
 		};
 
 		var sc = document.createElement('script'); sc.src = url;
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
 	});
-});
+};

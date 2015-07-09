@@ -1,11 +1,14 @@
-/*global require*/
 /**
  * Wrap tables
  */
+
 'use strict';
 
-var $ = require('jquery');
-
-$(function() {
-	$('.o-techdocs-content > table').wrap('<div class="o-techdocs-table-wrapper"></div>');
-});
+module.exports = function() {
+	[].slice.call(document.querySelectorAll('.o-techdocs-content > table')).forEach(function(el) {
+		var wrapper = document.createElement('div');
+		wrapper.className = "o-techdocs-table-wrapper";
+		el.parentNode.insertBefore(wrapper, el);
+		wrapper.appendChild(el);
+	});
+};

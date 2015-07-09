@@ -2,8 +2,15 @@
     "description": "A framework for building technical documentation and tool UIs",
     "origamiType": "module",
     "origamiVersion": 1,
-    "support": "andrew.betts@ft.com",
+    "support": "https://github.com/Financial-Times/o-techdocs/issues",
     "supportStatus": "active",
+    "browserFeatures": {
+        "required": [
+            "document.querySelector",
+            "Element.prototype.classList",
+            "Array.prototype.forEach"
+        ]
+    },
     "demos": [
         {
             "path": "/demos/demo.html",
