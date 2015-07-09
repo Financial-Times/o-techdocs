@@ -17,7 +17,7 @@ module.exports = {
 					"hasSidebar": true
 				}
 			},
-			"bodyClasses": "o-techdocs o-hoverable-on"
+			"documentClasses": "o-techdocs o-hoverable-on"
 		}
 	]
 };
