@@ -15,6 +15,9 @@ module.exports = function() {
 	var qsa = document.querySelectorAll.bind(document);
 	var qs = document.querySelector.bind(document);
 	var sidebar = qs('.o-techdocs-sidebar ul');
+
+	if (!sidebar) return;
+
 	var dockpoint = offset(sidebar) + sidebar.scrollHeight;
 
 	// Find heading 2s and build a link list.  Only proceed if there would be more than one item in the list
