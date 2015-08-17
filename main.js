@@ -1,8 +1,6 @@
-"use strict";
-
 require('o-header');
 
-var techdocsModules = [
+const techdocsModules = [
 	require('./src/js/highlight'),
 	require('./src/js/nav'),
 	require('./src/js/tables'),

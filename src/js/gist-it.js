@@ -1,21 +1,19 @@
 /**
  * Display Gist-it gists
  */
-'use strict';
-
 
 module.exports = function() {
 
-	var hljs = require('highlight.js');
+	const hljs = require('highlight.js');
 
 	[].slice.call(document.querySelectorAll('.o-techdocs-gist')).forEach(function(el) {
 
-		var repo = el.getAttribute('data-repo');
-		var branch = el.getAttribute('data-branch') || 'master';
-		var path = el.getAttribute('data-path');
-		var callbackName = "oTechdocsGistIt"+Math.floor(Math.random()*10000000)+(new Date()).getTime();
+		const repo = el.getAttribute('data-repo');
+		const branch = el.getAttribute('data-branch') || 'master';
+		const path = el.getAttribute('data-path');
+		const callbackName = "oTechdocsGistIt"+Math.floor(Math.random()*10000000)+(new Date()).getTime();
 
-		var url = "//gist-it.appspot.com/github/" + repo + "/blob/" + branch + path +"?footer=0&callback=" + callbackName;
+		const url = "//gist-it.appspot.com/github/" + repo + "/blob/" + branch + path +"?footer=0&callback=" + callbackName;
 
 		window[callbackName] = function(content) {
 
@@ -30,7 +28,7 @@ module.exports = function() {
 			hljs.highlightBlock(el.querySelector('code'));
 		};
 
-		var sc = document.createElement('script'); sc.src = url;
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+		const sc = document.createElement('script'); sc.src = url;
+		const s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
 	});
 };

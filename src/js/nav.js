@@ -4,21 +4,23 @@
  *
  */
 
-'use strict';
-
-var oViewport = require('o-viewport');
+const oViewport = require('o-viewport');
 oViewport.listenTo('scroll');
 oViewport.listenTo('resize');
 
 module.exports = function() {
-	var list = '', lis = [], scrollmargin, headings = [], currentheading;
-	var qsa = document.querySelectorAll.bind(document);
-	var qs = document.querySelector.bind(document);
-	var sidebar = qs('.o-techdocs-sidebar ul');
+	let list = '';
+	const lis = [];
+	let scrollmargin; 
+	let headings = [];
+	let currentheading;
+	const qsa = document.querySelectorAll.bind(document);
+	const qs = document.querySelector.bind(document);
+	const sidebar = qs('.o-techdocs-sidebar ul');
 
 	if (!sidebar) return;
 
-	var dockpoint = offset(sidebar) + sidebar.scrollHeight;
+	let dockpoint = offset(sidebar) + sidebar.scrollHeight;
 
 	// Find heading 2s and build a link list.  Only proceed if there would be more than one item in the list
 	[].slice.call(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
@@ -43,7 +45,8 @@ module.exports = function() {
 
 	// Return the vertical offset of the top of the element from the top of the document
 	function offset(el) {
-		var os = 0, treeEl = el;
+		let os = 0;
+		let treeEl = el;
 		while (treeEl) {
 			os += treeEl.offsetTop;
 			treeEl = treeEl.offsetParent;
@@ -52,7 +55,7 @@ module.exports = function() {
 	}
 
 	function showHideMenu() {
-		var isOneCol = offset(qs('.o-techdocs-content')) > offset(qs('.o-techdocs-nav'));
+		const isOneCol = offset(qs('.o-techdocs-content')) > offset(qs('.o-techdocs-nav'));
 		if (isOneCol && list.getAttribute('aria-hidden') !== 'true') {
 			list.setAttribute('aria-hidden', true);
 		} else if (!isOneCol && list.getAttribute('aria-hidden') === 'true') {
@@ -62,9 +65,9 @@ module.exports = function() {
 
 	// On scroll, determine which section is in view, and highlight it
 	document.addEventListener('oViewport.scroll', function() {
-		var scrolltop = window.pageYOffset || document.body.scrollTop;
-		var scrollos = scrolltop + scrollmargin;
-		var candidate;
+		const scrolltop = window.pageYOffset || document.body.scrollTop;
+		const scrollos = scrolltop + scrollmargin;
+		let candidate;
 		headings.forEach(function(heading) {
 
 			// Heading is before current scroll position, so might be the current heading
@@ -89,7 +92,7 @@ module.exports = function() {
 		}
 
 		// Dock or undock the navigation menu
-		var docked = list.classList.contains('o-techdocs-nav--affix');
+		const docked = list.classList.contains('o-techdocs-nav--affix');
 		if (!docked && scrolltop > dockpoint) {
 			list.classList.add('o-techdocs-nav--affix');
 			list.style.width = qs('.o-techdocs-nav').offsetWidth + 'px';
