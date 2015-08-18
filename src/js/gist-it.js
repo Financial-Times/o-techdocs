@@ -2,7 +2,7 @@
  * Display Gist-it gists
  */
 
-module.exports = function() {
+export function gistIt() {
 
 	const hljs = require('highlight.js');
 

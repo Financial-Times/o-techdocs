@@ -2,7 +2,7 @@
  * Wrap tables
  */
 
-module.exports = function() {
+export function tables() {
 	[].slice.call(document.querySelectorAll('.o-techdocs-content > table')).forEach(function(el) {
 		const wrapper = document.createElement('div');
 		wrapper.className = "o-techdocs-table-wrapper";

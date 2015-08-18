@@ -4,11 +4,12 @@
  *
  */
 
-const oViewport = require('o-viewport');
+import oViewport from 'o-viewport';
+
 oViewport.listenTo('scroll');
 oViewport.listenTo('resize');
 
-module.exports = function() {
+function nav() {
 	let list = '';
 	const lis = [];
 	let scrollmargin; 
@@ -121,3 +122,5 @@ module.exports = function() {
 		dockpoint = offset(sidebar) + sidebar.scrollHeight;
 	}, false);
 };
+
+export { nav }

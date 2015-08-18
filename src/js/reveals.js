@@ -2,7 +2,7 @@
  * Support displaying additional content on clicking reveal links
  */
 
-module.exports = function() {
+export function reveals() {
 	document.querySelector('.o-techdocs-content').addEventListener('click', function(e) {
 		if (e.target.tagName.toUpperCase() === 'A' && e.target.getAttribute('href').indexOf('#') === 0) {
 			const el = document.querySelector(e.target.getAttribute('href'));

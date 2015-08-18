@@ -2,7 +2,7 @@
  * Show permalink markers on headings with an ID
  */
 
-module.exports = function() {
+export function permalinks() {
 	const contEl = document.querySelector('.o-techdocs-content');
 	[].slice.call(contEl.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(function(el) {
 		return el.id;
