@@ -11,7 +11,11 @@ oViewport.listenTo('scroll');
 oViewport.listenTo('resize');
 
 module.exports = function() {
-	var list = '', lis = [], scrollmargin, headings = [], currentheading;
+	var list = '';
+	var lis = [];
+	var scrollmargin;
+	var headings = [];
+	var currentheading;
 	var qsa = document.querySelectorAll.bind(document);
 	var qs = document.querySelector.bind(document);
 	var sidebar = qs('.o-techdocs-sidebar ul');
@@ -43,7 +47,8 @@ module.exports = function() {
 
 	// Return the vertical offset of the top of the element from the top of the document
 	function offset(el) {
-		var os = 0, treeEl = el;
+		var os = 0;
+		var treeEl = el;
 		while (treeEl) {
 			os += treeEl.offsetTop;
 			treeEl = treeEl.offsetParent;
