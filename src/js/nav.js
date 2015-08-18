@@ -92,10 +92,11 @@ module.exports = function() {
 		var docked = list.classList.contains('o-techdocs-nav--affix');
 		if (!docked && scrolltop > dockpoint) {
 			list.classList.add('o-techdocs-nav--affix');
-			list.style.width = qs('.o-techdocs-nav').offsetWidth + 'px';
+			var width = qs('.o-techdocs-nav').offsetWidth + 'px';
+			list.style.width = list.style.maxWidth = list.style.minWidth = list.style.flexBasis = width;
 		} else if (docked && scrolltop < dockpoint) {
 			list.classList.remove('o-techdocs-nav--affix');
-			list.style.width = 'auto';
+			list.style.width = list.style.maxWidth = list.style.minWidth = list.style.flexBasis = '';
 		}
 	}, false);
 
