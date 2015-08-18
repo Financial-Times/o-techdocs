@@ -47,6 +47,7 @@ module.exports = function() {
 	function offset(el) {
 		let os = 0;
 		let treeEl = el;
+
 		while (treeEl) {
 			os += treeEl.offsetTop;
 			treeEl = treeEl.offsetParent;
@@ -95,10 +96,11 @@ module.exports = function() {
 		const docked = list.classList.contains('o-techdocs-nav--affix');
 		if (!docked && scrolltop > dockpoint) {
 			list.classList.add('o-techdocs-nav--affix');
-			list.style.width = qs('.o-techdocs-nav').offsetWidth + 'px';
+			const width = qs('.o-techdocs-nav').offsetWidth + 'px';
+			list.style.width = list.style.maxWidth = list.style.minWidth = list.style.flexBasis = width;
 		} else if (docked && scrolltop < dockpoint) {
 			list.classList.remove('o-techdocs-nav--affix');
-			list.style.width = 'auto';
+			list.style.width = list.style.maxWidth = list.style.minWidth = list.style.flexBasis = '';
 		}
 	}, false);
 
