@@ -14,6 +14,7 @@ module.exports = {
 				"o-header": require('fs').readFileSync('demos/src/demoheader.html'),
 				"o-techdocs": {
 					"content": require('fs').readFileSync('demos/src/democontent.html'),
+					"hero": require('fs').readFileSync('demos/src/demohero.html'),
 					"hasSidebar": true
 				}
 			},
