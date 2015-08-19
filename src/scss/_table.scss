@@ -10,7 +10,7 @@
 	> tbody > tr > td,
 	> thead > tr > th,
 	> tbody > tr > th {
-		@extend %o-techdocs-font;
+		@include oTechdocsFont();
 		padding: 10px 6px;
 		border-bottom: 1px solid $o-techdocs-color-grey2;
 		text-align: left;

@@ -1,18 +1,7 @@
 // scss-lint:disable QualifyingElement
 
-%o-techdocs-font {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
-	color: $o-techdocs-color-charcoal;
-	font-size: 15px;
-	line-height: 1.5;
-
-	a {
-		color: oColorsGetColorFor(link, text);
-	}
-}
-
 .o-techdocs-content {
-	@extend %o-techdocs-font;
+	@include oTechdocsFont();
 
 	h1,
 	h2,

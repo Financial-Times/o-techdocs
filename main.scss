@@ -3,6 +3,8 @@
 
 @import 'o-header/main';
 
+@import 'src/scss/deprecated';
+@import 'src/scss/mixins';
 @import 'src/scss/content';
 @import 'src/scss/page';
 @import 'src/scss/hero';

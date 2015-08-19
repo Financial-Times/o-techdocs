@@ -5,7 +5,8 @@
 	padding: 0;
 	list-style: none;
 	> li {
-		@extend %o-techdocs-font;
+		@include oTechdocsFont();
+
 		> a {
 			position: relative;
 			display: block;
