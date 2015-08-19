@@ -38,6 +38,7 @@
 .o-techdocs-nav--sub {
 	margin-bottom: 0;
 	padding: 0;
+
 	> li > a {
 		padding: 3px 10px 3px 40px;
 		font-size: 90%;
@@ -51,6 +52,7 @@
 	border-top: 1px dotted $o-techdocs-color-grey2;
 	margin-top: 20px;
 	padding-top: 20px;
+
 	li a {
 		color: oColorsGetPaletteColor('claret');
 	}
