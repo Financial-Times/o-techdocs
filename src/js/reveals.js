@@ -5,6 +5,8 @@
 'use strict';
 
 module.exports = function() {
+	if (!document.querySelector('.o-techdocs-content')) return;
+
 	document.querySelector('.o-techdocs-content').addEventListener('click', function(e) {
 		if (e.target.tagName.toUpperCase() === 'A' && e.target.getAttribute('href').indexOf('#') === 0) {
 			var el = document.querySelector(e.target.getAttribute('href'));

@@ -1,18 +1,7 @@
 // scss-lint:disable QualifyingElement
 
-%o-techdocs-font {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
-	color: $o-techdocs-color-charcoal;
-	font-size: 15px;
-	line-height: 1.5;
-
-	a {
-		color: oColorsGetColorFor(link, text);
-	}
-}
-
 .o-techdocs-content {
-	@extend %o-techdocs-font;
+	@include oTechdocsFont();
 
 	h1,
 	h2,
@@ -211,7 +200,7 @@
 	}
 
 	// Theme GitHub gists to match FT style
-	// This styling still differs a bit from the <pre class='prettyprint'> styles so better to use the gist-it.appspot.com service
+	// This styling still differs a bit from the <pre class='hljs'> styles so better to use the gist-it.appspot.com service
 	.gist,
 	.gist-it-gist {
 		.gist-file {

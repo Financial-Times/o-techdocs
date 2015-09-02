@@ -22,7 +22,7 @@
 	@include oGridColumn(full-width);
 }
 .o-techdocs-footer {
-	@extend %o-techdocs-font;
+	@include oTechdocsFont();
 	@include oGridRow;
 	font-size: 12px;
 	margin-top: 20px;
