@@ -8,12 +8,21 @@ It is used in the [Origami registry](http://registry.origami.ft.com), the [image
 
 __o-techdocs__ has no silent mode, so the provided CSS classes beginning with `o-techdocs` must be used. See the demo page for examples.
 
-## Upgrading from v3.x.x to v4.x.x
+## Upgrading from v4.x.x to v5.x.x
 
-1. Assign a `o-techdocs-footer` class to the technical docs `<footer>` elements
-2. Wrap the footer's contents inside a `<div class="o-techdocs-footer__inner">`
-3. Rename the `right` class in the footer to `o-techdocs-footer__secondary`
-4. Rename `o-ft-header` into `o-header`
-5. Wrap the children of `o-header__container` inside a new `<div class="o-header__inner">`
-6. `o-techdocs-layout--full` is deprecated fo single column layouts. Add the class `o-techdocs-main--fullwidth` to `o-techdocs-main` instead.
-7. Remove references to `prettyprint` and `prettify`: o-techdocs v4 includes a syntax highlighter by default and there is no need for an external script anymore.
+o-techdocs v5 relies on o-header v4 and o-grid v4.
+
+```diff
++<div class="o-techdocs-container">
+ 	<div class="o-techdocs-layout">
+ 
+ 	</div> <!-- /.o-techdocs-layout -->
++</div> <!-- /.o-techdocs-container -->
+
+ <footer class="o-techdocs-footer">
+-	<div class="o-techdocs-footer__inner">
+ 		<p class="o-techdocs-footer__secondary"><a href="http://github.com/financial-times/ft-origami">View project on GitHub</a></p>
+ 		<p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
+-	</div>
+ </footer>
+```

@@ -9,21 +9,24 @@
 		display: none;
 	}
 }
+.o-techdocs-container {
+	@include oGridContainer;
+}
 .o-techdocs-layout {
 	@include oGridRow;
 }
 .o-techdocs-sidebar {
-	@include oGridColumn((default: 12, M: 4, L: 3));
+	@include oGridColspan((default: 12, M: 4, L: 3));
 }
 .o-techdocs-main {
-	@include oGridColumn((default: 12, M: 8, L: 9));
+	@include oGridColspan((default: 12, M: 8, L: 9));
 }
 .o-techdocs-main--fullwidth {
-	@include oGridColumn(full-width);
+	@include oGridColspan(full-width);
 }
 .o-techdocs-footer {
 	@include oTechdocsFont();
-	@include oGridRow;
+	@include oGridContainer;
 	font-size: 12px;
 	margin-top: 20px;
 	padding-top: 10px;
@@ -33,9 +36,6 @@
 	p {
 		margin: 0 0 10px;
 	}
-}
-.o-techdocs-footer__inner {
-	@include oGridColumn(full-width);
 }
 .o-techdocs-footer__secondary {
 	float: right;
