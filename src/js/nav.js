@@ -65,6 +65,8 @@ module.exports = function() {
 		}
 	}
 
+	showHideMenu();
+
 	// On scroll, determine which section is in view, and highlight it
 	document.addEventListener('oViewport.scroll', function() {
 		var scrolltop = window.pageYOffset || document.body.scrollTop;
