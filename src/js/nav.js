@@ -65,6 +65,8 @@ function nav() {
 		}
 	}
 
+	showHideMenu();
+
 	// On scroll, determine which section is in view, and highlight it
 	document.addEventListener('oViewport.scroll', function() {
 		const scrolltop = window.pageYOffset || document.body.scrollTop;
