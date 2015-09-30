@@ -1,14 +1,19 @@
-"use strict";
-
 require('o-header');
 
-var techdocsModules = [
-	require('./src/js/highlight'),
-	require('./src/js/nav'),
-	require('./src/js/tables'),
-	require('./src/js/reveals'),
-	require('./src/js/permalinks'),
-	require('./src/js/gist-it')
+import highlight from './src/js/highlight';
+import { nav } from './src/js/nav';
+import { tables } from './src/js/tables';
+import { reveals } from './src/js/reveals';
+import { permalinks } from './src/js/permalinks';
+import { gistIt } from './src/js/gist-it';
+
+const techdocsModules = [
+	highlight,
+	nav,
+	tables,
+	reveals,
+	permalinks,
+	gistIt
 ];
 
 function init() {

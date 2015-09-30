@@ -2,9 +2,8 @@
 /**
  * Syntax highlighting using highlight.js - https://highlightjs.org/
  */
-'use strict';
 
-var hljs = require('highlight.js');
+const hljs = require('highlight.js');
 hljs.configure({
 	languages: [
 		'javascript',
@@ -41,7 +40,7 @@ function init() {
 	// Detect additions of new <pre><code> blocks to the page (TODO: should be instance DOM only)
 	// and highlight them automatically
 	if ('MutationObserver' in window) {
-		let observer = new MutationObserver(function(mutations) {
+		const observer = new MutationObserver(function(mutations) {
 			mutations.forEach(function(mut) {
 
 				// Ignore any mutations that do not add new elements
