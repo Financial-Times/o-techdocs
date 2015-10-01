@@ -8,7 +8,7 @@
 	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js?features=document.querySelector,Element.prototype.classList,Array.prototype.forEach,default"></script>
 	<style>body { margin: 0; } .demo-js .o--if-nojs { display: none; }</style>
 	<script>(function(d) { d.className = d.className + ' demo-js'; })(document.documentElement);</script>
-	<link rel="stylesheet" href="/bundles/css?modules=o-techdocs:/demos/src/scss/main.scss,o-fonts@^1.4.0,o-grid@^3.2.5" />
+	<link rel="stylesheet" href="/bundles/css?modules=o-techdocs:/demos/src/scss/main.scss,o-fonts@^1.4.0,o-grid@^4.0.0" />
 </head>
 <body>
 
@@ -39,29 +39,30 @@
 
 
 <!-- Navigation menu and main content -->
-<div class="o-techdocs-layout">
+<div class="o-techdocs-container">
+	<div class="o-techdocs-layout">
 
-	<!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
-	<div class="o-techdocs-sidebar">
-		<ul class="o-techdocs-nav">
-			<li><a href="#">Link title 1</a></li>
-			<li><a href="#">Link title 2</a></li>
-			<li><a href="#">Link title 3</a></li>
-			<li><a href="#">Link title 4</a>
-				<ul class="o-techdocs-nav o-techdocs-nav--sub">
-					<li><a href="#">Sub link 1</a></li>
-					<li aria-selected="true"><a href="#">Sub link 2 (selected)</a></li>
-					<li><a href="#">Sub link 3</a></li>
-					<li><a href="#">Sub link 4</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Link title 5</a></li>
-		</ul>
-	</div>
+		<!-- Navigation - optional, omit for single page docs.  o-techdocs-sidebar container allows an in-page navigation list to be appended after the site navigation -->
+		<div class="o-techdocs-sidebar">
+			<ul class="o-techdocs-nav">
+				<li><a href="#">Link title 1</a></li>
+				<li><a href="#">Link title 2</a></li>
+				<li><a href="#">Link title 3</a></li>
+				<li><a href="#">Link title 4</a>
+					<ul class="o-techdocs-nav o-techdocs-nav--sub">
+						<li><a href="#">Sub link 1</a></li>
+						<li aria-selected="true"><a href="#">Sub link 2 (selected)</a></li>
+						<li><a href="#">Sub link 3</a></li>
+						<li><a href="#">Sub link 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Link title 5</a></li>
+			</ul>
+		</div>
 
-	<!-- Main content (outer div for layout, inner for formatting) -->
-	<div class="o-techdocs-main">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
+		<!-- Main content (outer div for layout, inner for formatting) -->
+		<div class="o-techdocs-main">
+			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
 <div class="o-techdocs-content">
 
 <h1>Sample content (h1)</h1>
@@ -391,9 +392,10 @@ Server running... press ctrl-c to stop.</output></pre>
 
 </div> <!-- /o-techdocs-content -->
 
-	</div>
+		</div>
 
-</div> <!-- /row containing nav and content -->
+	</div> <!-- /.o-techdocs-layout -->
+</div> <!-- /.o-techdocs-container -->
 
 <footer class="o-techdocs-footer">
 	<div class="o-techdocs-footer__inner">
@@ -402,7 +404,7 @@ Server running... press ctrl-c to stop.</output></pre>
 	</div>
 </footer>
 
-<script src="/bundles/js?modules=o-techdocs,o-fonts@^1.4.0,o-grid@^3.2.5"></script>
+<script src="/bundles/js?modules=o-techdocs,o-fonts@^1.4.0,o-grid@^4.0.0"></script>
 <script src="//registry.origami.ft.com/embedapi?autoload=resize"></script>
 </body>
 </html>
