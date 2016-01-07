@@ -12,7 +12,7 @@
 			position: relative;
 			display: block;
 			overflow: hidden;
-			padding: 6px 10px 6px 30px;
+			padding: 6px 10px 6px 15px;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			color: oColorsGetColorFor(link, text);
@@ -24,7 +24,7 @@
 	}
 	> li[aria-selected="true"] {
 		> a {
-			padding-left: 15px;
+			padding-left: 0;
 			color: oColorsGetPaletteColor('black');
 			font-weight: bold;
 			pointer-events: none;
