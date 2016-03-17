@@ -12,7 +12,7 @@ oViewport.listenTo('resize');
 function nav() {
 	let list = '';
 	const lis = [];
-	let scrollmargin; 
+	let scrollmargin;
 	let headings = [];
 	let currentheading;
 	const qsa = document.querySelectorAll.bind(document);
@@ -125,4 +125,4 @@ function nav() {
 	}, false);
 };
 
-export { nav }
+export { nav };
