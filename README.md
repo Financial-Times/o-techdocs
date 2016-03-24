@@ -1,4 +1,4 @@
-## Tech docs framework  [![Build Status](https://travis-ci.org/Financial-Times/o-techdocs.png?branch=master)](https://travis-ci.org/Financial-Times/o-techdocs)
+## Tech docs framework  [![Build Status](https://circleci.com/gh/Financial-Times/o-techdocs.png?style=shield&circle-token=99a02a6c2729e1d54b46363ec0d8aa59cf0f9772)](https://circleci.com/gh/Financial-Times/o-techdocs)
 
 Documentation styles for technical documentation, API references and internal tools.
 
@@ -15,7 +15,7 @@ o-techdocs v5 relies on o-header v4 and o-grid v4.
 ```diff
 +<div class="o-techdocs-container">
  	<div class="o-techdocs-layout">
- 
+
  	</div> <!-- /.o-techdocs-layout -->
 +</div> <!-- /.o-techdocs-container -->
 
