@@ -72,17 +72,6 @@ $o-techdocs-header-breakpoint: M !default;
 		min-width: 100%;
 		box-sizing: border-box;
 	}
-
-	// Ensure passing from normal to expanded state
-	// doesn't change the width of the menu
-	.o-hierarchical-nav__parent__right-arrow,
-	.o-hierarchical-nav__parent__down-arrow {
-		box-sizing: border-box;
-		width: 16px;
-		text-align: right;
-		padding-right: 6px;
-		line-height: 16px;
-	}
 }
 
 // Alternative to the FT masthead
