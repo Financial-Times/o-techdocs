@@ -4,6 +4,10 @@
 	// Used in core experience so hidden elements don't continue appearing
 	overflow: hidden;
 
+	[data-o-hierarchical-nav-level] {
+		background-color: oColorsGetColorFor(o-techdocs-header, background);
+	}
+
 	li {
 		text-align: left;
 
