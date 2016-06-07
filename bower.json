@@ -3,7 +3,7 @@
   "dependencies": {
     "o-colors": ">=2.5.0 <4",
     "o-grid": "^4.0.0",
-    "o-hierarchical-nav": ">=2.0.0 <4",
+    "o-hierarchical-nav": "^4.0.0",
     "highlight.js": "Financial-Times/highlight.js-shim",
     "o-viewport": ">=1.3.0 <3",
     "ftdomdelegate": ">=1.0.0 <3"
