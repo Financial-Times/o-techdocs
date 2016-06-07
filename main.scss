@@ -2,7 +2,7 @@
 @import 'src/scss/color-use-cases';
 
 @import 'o-grid/main';
-@import 'o-header/main';
+@import 'o-hierarchical-nav/main';
 
 @import 'src/scss/deprecated';
 @import 'src/scss/mixins';
@@ -13,3 +13,7 @@
 @import 'src/scss/table';
 @import 'src/scss/card';
 @import 'src/scss/solarized-light.hljs-theme';
+@import 'src/scss/header_mixins';
+@import 'src/scss/header';
+@import 'src/scss/header_icon';
+@import 'src/scss/header_theme_primary';

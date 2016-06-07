@@ -1,3 +1,6 @@
+@include oColorsSetUseCase(o-techdocs-header, background, 'grey-tint5');
+@include oColorsSetUseCase(o-techdocs-header-item, text, 'white');
+
 @include oColorsSetUseCase(product-brand, background, 'blue');
 
 @include oColorsSetUseCase(o-techdocs-block-code-sample, background, 'pink-tint1');

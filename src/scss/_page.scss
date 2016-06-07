@@ -1,10 +1,8 @@
 // scss-lint:disable QualifyingElement
 .o-techdocs {
 	background-color: oColorsGetPaletteColor('white');
+	font-family: Helvetica, Arial ,sans-serif;
 
-	.o-header {
-		margin-bottom: 45px;
-	}
 	[aria-hidden=true] {
 		display: none;
 	}
