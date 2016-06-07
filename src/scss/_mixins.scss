@@ -9,13 +9,3 @@
 		color: oColorsGetColorFor(link, text);
 	}
 }
-
-/// Target both IE8 and modern browsers at the M layout
-@mixin _oTechdocsHeaderBreakpoint {
-	@include oGridRespondTo($o-techdocs-header-breakpoint) {
-		@content;
-	}
-	@include oGridTargetIE8 {
-		@content;
-	}
-}
