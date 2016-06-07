@@ -8,9 +8,9 @@ function Header(rootEl) {
 	let bodyDelegate;
 	// Gets all nav elements in the header
 	const hierarchicalNavEls = [
-			rootEl.querySelector('.o-header__nav--primary-theme'),
-			rootEl.querySelector('.o-header__nav--secondary-theme'),
-			rootEl.querySelector('.o-header__nav--tools-theme')
+			rootEl.querySelector('.o-techdocs-header__nav--primary-theme'),
+			rootEl.querySelector('.o-techdocs-header__nav--secondary-theme'),
+			rootEl.querySelector('.o-techdocs-header__nav--tools-theme')
 		].filter(function(el) {
 			/**
 			 * Overflow is hidden by default on the tools and primary theme for it to resize properly on core experience
@@ -31,7 +31,7 @@ function Header(rootEl) {
 		} else if (!(rootEl instanceof HTMLElement)) {
 			rootEl = document.querySelector(rootEl);
 		}
-		rootEl.setAttribute('data-o-header--js', '');
+		rootEl.setAttribute('data-o-techdocs-header--js', '');
 		bodyDelegate = new DomDelegate(document.body);
 		hierarchicalNavs = hierarchicalNavEls.map(function(el) {
 			return new HierarchicalNav(el);
@@ -46,7 +46,7 @@ function Header(rootEl) {
 				hierarchicalNavs[c].destroy();
 			}
 		}
-		rootEl.removeAttribute('data-o-header--js');
+		rootEl.removeAttribute('data-o-techdocs-header--js');
 	}
 
 	init();
@@ -62,10 +62,10 @@ Header.init = function(el) {
 	} else if (!(el instanceof HTMLElement)) {
 		el = document.querySelector(el);
 	}
-	const headerEls = el.querySelectorAll('[data-o-component="o-header"]');
+	const headerEls = el.querySelectorAll('[data-o-component="o-techdocs-header"]');
 	const headers = [];
 	for (let c = 0, l = headerEls.length; c < l; c++) {
-		if (!headerEls[c].hasAttribute('data-o-header--js')) {
+		if (!headerEls[c].hasAttribute('data-o-techdocs-header--js')) {
 			headers.push(new Header(headerEls[c]));
 		}
 	}

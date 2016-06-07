@@ -1,7 +1,7 @@
 /// Default arrow styling
 ///
 /// @param {Number} $size [8px]
-@mixin oHeaderArrow($size: 8px) {
+@mixin oTechdocsHeaderArrow($size: 8px) {
 	border-left: $size solid transparent;
 	border-right: $size solid transparent;
 	width: 0;
@@ -16,8 +16,8 @@
 ///
 /// @param {Color} $color [#333333]
 /// @param {Number} $size [8px]
-@mixin oHeaderDownArrow($color: #333333, $size: 8px) {
-	@include oHeaderArrow($size);
+@mixin oTechdocsHeaderDownArrow($color: #333333, $size: 8px) {
+	@include oTechdocsHeaderArrow($size);
 	border-top: $size solid $color;
 	top: 100%;
 	margin-top: -1px; // Extra pixel ensures background and arrow have no space between them
@@ -29,8 +29,8 @@
 ///
 /// @param {Color} $color [#333333]
 /// @param {Number} $size [8px]
-@mixin oHeaderUpArrow($color: #333333, $size: 8px) {
-	@include oHeaderArrow($size);
+@mixin oTechdocsHeaderUpArrow($color: #333333, $size: 8px) {
+	@include oTechdocsHeaderArrow($size);
 	border-bottom: $size solid $color;
 	bottom: -1px; // Extra pixel ensures background and arrow have no space between them
 	left: 50%;
@@ -38,13 +38,13 @@
 }
 
 /// Helper function for assets
-@function oHeaderAsset($asset) {
-	@return oAssetsResolve($asset, o-header);
+@function oTechdocsHeaderAsset($asset) {
+	@return oAssetsResolve($asset, o-techdocs-header);
 }
 
 /// Target both IE8 and modern browsers at the M layout
-@mixin _oHeaderBreakpoint {
-	@include oGridRespondTo($o-header-breakpoint) {
+@mixin _oTechdocsHeaderBreakpoint {
+	@include oGridRespondTo($o-techdocs-header-breakpoint) {
 		@content;
 	}
 	@include oGridTargetIE8 {
