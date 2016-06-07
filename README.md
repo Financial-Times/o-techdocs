@@ -16,7 +16,7 @@ In moving `o-header` back into `o-techdocs-header` it's possible that we've fail
 
 ## Upgrading from v4.x.x to v5.x.x
 
-o-techdocs v5 relies on o-techdocs-header v4 and o-grid v4.
+o-techdocs v5 relies on o-header v4 and o-grid v4.
 
 ```diff
 +<div class="o-techdocs-container">
