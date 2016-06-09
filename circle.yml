@@ -6,9 +6,14 @@ machine:
 dependencies:
   override:
     - obt install
+    - npm install -g pa11y@^4
   cache_directories:
     - "node_modules"
 test:
   override:
     - obt test
     - obt verify
+    - "obt demo --runServer":
+        background: true
+    - sleep 10
+    - pa11y http://localhost:8080/demos/local/demo.html --ignore notice --ignore warning
