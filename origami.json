@@ -1,6 +1,7 @@
 {
 	"description": "A framework for building technical documentation and tool UIs",
 	"origamiType": "module",
+	"origamiCategory": "layouts",
 	"origamiVersion": 1,
 	"support": "https://github.com/Financial-Times/o-techdocs/issues",
 	"supportStatus": "active",
