@@ -1,7 +1,7 @@
-// scss-lint:disable QualifyingElement
+// sass-lint:disable no-qualifying-elements
 .o-techdocs {
 	background-color: oColorsGetPaletteColor('white');
-	font-family: Helvetica, Arial ,sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 
 	[aria-hidden=true] {
 		display: none;

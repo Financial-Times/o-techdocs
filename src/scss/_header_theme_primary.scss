@@ -24,7 +24,7 @@
 		font-size: 14px;
 	}
 
-	// scss-lint:disable SelectorDepth
+	// sass-lint:disable SelectorDepth -- not supported in sass-lint
 	[data-o-hierarchical-nav-level='1'] > li {
 		// Default styling for the a tag
 		> a {
@@ -41,7 +41,7 @@
 			opacity: 0.7;
 		}
 	}
-	// scss-lint:enable SelectorDepth
+	// sass-lint:enable SelectorDepth -- not supported in sass-lint
 
 	// Padding for all a tags that aren't in the first hierarchical nav level
 	[data-o-hierarchical-nav-level] [data-o-hierarchical-nav-level] a {
