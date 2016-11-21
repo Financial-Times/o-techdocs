@@ -1,4 +1,4 @@
-// scss-lint:disable QualifyingElement
+// sass-lint:disable no-qualifying-elements
 .o-techdocs-card {
 	max-width: 500px;
 	box-shadow: 1px 1px 3px 0px rgba(100, 100, 100, 0.5);
@@ -97,11 +97,11 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 // Theme variations
 
 .o-techdocs-card--sev1 .o-techdocs-card__context {
-	background-color: #B12D00;
+	background-color: #b12d00;
 	color: white;
 }
 .o-techdocs-card--sev1 {
-	border-color: #B12D00;
+	border-color: #b12d00;
 }
 .o-techdocs-card--sev2 .o-techdocs-card__context {
 	background-color: #b16300;

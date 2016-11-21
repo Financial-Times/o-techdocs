@@ -1,4 +1,4 @@
-// scss-lint:disable QualifyingElement
+// sass-lint:disable no-qualifying-elements
 
 .o-techdocs-content {
 	@include oTechdocsFont();
@@ -116,7 +116,7 @@
 		kbd {
 			color: white;
 
-			// scss-lint:disable NestingDepth
+			// sass-lint:disable nesting-depth
 			&:before {
 				content: '>';
 				margin-left: -15px;
