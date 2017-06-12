@@ -1,10 +1,8 @@
 // sass-lint:disable no-qualifying-elements
 .o-techdocs-card {
+	background: $o-techdocs-content-background;
 	max-width: 500px;
-	box-shadow: 1px 1px 3px 0px rgba(100, 100, 100, 0.5);
-	background: #eeeeee;
 	display: block;
-	border: 1px solid #f0f0f0;
 	margin: 1em 0;
 	box-sizing: border-box;
 }
@@ -13,7 +11,7 @@ a.o-techdocs-card {
 	text-decoration: none;
 }
 a.o-techdocs-card:hover {
-	box-shadow: 1px 1px 3px 2px #5296c4;
+	box-shadow: 0 0 0 4px oColorsGetPaletteColor('teal');
 }
 a.o-techdocs-card .o-techdocs-card__actions,
 a.o-techdocs-card .o-techdocs-card__quickactions {
@@ -85,28 +83,28 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 	border: 0;
 	margin-right: 5px;
 	padding: 8px;
-	background-color: #dddddd;
+	background-color: $o-techdocs-card-button;
 	font-size: 13px;
 	cursor: pointer;
 }
 .o-techdocs-card__actionbutton:hover {
-	background-color: #cccccc;
+	background-color: $o-techdocs-card-button-hover;
 }
 
 
 // Theme variations
 
 .o-techdocs-card--sev1 .o-techdocs-card__context {
-	background-color: #b12d00;
-	color: white;
+	@include oColorsFor(o-techdocs-status-sev1, all);
 }
 .o-techdocs-card--sev1 {
-	border-color: #b12d00;
+	border: 4px solid;
+	border-color: oColorsGetColorFor(o-techdocs-status-sev1, background);
 }
 .o-techdocs-card--sev2 .o-techdocs-card__context {
-	background-color: #b16300;
-	color: white;
+	@include oColorsFor(o-techdocs-status-sev2, all);
 }
 .o-techdocs-card--sev2 {
-	border-color: #b16300;
+	border: 4px solid;
+	border-color: oColorsGetColorFor(o-techdocs-status-sev2, background);
 }

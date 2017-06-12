@@ -17,7 +17,7 @@
 	}
 	h2 {
 		font-size: 26px;
-		border-bottom: 1px solid $o-techdocs-color-grey2;
+		border-bottom: 1px solid $o-techdocs-border-color;
 		padding-bottom: 2px;
 		margin: 35px 0 15px;
 	}
@@ -40,7 +40,7 @@
 		height: 4px;
 		padding: 0;
 		margin: 1em 0;
-		background-color: $o-techdocs-color-grey2;
+		background-color: $o-techdocs-border-color;
 		border: 0;
 
 		&:before,
@@ -61,7 +61,7 @@
 		font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	}
 	code {
-		background-color: $o-techdocs-color-grey1;
+		background-color: $o-techdocs-content-background;
 		color: $o-techdocs-color-green;
 		white-space: pre-wrap;
 	}
@@ -76,9 +76,7 @@
 		overflow-x: auto;
 		margin: 0 0 10px;
 		padding: 9.5px;
-		border: 1px solid $o-techdocs-color-grey2;
-		background-color: $o-techdocs-color-grey1;
-		color: $o-techdocs-color-charcoal;
+		background-color: $o-techdocs-content-background;
 		word-wrap: inherit;
 		word-break: break-all;
 		font-size: 15px;
@@ -106,7 +104,7 @@
 		max-height: 340px;
 	}
 	pre.cli {
-		background: $o-techdocs-color-charcoal;
+		background: oColorsMix(black, white, 90);
 
 		kbd,
 		output {
@@ -124,7 +122,7 @@
 			}
 		}
 		output {
-			color: $o-techdocs-color-grey3;
+			color: oColorsMix(black, white, 30);
 		}
 	}
 
@@ -149,12 +147,12 @@
 		margin-bottom: 20px;
 		padding: 15px;
 		overflow: hidden;
-		border-left: 5px solid oColorsGetPaletteColor('claret');
-		background-color: $o-techdocs-color-grey1;
+		border-left: 4px solid oColorsGetPaletteColor('teal');
+		background-color: $o-techdocs-content-background;
 
 		> h4,
 		> h5 {
-			color: oColorsGetPaletteColor('claret');
+			color: oColorsGetPaletteColor('teal');
 			font-size: 18px;
 			margin: 14px 0 0;
 		}
@@ -181,7 +179,7 @@
 		font-family: sans-serif;
 		font-weight: normal;
 		margin-left: 0.5em;
-		color: #cccccc;
+		color: $o-techdocs-content-background;
 		text-decoration: none;
 		font-size: 80%;
 		line-height: 1;
@@ -204,14 +202,14 @@
 	.gist,
 	.gist-it-gist {
 		.gist-file {
-			border: 1px solid $o-techdocs-color-grey2;
+			border: 1px solid $o-techdocs-border-color;
 		}
 		.gist-data {
-			background-color: $o-techdocs-color-grey1;
+			background-color: $o-techdocs-content-background;
 			border-bottom: 0;
 		}
 		.line-numbers {
-			background-color: $o-techdocs-color-grey1;
+			background-color: $o-techdocs-border-color;
 			border-right: 0;
 			padding: 1em;
 		}

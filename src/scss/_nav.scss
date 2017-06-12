@@ -19,13 +19,13 @@
 			text-decoration: none;
 		}
 		> a:hover {
-			background-color: $o-techdocs-color-grey2;
+			background-color: $o-techdocs-border-color;
 		}
 	}
 	> li[aria-selected="true"] {
 		> a {
 			padding-left: 0;
-			color: oColorsGetPaletteColor('black');
+			color: oColorsGetColorFor(o-techdocs-content, text);
 			font-weight: bold;
 			pointer-events: none;
 		}
@@ -51,7 +51,7 @@
 }
 
 .o-techdocs-nav--page {
-	border-top: 1px dotted $o-techdocs-color-grey2;
+	border-top: 1px dotted $o-techdocs-border-color;
 	margin-top: 20px;
 	padding-top: 20px;
 

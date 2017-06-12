@@ -1,16 +1,17 @@
 .o-techdocs-hero {
 	width: 100%;
+	background-color: oColorsGetPaletteColor('paper');
 	box-sizing: border-box;
-	margin: 45px auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin: 0 auto 56px auto;
+	padding: 56px 20px ;
 }
+
 .o-techdocs-hero__title {
 	text-align: center;
 	font-weight: 200;
 	font-size: 26px;
-	margin-top: 0;
-	margin-bottom: 45px;
+	margin: 0;
+
 }
 @include oGridRespondTo(S) {
 	.o-techdocs-hero__title {
