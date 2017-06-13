@@ -17,17 +17,17 @@
 	}
 	h2 {
 		font-size: 26px;
-		border-bottom: 1px solid $o-techdocs-border-color;
-		padding-bottom: 2px;
-		margin: 35px 0 15px;
+		border-bottom: 4px solid $o-techdocs-border-color;
+		padding-bottom: oTechdocsSpacingUnit(2);
+		margin: oTechdocsSpacingUnit(9) 0 oTechdocsSpacingUnit(4);
 	}
 	h3 {
 		font-size: 21px;
-		margin: 30px 0 15px;
+		margin: oTechdocsSpacingUnit(8) 0 oTechdocsSpacingUnit(4);
 	}
 	h4 {
 		font-size: 18px;
-		margin: 25px 0 15px;
+		margin: oTechdocsSpacingUnit(5) 0 oTechdocsSpacingUnit(4);
 	}
 	h1,
 	h2,
@@ -39,7 +39,7 @@
 	hr {
 		height: 4px;
 		padding: 0;
-		margin: 1em 0;
+		margin: oTechdocsSpacingUnit(4) 0;
 		background-color: $o-techdocs-border-color;
 		border: 0;
 
@@ -74,8 +74,8 @@
 	pre { // Override defaults
 		display: block;
 		overflow-x: auto;
-		margin: 0 0 10px;
-		padding: 9.5px;
+		margin: 0 0 oTechdocsSpacingUnit(4);
+		padding: oTechdocsSpacingUnit(4);
 		background-color: $o-techdocs-content-background;
 		word-wrap: inherit;
 		word-break: break-all;
@@ -144,8 +144,8 @@
 	}
 
 	aside {
-		margin-bottom: 20px;
-		padding: 15px;
+		margin-bottom: oTechdocsSpacingUnit(5);
+		padding: oTechdocsSpacingUnit(4);
 		overflow: hidden;
 		border-left: 4px solid oColorsGetPaletteColor('teal');
 		background-color: $o-techdocs-content-background;
@@ -154,7 +154,7 @@
 		> h5 {
 			color: oColorsGetPaletteColor('teal');
 			font-size: 18px;
-			margin: 14px 0 0;
+			margin: oTechdocsSpacingUnit(3) 0 0;
 		}
 		> *:last-child {
 			margin-bottom: 0;

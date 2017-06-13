@@ -46,12 +46,12 @@
 		font-size: 90%;
 	}
 	> li[aria-selected="true"] > a {
-		padding-left: 25px;
+		padding-left: oTechdocsSpacingUnit(6);
 	}
 }
 
 .o-techdocs-nav--page {
-	border-top: 1px dotted $o-techdocs-border-color;
+	border-top: 4px solid $o-techdocs-border-color;
 	margin-top: 20px;
 	padding-top: 20px;
 

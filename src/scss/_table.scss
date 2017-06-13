@@ -11,7 +11,7 @@
 	> thead > tr > th,
 	> tbody > tr > th {
 		@include oTechdocsFont();
-		padding: 10px 6px;
+		padding: oTechdocsSpacingUnit(4) oTechdocsSpacingUnit(2);
 		border-bottom: 1px solid $o-techdocs-border-color;
 		text-align: left;
 	}

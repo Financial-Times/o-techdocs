@@ -1,9 +1,10 @@
 .o-techdocs-hero {
+	@include oTechdocsFont();
 	width: 100%;
 	background-color: oColorsGetPaletteColor('paper');
 	box-sizing: border-box;
-	margin: 0 auto 56px auto;
-	padding: 56px 20px ;
+	margin: 0 auto oTechdocsSpacingUnit(14) auto;
+	padding: oTechdocsSpacingUnit(14) oTechdocsSpacingUnit(5);
 }
 
 .o-techdocs-hero__title {

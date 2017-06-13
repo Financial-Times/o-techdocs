@@ -3,7 +3,7 @@
 	background: $o-techdocs-content-background;
 	max-width: 500px;
 	display: block;
-	margin: 1em 0;
+	margin: oTechdocsSpacingUnit(4) 0;
 	box-sizing: border-box;
 }
 a.o-techdocs-card {
@@ -22,7 +22,8 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 // Context: top of card
 
 .o-techdocs-card__context {
-	padding: 10px;
+	padding: oTechdocsSpacingUnit(3);
+
 	overflow: hidden;
 	display: flex;
 }
@@ -35,7 +36,7 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 	flex: 0 0 30px;
 	font-size: 25px;
 	text-align: center;
-	margin-right: 10px;
+	margin-right: oTechdocsSpacingUnit(3);
 }
 .o-techdocs-card__heading {
 	flex: 1 1 auto;
@@ -66,7 +67,7 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 // Content
 
 .o-techdocs-card__content {
-	padding: 10px;
+	padding: oTechdocsSpacingUnit(3);
 	font-size: 90%;
 	width: 100%;
 	box-sizing: border-box;
@@ -76,13 +77,13 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 // Action bar
 
 .o-techdocs-card__actions {
-	padding: 10px;
-	border-top: 1px solid #dddddd;
+	padding: oTechdocsSpacingUnit(3);
+	border-top: 1px solid $o-techdocs-border-color;
 }
 .o-techdocs-card__actionbutton {
 	border: 0;
-	margin-right: 5px;
-	padding: 8px;
+	margin-right: oTechdocsSpacingUnit(1);
+	padding: oTechdocsSpacingUnit(2);
 	background-color: $o-techdocs-card-button;
 	font-size: 13px;
 	cursor: pointer;
