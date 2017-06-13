@@ -1,5 +1,6 @@
 // sass-lint:disable no-qualifying-elements
 .o-techdocs {
+	@include oNormaliseHTML();
 	background-color: oColorsGetPaletteColor('white');
 	font-family: Helvetica, Arial, sans-serif;
 

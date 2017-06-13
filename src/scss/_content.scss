@@ -2,6 +2,8 @@
 
 .o-techdocs-content {
 	@include oTechdocsFont();
+	@include oNormaliseLinks();
+	@include oNormaliseText();
 
 	h1,
 	h2,
