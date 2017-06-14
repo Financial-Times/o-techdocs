@@ -7,5 +7,10 @@
 
 	a {
 		color: oColorsGetColorFor(link, text);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+    }
 	}
 }

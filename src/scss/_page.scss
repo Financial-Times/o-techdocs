@@ -2,7 +2,6 @@
 .o-techdocs {
 	@include oNormaliseHTML();
 	background-color: oColorsGetPaletteColor('white');
-	font-family: Helvetica, Arial, sans-serif;
 
 	[aria-hidden=true] {
 		display: none;
