@@ -1,14 +1,14 @@
 {
   "name": "o-techdocs",
   "dependencies": {
+    "ftdomdelegate": ">=1.0.0 <3",
+    "highlight.js": "Financial-Times/highlight.js-shim",
     "o-colors": "^4.0.0",
     "o-grid": "^4.0.0",
-    "o-hierarchical-nav": "^4.0.0",
     "o-header-services": "^2.0.0",
-    "highlight.js": "Financial-Times/highlight.js-shim",
+    "o-hierarchical-nav": "^4.0.0",
     "o-normalise": "^1.0.0",
-    "o-viewport": ">=1.3.0 <3",
-    "ftdomdelegate": ">=1.0.0 <3"
+    "o-viewport": ">=1.3.0 <3"
   },
   "main": [
     "main.js",
