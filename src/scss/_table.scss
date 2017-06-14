@@ -11,7 +11,9 @@
 	> thead > tr > th,
 	> tbody > tr > th {
 		@include oTechdocsFont();
-		padding: oTechdocsSpacingUnit(4) oTechdocsSpacingUnit(2);
+		font-size: 16px;
+		line-height: oTechdocsSpacingUnit(3);
+		padding: oTechdocsSpacingUnit(1) oTechdocsSpacingUnit(1);
 		border-bottom: 1px solid $o-techdocs-border-color;
 		text-align: left;
 	}

@@ -11,6 +11,7 @@
 	@include oGridContainer;
 }
 .o-techdocs-layout {
+	padding-top: oTechdocsSpacingUnit(14);
 	@include oGridRow;
 }
 .o-techdocs-sidebar {
@@ -26,13 +27,13 @@
 	@include oTechdocsFont();
 	@include oGridContainer;
 	font-size: 12px;
-	margin-top: oTechdocsSpacingUnit(5);
-	padding-top: oTechdocsSpacingUnit(4);
-	padding-bottom: oTechdocsSpacingUnit(4);
+	margin-top: oTechdocsSpacingUnit(2);
+	padding-top: oTechdocsSpacingUnit(1);
+	padding-bottom: oTechdocsSpacingUnit(2);
 	border-top: 4px solid $o-techdocs-border-color;
 
 	p {
-		margin: 0 0 oTechdocsSpacingUnit(4);
+		margin: 0 0 oTechdocsSpacingUnit(2);
 	}
 }
 .o-techdocs-footer__secondary {

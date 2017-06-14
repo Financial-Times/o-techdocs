@@ -1,9 +1,9 @@
 /// Techdocs font settings
 @mixin oTechdocsFont {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+	font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue", Arial, sans-serif;
 	color: oColorsGetColorFor(o-techdocs-content, text);
-	font-size: 18px;
-	line-height: 1.5;
+	font-size: 19px;
+	line-height: 24px;
 
 	a {
 		color: oColorsGetColorFor(link, text);

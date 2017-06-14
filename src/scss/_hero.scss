@@ -3,24 +3,29 @@
 	width: 100%;
 	background-color: oColorsGetPaletteColor('paper');
 	box-sizing: border-box;
-	margin: 0 auto oTechdocsSpacingUnit(14) auto;
-	padding: oTechdocsSpacingUnit(14) oTechdocsSpacingUnit(5);
+	margin: 0 auto;
+	padding: oTechdocsSpacingUnit(7) oTechdocsSpacingUnit(2);
 }
 
 .o-techdocs-hero__title {
 	text-align: center;
 	font-weight: 200;
 	font-size: 26px;
+	line-height: oTechdocsSpacingUnit(4);
 	margin: 0;
 
 }
 @include oGridRespondTo(S) {
 	.o-techdocs-hero__title {
 		font-size: 32px;
+		line-height: oTechdocsSpacingUnit(6);
+
 	}
 }
 @include oGridRespondTo(M) {
 	.o-techdocs-hero__title {
 		font-size: 40px;
+		line-height: oTechdocsSpacingUnit(7);
+
 	}
 }
