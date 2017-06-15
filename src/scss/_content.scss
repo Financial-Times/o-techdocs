@@ -17,9 +17,10 @@
 	h2 {
 		line-height: oTechdocsSpacingUnit(4);
 		font-size: 26px;
-		padding-bottom: 4px; // magic number to make padding + border-bottom add up to 8 (2*spacing unit)
+		$border-thickness: 4px;
+		border-bottom: $border-thickness solid $o-techdocs-border-color;
+		padding-bottom: calc(oTechdocsSpacingUnit() - $border-thickness);
 		margin-bottom: oTechdocsSpacingUnit(2);
-		border-bottom: 4px solid $o-techdocs-border-color;
 		margin-top: oTechdocsSpacingUnit(5);
 	}
 	h3 {
