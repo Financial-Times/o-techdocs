@@ -3,10 +3,16 @@
 	@include oNormaliseText();
 
 	h1 {
-		font-size: 40px;
-		line-height: oTechdocsSpacingUnit(7);
+		font-size: 30px;
+		line-height: oTechdocsSpacingUnit(4);
 		padding-bottom: oTechdocsSpacingUnit(2);
-		margin-bottom: oTechdocsSpacingUnit(3);
+		margin-bottom: oTechdocsSpacingUnit(2);
+		@include oGridRespondTo(M) {
+			font-size: 40px;
+			line-height: oTechdocsSpacingUnit(6);
+			padding-bottom: oTechdocsSpacingUnit(3);
+			margin-bottom: oTechdocsSpacingUnit(3);
+		}
 	}
 	h2 {
 		line-height: oTechdocsSpacingUnit(4);
@@ -139,9 +145,14 @@
 		font-size: 130%;
 	}
 	.o-techdocs-leadbody {
-		font-size: 26px;
-		line-height: oTechdocsSpacingUnit(4);
-		margin: 0 0 oTechdocsSpacingUnit(4);
+		@include oGridRespondTo(M) {
+			font-size: 26px;
+			line-height: oTechdocsSpacingUnit(4);
+			margin: 0 0 oTechdocsSpacingUnit(4);
+		}
+		font-size: 20px;
+		line-height: oTechdocsSpacingUnit(3);
+		margin: 0 0 oTechdocsSpacingUnit(3);
 	}
 
 	// Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)
