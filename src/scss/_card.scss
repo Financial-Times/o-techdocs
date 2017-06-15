@@ -1,4 +1,3 @@
-// sass-lint:disable no-qualifying-elements
 .o-techdocs-card {
 	background: $o-techdocs-content-background;
 	font-size: 18px;
@@ -7,6 +6,8 @@
 	margin: oTechdocsSpacingUnit(1) 0;
 	box-sizing: border-box;
 }
+
+// scss-lint:disable QualifyingElement
 a.o-techdocs-card {
 	color: inherit;
 	text-decoration: none;
@@ -19,6 +20,7 @@ a.o-techdocs-card .o-techdocs-card__actions,
 a.o-techdocs-card .o-techdocs-card__quickactions {
 	display: none;
 }
+// scss-lint:enable QualifyingElement
 
 
 // Context: top of card

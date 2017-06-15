@@ -1,5 +1,3 @@
-// sass-lint:disable no-qualifying-elements
-
 .o-techdocs-content {
 	@include oTechdocsFont();
 	@include oNormaliseText();
@@ -89,6 +87,7 @@
 			white-space: pre;
 			font-size: inherit;
 		}
+		// scss-lint:disable QualifyingElement
 		li.l1,
 		li.l3,
 		li.l5,
@@ -96,7 +95,11 @@
 		li.l9 {
 			// Stripe rows if desired
 		}
+		// scss-lint:enable QualifyingElement
+
 	}
+
+	// scss-lint:disable QualifyingElement
 	pre.long-code {
 		overflow-y: scroll;
 		max-height: 340px;
@@ -123,6 +126,7 @@
 			color: oColorsMix(black, white, 30);
 		}
 	}
+	// scss-lint:enable QualifyingElement
 
 	img {
 		max-width: 100%;
@@ -137,7 +141,7 @@
 	.o-techdocs-leadbody {
 		font-size: 26px;
 		line-height: oTechdocsSpacingUnit(4);
-		margin: 0 0 oTechdocsSpacingUnit(4) 0;
+		margin: 0 0 oTechdocsSpacingUnit(4);
 	}
 
 	// Fix for nested bulleted/numbered lists (Markdown does not consistently wrap in para tags)

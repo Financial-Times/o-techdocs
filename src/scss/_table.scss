@@ -13,7 +13,7 @@
 		@include oTechdocsFont();
 		font-size: 16px;
 		line-height: oTechdocsSpacingUnit(3);
-		padding: oTechdocsSpacingUnit(1) oTechdocsSpacingUnit(1);
+		padding: oTechdocsSpacingUnit(1);
 		border-bottom: 1px solid $o-techdocs-border-color;
 		text-align: left;
 	}
@@ -21,6 +21,7 @@
 	> tbody > tr > th {
 		background-color: $o-techdocs-border-color;
 	}
+	// scss-lint:disable QualifyingElement
 	td.right-align,
 	th.right-align {
 		text-align: right;
@@ -29,6 +30,7 @@
 	tr.left-align {
 		text-align: left;
 	}
+	// scss-lint:enable QualifyingElement
 }
 .o-techdocs-table-wrapper {
 	overflow: auto;
