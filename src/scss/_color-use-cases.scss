@@ -6,7 +6,7 @@
 @include oColorsSetUseCase(o-techdocs-content, text, black-90);
 
 // Colors
-$o-techdocs-content-background: oColorsMix(black, white, 5);
+$o-techdocs-content-background: oColorsMix(black, white, 4);
 $o-techdocs-card-button: oColorsMix(black, white, 20);
 $o-techdocs-card-button-hover: oColorsMix(black, white, 40);
 
@@ -14,4 +14,4 @@ $o-techdocs-card-button-hover: oColorsMix(black, white, 40);
 $o-techdocs-border-color: oColorsMix(black, white, 5);
 
 $o-techdocs-color-green: oColorsGetTint("teal", 40);
-$o-techdocs-color-purple: oColorsGetTint("claret", 90);
+$o-techdocs-color-purple: oColorsGetTint("claret", 80);
