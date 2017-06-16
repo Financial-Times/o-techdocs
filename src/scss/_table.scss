@@ -3,7 +3,7 @@
 .o-techdocs-content > table,
 .o-techdocs-table-wrapper > table {
 	border-collapse: collapse;
-	border: 1px solid $o-techdocs-color-grey2;
+	border: 1px solid $o-techdocs-border-color;
 	margin: 1em 0;
 
 	> thead > tr > td,
@@ -11,15 +11,17 @@
 	> thead > tr > th,
 	> tbody > tr > th {
 		@include oTechdocsFont();
-		padding: 10px 6px;
-		border-bottom: 1px solid $o-techdocs-color-grey2;
+		font-size: 16px;
+		line-height: oTechdocsSpacingUnit(3);
+		padding: oTechdocsSpacingUnit(1);
+		border-bottom: 1px solid $o-techdocs-border-color;
 		text-align: left;
 	}
 	> thead > tr > th,
 	> tbody > tr > th {
-		background-color: $o-techdocs-color-grey2;
-		color: $o-techdocs-color-charcoal-lighter;
+		background-color: $o-techdocs-border-color;
 	}
+	// scss-lint:disable QualifyingElement
 	td.right-align,
 	th.right-align {
 		text-align: right;
@@ -28,6 +30,7 @@
 	tr.left-align {
 		text-align: left;
 	}
+	// scss-lint:enable QualifyingElement
 }
 .o-techdocs-table-wrapper {
 	overflow: auto;

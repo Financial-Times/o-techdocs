@@ -1,7 +1,7 @@
 // sass-lint:disable no-qualifying-elements
 .o-techdocs {
+	@include oNormaliseHTML();
 	background-color: oColorsGetPaletteColor('white');
-	font-family: Helvetica, Arial, sans-serif;
 
 	[aria-hidden=true] {
 		display: none;
@@ -11,9 +11,19 @@
 	@include oGridContainer;
 }
 .o-techdocs-layout {
+	@include oGridRespondTo(S) {
+		padding-top: oTechdocsSpacingUnit(7);
+	}
+
+	padding-top: oTechdocsSpacingUnit(3);
 	@include oGridRow;
 }
 .o-techdocs-sidebar {
+	@include oGridRespondTo(M) {
+		padding-bottom: 0;
+	}
+	padding-bottom: oTechdocsSpacingUnit(3);
+
 	@include oGridColspan((default: 12, M: 4, L: 3));
 }
 .o-techdocs-main {
@@ -26,13 +36,13 @@
 	@include oTechdocsFont();
 	@include oGridContainer;
 	font-size: 12px;
-	margin-top: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-top: 1px dotted $o-techdocs-color-grey3;
+	margin-top: oTechdocsSpacingUnit(2);
+	padding-top: oTechdocsSpacingUnit(1);
+	padding-bottom: oTechdocsSpacingUnit(2);
+	border-top: 4px solid $o-techdocs-border-color;
 
 	p {
-		margin: 0 0 10px;
+		margin: 0 0 oTechdocsSpacingUnit(2);
 	}
 }
 .o-techdocs-footer__secondary {

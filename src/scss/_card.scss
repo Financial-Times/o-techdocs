@@ -1,30 +1,33 @@
-// sass-lint:disable no-qualifying-elements
 .o-techdocs-card {
+	background: $o-techdocs-content-background;
+	font-size: 18px;
 	max-width: 500px;
-	box-shadow: 1px 1px 3px 0px rgba(100, 100, 100, 0.5);
-	background: #eeeeee;
 	display: block;
-	border: 1px solid #f0f0f0;
-	margin: 1em 0;
+	margin: oTechdocsSpacingUnit(1) 0;
 	box-sizing: border-box;
 }
+
+// scss-lint:disable QualifyingElement
 a.o-techdocs-card {
 	color: inherit;
 	text-decoration: none;
 }
 a.o-techdocs-card:hover {
-	box-shadow: 1px 1px 3px 2px #5296c4;
+	box-shadow: 0 0 0 4px oColorsGetPaletteColor('teal');
+	text-decoration: none;
 }
 a.o-techdocs-card .o-techdocs-card__actions,
 a.o-techdocs-card .o-techdocs-card__quickactions {
 	display: none;
 }
+// scss-lint:enable QualifyingElement
 
 
 // Context: top of card
 
 .o-techdocs-card__context {
-	padding: 10px;
+	padding: oTechdocsSpacingUnit(1);
+
 	overflow: hidden;
 	display: flex;
 }
@@ -37,7 +40,7 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 	flex: 0 0 30px;
 	font-size: 25px;
 	text-align: center;
-	margin-right: 10px;
+	margin-right: oTechdocsSpacingUnit(1);
 }
 .o-techdocs-card__heading {
 	flex: 1 1 auto;
@@ -68,7 +71,7 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 // Content
 
 .o-techdocs-card__content {
-	padding: 10px;
+	padding: oTechdocsSpacingUnit(1);
 	font-size: 90%;
 	width: 100%;
 	box-sizing: border-box;
@@ -78,35 +81,41 @@ a.o-techdocs-card .o-techdocs-card__quickactions {
 // Action bar
 
 .o-techdocs-card__actions {
-	padding: 10px;
-	border-top: 1px solid #dddddd;
+	padding: oTechdocsSpacingUnit(1);
+	border-top: 1px solid $o-techdocs-border-color;
 }
 .o-techdocs-card__actionbutton {
 	border: 0;
-	margin-right: 5px;
-	padding: 8px;
-	background-color: #dddddd;
+	margin-right: oTechdocsSpacingUnit(1);
+	padding: oTechdocsSpacingUnit(1);
+	background-color: $o-techdocs-card-button;
 	font-size: 13px;
 	cursor: pointer;
 }
 .o-techdocs-card__actionbutton:hover {
-	background-color: #cccccc;
+	background-color: $o-techdocs-card-button-hover;
 }
 
 
 // Theme variations
 
 .o-techdocs-card--sev1 .o-techdocs-card__context {
-	background-color: #b12d00;
-	color: white;
+	@include oColorsFor(o-techdocs-status-sev1, all);
 }
 .o-techdocs-card--sev1 {
-	border-color: #b12d00;
+	border: 4px solid;
+	border-color: oColorsGetColorFor(o-techdocs-status-sev1, background);
+	.o-techdocs-card__content {
+		border-top: 0;
+	}
 }
 .o-techdocs-card--sev2 .o-techdocs-card__context {
-	background-color: #b16300;
-	color: white;
+	@include oColorsFor(o-techdocs-status-sev2, all);
 }
 .o-techdocs-card--sev2 {
-	border-color: #b16300;
+	border: 4px solid;
+	border-color: oColorsGetColorFor(o-techdocs-status-sev2, background);
+	.o-techdocs-card__content {
+		border-top: 0;
+	}
 }

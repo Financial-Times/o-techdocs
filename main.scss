@@ -1,10 +1,14 @@
 @import 'o-colors/main';
 @import 'src/scss/color-use-cases';
-
+@import 'o-normalise/main';
 @import 'o-grid/main';
-@import 'o-hierarchical-nav/main';
 
-@import 'src/scss/deprecated';
+$o-header-services-is-silent: false;
+@import 'o-header-services/main';
+
+@import 'o-typography/main';
+
+@import 'src/scss/variables';
 @import 'src/scss/mixins';
 @import 'src/scss/content';
 @import 'src/scss/page';
@@ -13,7 +17,3 @@
 @import 'src/scss/table';
 @import 'src/scss/card';
 @import 'src/scss/github-gist.hljs-theme';
-@import 'src/scss/header_mixins';
-@import 'src/scss/header';
-@import 'src/scss/header_icon';
-@import 'src/scss/header_theme_primary';

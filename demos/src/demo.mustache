@@ -1,21 +1,12 @@
-
-<header data-o-component="o-techdocs-header" class="o-techdocs-header">
-	<div class="o-techdocs-header__container">
-		<div class="o-techdocs-header__primary">
-			<div class="o-techdocs-header__primary__left">
-				<a class="o-techdocs-header__logo" href="/">
-					<h1 class="o-techdocs-header__title">Documentation Site</h1>
-				</a>
-			</div>
-
-			<nav class="o-techdocs-header__primary__right o-hierarchical-nav o-techdocs-header__nav--primary-theme" data-o-component="o-hierarchical-nav">
-				<ul data-o-hierarchical-nav-level="1"><!--
-				--><li data-priority="1"><a href="#">Demos</a></li><!--
-				--><li data-priority="1"><a href="#">Specification</a></li><!--
-				--><li data-priority="1" aria-selected="true"><a href="#">Documentation</a></li><!--
-				--><li data-more class="o-hierarchical-nav__parent" aria-hidden="true"><a href="#"><span class="o-hierarchical-nav__more--if-all">Menu<i class="o-hierarchical-nav__parent__down-arrow"></i></span></a></li><!--
-				--></ul>
-			</nav>
+<header class="o-header-services" data-o-component="o-header">
+	<div class="o-header-services__top o-header-services__container">
+		<div class="o-header-services__ftlogo"></div>
+		<div class="o-header-services__title">
+			<h1 class="o-header-services__product-name"><a href="/">Documentation site</a></h1><span class="o-header-subrand__product-tagline ">Tagline to explain the docs</span>
+		</div>
+		<div class="o-header-services__related-content">
+			<a class="o-header-services__related-content-link" href="#">Related site</a>
+			<a class="o-header-services__related-content-link" href="#">Sign in</a>
 		</div>
 	</div>
 </header>
@@ -105,71 +96,71 @@
 			<p>For blocks, wrap in <code>&lt;pre&gt;&lt;code&gt;</code>:</p>
 
 			<pre><code>$.ajax({
-				"url": "/api/getWeather",
-				"data": {
-					"zipcode": 97201
-				},
-				"success": function( data ) {
-					$("#weather-temp").html("<strong>" + data + "</strong> degrees");
-				} // A nice comment
-			});</code></pre>
+	"url": "/api/getWeather",
+	"data": {
+		"zipcode": 97201
+	},
+	"success": function( data ) {
+		$("#weather-temp").html("<strong>" + data + "</strong> degrees");
+	} // A nice comment
+});</code></pre>
 
 			<p>Any such blocks added to the DOM after techdocs has initialised will be detected and highlighted automatically.</p>
 
 			<p>For large code samples, the code block may be constrained to a reasonable height and made to scroll vertically by adding a <code>long-code</code> class to the <code>pre</code> tag (here we also opt out of syntax highlighting and line numbering):
 
 			<pre class="long-code"><code class="markdown">50 random words
-			===============
-			aquacade
-			volatilise
-			boniface
-			centesimo
-			unfaked
-			unraftered
-			upstart
-			hemocyanin
-			meaninglessness
-			whitehead
-			oxime
-			angelus
-			obtundent
-			readvertisement
-			limited
-			misemphasized
-			subintegumental
-			nates
-			ethyle
-			gasolineless
-			biophysics
-			reprography
-			soluble
-			qualitative
-			vaporetto
-			raphaelle
-			equipollency
-			taipei
-			lunacy
-			symploce
-			overconcentrated
-			logograph
-			ashur
-			uncondemned
-			nipigon
-			gomerel
-			impregnation
-			insaneness
-			avifaunally
-			projectable
-			disputing
-			sprightful
-			nonschematically
-			normandy
-			basis
-			discomposing
-			stroking
-			auberon
-			bioptic
-			pockier</code></pre>
+	===============
+	aquacade
+	volatilise
+	boniface
+	centesimo
+	unfaked
+	unraftered
+	upstart
+	hemocyanin
+	meaninglessness
+	whitehead
+	oxime
+	angelus
+	obtundent
+	readvertisement
+	limited
+	misemphasized
+	subintegumental
+	nates
+	ethyle
+	gasolineless
+	biophysics
+	reprography
+	soluble
+	qualitative
+	vaporetto
+	raphaelle
+	equipollency
+	taipei
+	lunacy
+	symploce
+	overconcentrated
+	logograph
+	ashur
+	uncondemned
+	nipigon
+	gomerel
+	impregnation
+	insaneness
+	avifaunally
+	projectable
+	disputing
+	sprightful
+	nonschematically
+	normandy
+	basis
+	discomposing
+	stroking
+	auberon
+	bioptic
+	pockier</code></pre>
 
 			<h3>Syntax highlighting</h3>
 
@@ -181,7 +172,7 @@
 
 			<pre><code>&lt;div class="o-techdocs-gist" data-repo="{{owner}}/{{repo}}" data-branch="{{branch}}" data-path="{{path}}">&lt;/div></code></pre>
 
-			Live example:
+			<p>Live example:</p>
 
 			<div class="o-techdocs-gist" data-repo="financial-times/o-techdocs" data-branch="master" data-path="/origami.json"></div>
 
@@ -372,13 +363,9 @@
 
 			<script src="http://registry.origami.ft.com/embedapi"></script>
 
-			<h3>Gallery</h3>
-
-			<iframe title="o-gallery demo"  style="width: 100%;" scrolling="no" src="http://registry.origami.ft.com/components/o-gallery@1.7.4/demos/visual/declarative?embed=1"></iframe>
-
 			<h3>Buttons</h3>
 
-			<iframe title="o-buttons demo" style="width: 100%" scrolling="no" src="http://registry.origami.ft.com/components/o-buttons@3.1.2/demos/visual/individual?embed=1"></iframe>
+			<iframe title="o-buttons demo" style="width: 100%" scrolling="no" src="http://registry.origami.ft.com/components/o-buttons@5.0.1/demos/visual/primary?embed=1"></iframe>
 
 
 			</div> <!-- /o-techdocs-content -->

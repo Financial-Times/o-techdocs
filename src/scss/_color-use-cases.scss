@@ -1,24 +1,17 @@
-@include oColorsSetUseCase(o-techdocs-header, background, 'grey-tint5');
-@include oColorsSetUseCase(o-techdocs-header-item, text, 'white');
-
-@include oColorsSetUseCase(product-brand, background, 'blue');
-
-@include oColorsSetUseCase(o-techdocs-block-code-sample, background, 'pink-tint1');
-@include oColorsSetUseCase(o-techdocs-block-code-sample, border, 'pink-tint2');
-@include oColorsSetUseCase(o-techdocs-block-code-sample, text, 'grey-tint5');
-@include oColorsSetUseCase(o-techdocs-status-sev1, background, 'red');
+@include oColorsSetUseCase(o-techdocs-status-sev1, background, 'crimson');
 @include oColorsSetUseCase(o-techdocs-status-sev1, text, 'white');
-@include oColorsSetUseCase(o-techdocs-status-sev2, text, 'white');
-@include oColorsSetUseCase(o-techdocs-status-sev2, background, 'orange');
+@include oColorsSetUseCase(o-techdocs-status-sev2, text, 'black');
+@include oColorsSetUseCase(o-techdocs-status-sev2, background, 'mandarin');
+
+@include oColorsSetUseCase(o-techdocs-content, text, black-90);
+
+// Colors
+$o-techdocs-content-background: oColorsMix(black, white, 4);
+$o-techdocs-card-button: oColorsMix(black, white, 20);
+$o-techdocs-card-button-hover: oColorsMix(black, white, 40);
 
 
-// Colors not in FT palette
+$o-techdocs-border-color: oColorsMix(black, white, 5);
 
-$o-techdocs-color-grey1: #f5f5f5;
-$o-techdocs-color-grey2: #eeeeee;
-$o-techdocs-color-grey3: #cccccc;
-
-$o-techdocs-color-charcoal: #222222;
-$o-techdocs-color-charcoal-lighter: #555555;
-$o-techdocs-color-green: #008100;
-$o-techdocs-color-purple: #b400b4;
+$o-techdocs-color-green: oColorsGetTint("teal", 40);
+$o-techdocs-color-purple: oColorsGetTint("claret", 80);
