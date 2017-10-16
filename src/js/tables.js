@@ -9,4 +9,4 @@ export function tables() {
 		el.parentNode.insertBefore(wrapper, el);
 		wrapper.appendChild(el);
 	});
-};
+}

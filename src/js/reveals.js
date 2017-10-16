@@ -3,7 +3,9 @@
  */
 
 export function reveals() {
-	if (!document.querySelector('.o-techdocs-content')) return;
+	if (!document.querySelector('.o-techdocs-content')) {
+		return;
+	}
 
 	document.querySelector('.o-techdocs-content').addEventListener('click', function(e) {
 		if (e.target.tagName.toUpperCase() === 'A' && e.target.getAttribute('href').indexOf('#') === 0) {
@@ -17,4 +19,4 @@ export function reveals() {
 			}
 		}
 	});
-};
+}

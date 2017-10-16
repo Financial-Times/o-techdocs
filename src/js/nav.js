@@ -127,6 +127,6 @@ function nav() {
 		// Calculate the dock point for the menu
 		dockpoint = offset(sidebar) + sidebar.scrollHeight;
 	}, false);
-};
+}
 
 export { nav };

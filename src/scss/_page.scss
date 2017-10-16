@@ -14,17 +14,17 @@
 	@include oGridRespondTo(S) {
 		padding-top: oTechdocsSpacingUnit(7);
 	}
+	@include oGridRow;
 
 	padding-top: oTechdocsSpacingUnit(3);
-	@include oGridRow;
 }
 .o-techdocs-sidebar {
 	@include oGridRespondTo(M) {
 		padding-bottom: 0;
 	}
-	padding-bottom: oTechdocsSpacingUnit(3);
-
 	@include oGridColspan((default: 12, M: 4, L: 3));
+
+	padding-bottom: oTechdocsSpacingUnit(3);
 }
 .o-techdocs-main {
 	@include oGridColspan((default: 12, M: 8, L: 9));

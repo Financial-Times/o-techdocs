@@ -20,12 +20,12 @@
 			background-color: $o-techdocs-border-color;
 		}
 	}
-	// scss-lint:disable QualifyingElement
+	// sass-lint:disable no-qualifying-elements
 	> li[aria-selected="true"] {
 		> a {
+			@include oTypographySansBold(1);
 			padding-left: 0;
 			color: oColorsGetColorFor(o-techdocs-content, text);
-			@include oTypographySansBold(1);
 			pointer-events: none;
 		}
 		> a:before {
@@ -34,7 +34,7 @@
 			content: "▸";
 		}
 	}
-	// scss-lint:enable QualifyingElement
+	// sass-lint:enable no-qualifying-elements
 
 }
 
@@ -45,11 +45,11 @@
 	> li > a {
 		padding: 2px 10px 2px 40px;
 	}
-	// scss-lint:disable QualifyingElement
+	// sass-lint:disable no-qualifying-elements
 	> li[aria-selected="true"] > a {
 		padding-left: oTechdocsSpacingUnit(6);
 	}
-	// scss-lint:enable QualifyingElement
+	// sass-lint:enable no-qualifying-elements
 
 }
 
