@@ -2,18 +2,14 @@ machine:
   node:
     version: 6
   post:
-    - npm install -g origami-build-tools
+    - npm install -g origami-build-tools@^7
 dependencies:
   override:
     - obt install
-    - npm install -g pa11y@^4
   cache_directories:
     - "node_modules"
 test:
   override:
-    - obt test
+    - obt demo --demo-filter pa11y
     - obt verify
-    - "obt demo --runServer":
-        background: true
-    - sleep 10
-    - pa11y http://localhost:8080/demos/local/demo.html --ignore notice --ignore warning
+    - obt test
