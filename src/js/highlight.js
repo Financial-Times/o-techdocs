@@ -44,7 +44,9 @@ function init() {
 			mutations.forEach(function(mut) {
 
 				// Ignore any mutations that do not add new elements
-				if (mut.type !== 'childList' || !mut.addedNodes.length) return;
+				if (mut.type !== 'childList' || !mut.addedNodes.length) {
+					return;
+				}
 				[].slice.call(mut.addedNodes).forEach(function(el) {
 
 					// Ignore unless added element is a PRE > CODE
