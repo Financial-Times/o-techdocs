@@ -31,4 +31,4 @@ export function gistIt() {
 		const sc = document.createElement('script'); sc.src = url;
 		const s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
 	});
-};
+}
