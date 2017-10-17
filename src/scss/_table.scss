@@ -21,7 +21,7 @@
 	> tbody > tr > th {
 		background-color: $o-techdocs-border-color;
 	}
-	// scss-lint:disable QualifyingElement
+	// sass-lint:disable no-qualifying-elements
 	td.right-align,
 	th.right-align {
 		text-align: right;
@@ -30,7 +30,7 @@
 	tr.left-align {
 		text-align: left;
 	}
-	// scss-lint:enable QualifyingElement
+	// sass-lint:enable no-qualifying-elements
 }
 .o-techdocs-table-wrapper {
 	overflow: auto;

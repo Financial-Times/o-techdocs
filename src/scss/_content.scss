@@ -94,7 +94,7 @@
 			white-space: pre;
 			font-size: inherit;
 		}
-		// scss-lint:disable QualifyingElement
+		// sass-lint:disable no-qualifying-elements
 		li.l1,
 		li.l3,
 		li.l5,
@@ -102,11 +102,11 @@
 		li.l9 {
 			// Stripe rows if desired
 		}
-		// scss-lint:enable QualifyingElement
+		// sass-lint:enable no-qualifying-elements
 
 	}
 
-	// scss-lint:disable QualifyingElement
+	// sass-lint:disable no-qualifying-elements
 	pre.long-code {
 		overflow-y: scroll;
 		max-height: 340px;
@@ -133,7 +133,7 @@
 			color: oColorsMix(black, white, 30);
 		}
 	}
-	// scss-lint:enable QualifyingElement
+	// sass-lint:enable no-qualifying-elements
 
 	img {
 		max-width: 100%;

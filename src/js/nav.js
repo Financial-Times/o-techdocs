@@ -19,7 +19,9 @@ function nav() {
 	const qs = document.querySelector.bind(document);
 	const sidebar = qs('.o-techdocs-sidebar ul');
 
-	if (!sidebar) return;
+	if (!sidebar) {
+		return;
+	}
 
 	let dockpoint = offset(sidebar) + sidebar.scrollHeight;
 
@@ -28,7 +30,9 @@ function nav() {
 		headings.push({id:el.id, pos:offset(el)});
 		lis.push('<li id="o-techdocs-pagenav-'+el.id+'"><a href="#'+el.id+'">'+el.innerHTML+'</a></li>');
 	});
-	if (lis.length < 2) return;
+	if (lis.length < 2) {
+		return;
+	}
 	list = document.createElement('UL');
 	list.className = "o-techdocs-nav o-techdocs-nav--page";
 	list.setAttribute('data-o-grid-colspan', '12');
@@ -123,6 +127,6 @@ function nav() {
 		// Calculate the dock point for the menu
 		dockpoint = offset(sidebar) + sidebar.scrollHeight;
 	}, false);
-};
+}
 
 export { nav };
