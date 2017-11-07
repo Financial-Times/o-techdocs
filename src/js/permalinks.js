@@ -2,6 +2,8 @@
  * Show permalink markers on headings with an ID
  */
 
+import {getBaseUrl} from './base-url';
+
 export function permalinks() {
 	if (!document.querySelector('.o-techdocs-content')) {
 		return;
@@ -12,7 +14,7 @@ export function permalinks() {
 		return el.id;
 	}).forEach(function(el) {
 		const a = document.createElement('a');
-		a.href = "#"+el.id;
+		a.href = getBaseUrl() + '#' + el.id;
 		a.className = "o-techdocs__permalink";
 		a.title = "Link directly to this section of the page";
 		a.innerHTML = "&#x00B6;";
