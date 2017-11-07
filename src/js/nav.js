@@ -4,7 +4,6 @@
  *
  */
 
-import {getBaseUrl} from './base-url';
 import oViewport from 'o-viewport';
 
 oViewport.listenTo('scroll');
@@ -29,7 +28,7 @@ function nav() {
 	// Find heading 2s and build a link list.  Only proceed if there would be more than one item in the list
 	[].slice.call(qsa('.o-techdocs-content h2[id]')).forEach(function(el) {
 		headings.push({id:el.id, pos:offset(el)});
-		lis.push('<li id="o-techdocs-pagenav-' + el.id + '"><a href="' + getBaseUrl() + '#' + el.id + '">' + el.innerHTML + '</a></li>');
+		lis.push('<li id="o-techdocs-pagenav-'+el.id+'"><a href="#'+el.id+'">'+el.innerHTML+'</a></li>');
 	});
 	if (lis.length < 2) {
 		return;
