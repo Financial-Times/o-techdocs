@@ -1,5 +1,5 @@
 $o-techdocs-spacing-unit: 8;
 
-@function oTechdocsSpacingUnit($multiplier) {
+@function oTechdocsSpacingUnit($multiplier:1) {
 	@return $o-techdocs-spacing-unit * $multiplier + 0px;
 }
