@@ -19,7 +19,7 @@
 		font-size: 26px;
 		$border-thickness: 4px;
 		border-bottom: $border-thickness solid $o-techdocs-border-color;
-		padding-bottom: calc(oTechdocsSpacingUnit() - $border-thickness);
+		padding-bottom: oTechdocsSpacingUnit(1) - $border-thickness;
 		margin-bottom: oTechdocsSpacingUnit(2);
 		margin-top: oTechdocsSpacingUnit(5);
 	}
