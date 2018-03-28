@@ -27,9 +27,10 @@
 	},
 	"demos": [
 		{
-		"name": "demo",
-		"description": "techdocs demo",
-		"template": "demos/src/demo.mustache"
+			"title": "Demo",
+			"name": "demo",
+			"description": "techdocs demo",
+			"template": "demos/src/demo.mustache"
 		}
 	]
 }
