@@ -28,8 +28,6 @@ hljs.configure({
 	]
 });
 
-export default hljs.initHighlighting;
-
 
 // TODO: This really ought to be restricted to elements within a techdocs component,
 // but to do that properly, main.js needs to instantiate techdocs instances.  In theory
