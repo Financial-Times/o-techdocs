@@ -1,7 +1,8 @@
 /*global require,module*/
 
-const DomDelegate = require('ftdomdelegate');
-const HierarchicalNav = require('o-hierarchical-nav');
+import DomDelegate from 'ftdomdelegate';
+
+import HierarchicalNav from 'o-hierarchical-nav';
 
 function Header(rootEl) {
 
@@ -72,4 +73,4 @@ Header.init = function(el) {
 	return headers;
 };
 
-module.exports = { Header };
+export default { Header };

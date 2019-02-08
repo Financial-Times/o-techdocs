@@ -22,4 +22,4 @@ function init() {
 }
 
 document.addEventListener('o.DOMContentLoaded', init, false);
-exports.init = init;
+export {init};

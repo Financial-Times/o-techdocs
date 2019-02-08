@@ -3,7 +3,8 @@
  * Syntax highlighting using highlight.js - https://highlightjs.org/
  */
 
-const hljs = require('highlight.js');
+import hljs from 'highlight.js';
+
 hljs.configure({
 	languages: [
 		'javascript',
@@ -27,7 +28,7 @@ hljs.configure({
 	]
 });
 
-module.exports = hljs.initHighlighting;
+export default hljs.initHighlighting;
 
 
 // TODO: This really ought to be restricted to elements within a techdocs component,
@@ -61,4 +62,4 @@ function init() {
 	}
 }
 
-module.exports = init;
+export default init;
