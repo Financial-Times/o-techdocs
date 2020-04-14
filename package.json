@@ -1,7 +1,0 @@
-{
-  "name": "o-techdocs",
-  "description": "_Deprecated. We recommend [o-layout](https://registry.origami.ft.com/components/o-layout) with [o-header-services](https://registry.origami.ft.com/components/o-layout) instead._",
-  "devDependencies": {
-    "origami-ci-tools": "^1.3.8"
-  }
-}
