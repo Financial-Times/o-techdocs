@@ -1,4 +1,3 @@
-/*global require*/
 /**
  * Syntax highlighting using highlight.js - https://highlightjs.org/
  */

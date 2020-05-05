@@ -1,5 +1,3 @@
-/*global require,module*/
-
 const DomDelegate = require('ftdomdelegate');
 const HierarchicalNav = require('o-hierarchical-nav');
 
