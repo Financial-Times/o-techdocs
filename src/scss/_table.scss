@@ -21,16 +21,14 @@
 	> tbody > tr > th {
 		background-color: $o-techdocs-border-color;
 	}
-	// sass-lint:disable no-qualifying-elements
 	td.right-align,
-	th.right-align {
+	th.right-align { // stylelint-disable-line selector-no-qualifying-type
 		text-align: right;
 	}
 	td.left-align,
-	tr.left-align {
+	tr.left-align { // stylelint-disable-line selector-no-qualifying-type
 		text-align: left;
 	}
-	// sass-lint:enable no-qualifying-elements
 }
 .o-techdocs-table-wrapper {
 	overflow: auto;
