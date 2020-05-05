@@ -16,4 +16,4 @@ $o-header-services-is-silent: false;
 @import 'src/scss/nav';
 @import 'src/scss/table';
 @import 'src/scss/card';
-@import 'src/scss/github-gist.hljs-theme';
+@import 'src/scss/github-gist.hljs-theme'; // stylelint-disable-line scss/at-import-partial-extension-whitelist

@@ -7,20 +7,20 @@
 	box-sizing: border-box;
 }
 
-// sass-lint:disable no-qualifying-elements
-a.o-techdocs-card {
+
+a.o-techdocs-card { // stylelint-disable-line selector-no-qualifying-type
 	color: inherit;
 	text-decoration: none;
 }
-a.o-techdocs-card:hover {
+a.o-techdocs-card:hover { // stylelint-disable-line selector-no-qualifying-type
 	box-shadow: 0 0 0 4px oColorsGetPaletteColor('teal');
 	text-decoration: none;
 }
+// stylelint-disable-next-line selector-no-qualifying-type
 a.o-techdocs-card .o-techdocs-card__actions,
-a.o-techdocs-card .o-techdocs-card__quickactions {
+a.o-techdocs-card .o-techdocs-card__quickactions { // stylelint-disable-line selector-no-qualifying-type
 	display: none;
 }
-// sass-lint:enable no-qualifying-elements
 
 
 // Context: top of card
