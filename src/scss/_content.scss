@@ -3,25 +3,25 @@
 	@include oNormaliseText();
 
 	h1 {
+		font-size: 30px;
+		line-height: oTechdocsSpacingUnit(4);
+		padding-bottom: oTechdocsSpacingUnit(2);
+		margin-bottom: oTechdocsSpacingUnit(2);
 		@include oGridRespondTo(M) {
 			font-size: 40px;
 			line-height: oTechdocsSpacingUnit(6);
 			padding-bottom: oTechdocsSpacingUnit(3);
 			margin-bottom: oTechdocsSpacingUnit(3);
 		}
-		font-size: 30px;
-		line-height: oTechdocsSpacingUnit(4);
-		padding-bottom: oTechdocsSpacingUnit(2);
-		margin-bottom: oTechdocsSpacingUnit(2);
 	}
 	h2 {
 		line-height: oTechdocsSpacingUnit(4);
 		font-size: 26px;
+		$border-thickness: 4px;
 		border-bottom: $border-thickness solid $o-techdocs-border-color;
 		padding-bottom: oTechdocsSpacingUnit(1) - $border-thickness;
 		margin-bottom: oTechdocsSpacingUnit(2);
 		margin-top: oTechdocsSpacingUnit(5);
-		$border-thickness: 4px;
 	}
 	h3 {
 		line-height: oTechdocsSpacingUnit(3);
