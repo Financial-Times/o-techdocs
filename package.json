@@ -3,6 +3,7 @@
 	"name": "o-techdocs",
 	"devDependencies": {
 		"eslint-config-origami-component": "^2.0.1",
+		"origami-build-tools": "^10.1.8",
 		"origami-ci-tools": "^2.0.0",
 		"stylelint-config-origami-component": "^1.0.2"
 	}

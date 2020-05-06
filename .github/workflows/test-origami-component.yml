@@ -8,9 +8,10 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - run: npm install
     - name: Build accessibility testing demo
-      run: npx origami-build-tools@^10 demo --demo-filter pa11y --suppress-errors
+      run: npx obt demo --demo-filter pa11y --suppress-errors
     - name: Run linters
-      run: npx origami-build-tools@^10 verify
+      run: npx obt verify
     - name: Run tests
-      run: npx origami-build-tools@^10 test
+      run: npx obt test
