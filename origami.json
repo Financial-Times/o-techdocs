@@ -16,9 +16,6 @@
 			"Array.prototype.forEach"
 		]
 	},
-	"ci": {
-	  "circle": "https://circleci.com/api/v1/project/Financial-Times/o-techdocs"
-	},
 	"demosDefaults": {
 		"documentClasses": "o-techdocs",
 		"sass": "demos/src/scss/main.scss",
